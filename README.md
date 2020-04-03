@@ -8,6 +8,12 @@ La versión actual incluye princpalmente la idea y el guión que estamos siguien
 En cuanto al grado de desarrollo, de momento se encuentran subidos los siguientes archivos con código fuente:
 
 * main.py: Será el script principal a partir del cual se enlazarán los distintos desarrollos que estamos abordando en paralelo.
+* constants.py: Contiene las variables globales y la definición de la estructura del dataset. A partir de ésta, definiremos en el informe las características de los campos. A fecha de presentación de este grado de avance, la definición inicial del dataset consiste en lo siguiente: 
+
+    FIELDS_NAME = \
+    ["id", "date", "author", "target", "description", "attack", "target_class", "attack_class", "country", "link",
+     "tag", 'author_report', 'date_report']
+     
 * scraper_Masters: A partir de la URL principal del site, www.hackmageddon.com, identifica los enlaces a los informes anuales, y ejecuta el script adecuado para cada uno de ellos (hay dos formatos distintos, que requieren técnicas de scraping distintas).
 * scraper_Master2017: Scraper del historial anual para el caso del formato del año 2017. Se basa en la descarga de una archivo almacenado en google docs.
 * scraper_Master2018: Scraper del historial anual para el caso del formato del año 2018. Se basa en la descarga a través de un botón de un applet de Java.
