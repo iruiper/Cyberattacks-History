@@ -160,11 +160,11 @@ class BeautyScraper:
                         if not follow:
                             self.missing_calls.pop(0)
                             self.missing_calls.append(True)
-                            log_txt = f'No leído, report no contenido en las fechas {ini_date} - {fin_date}'
+                            log_txt = f'No leído, report no contenido en las fechas {ini_date} y {fin_date}'
                             log_info(logger=self.logger, title=title, url=link, status='INFO', registers=0,
                                      time_scrap=time() - start, info=log_txt)
 
-                        log_txt = f'No leído, report no contenido en las fechas {ini_date} - {fin_date}'
+                        log_txt = f'No leído, report no contenido en las fechas {ini_date} y {fin_date}'
                         log_info(logger=self.logger, title=title, url=link, status='INFO', registers=0,
                                  time_scrap=time() - start, info=log_txt)
                         assert not all(self.missing_calls), "No existen más reports para el periodo seleccionado"
@@ -293,7 +293,7 @@ class BeautyScraper:
             try:
                 df = read_csv(new_file)
                 df.loc[:, 'Date'] = to_datetime(df['Date'], format="%d/%m/%Y")
-                self.df = df.loc[df["Date"].between(ini_date, fin_date, include=True), :]
+                self.df = df.loc[df["Date"].between(ini_date, fin_date), :]
                 self.finish_scrapping(MASTER_2017_PATH_FILE)
                 os.remove(new_file)
                 log_info(logger=self.logger, title='MASTER TABLE', url=URL_SITE_MASTER_TABLE_2017, status='OK',
@@ -359,7 +359,7 @@ class BeautyScraper:
             try:
                 df = read_csv(new_file)
                 df.loc[:, 'Date'] = to_datetime(df['Date'], format="%d/%m/%Y")
-                self.df = df.loc[df["Date"].between(ini_date, fin_date, include=True), :]
+                self.df = df.loc[df["Date"].between(ini_date, fin_date, inclusive=True), :]
                 self.finish_scrapping(MASTER_2018_PATH_FILE)
                 os.remove(new_file)
                 log_info(logger=self.logger, title='MASTER TABLE', url=URL_SITE_MASTER_TABLE_2018, status='OK',
