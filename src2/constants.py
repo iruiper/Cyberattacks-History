@@ -30,6 +30,7 @@ DESKTOP_PATH = path.join("C:", environ['HOMEPATH'], "Desktop")
 TIMELINE_PATH_FILE = path.join(RAW_DATA_PATH, f'scrapping {datetime.now().strftime("%Y-%m-%d %H.%M.%S")}.csv')
 MASTER_2018_PATH_FILE = path.join(RAW_DATA_PATH, f'Master Data 2018 {datetime.now().strftime("%Y-%m-%d %H.%M.%S")}.csv')
 MASTER_2017_PATH_FILE = path.join(RAW_DATA_PATH, f'Master Data 2017 {datetime.now().strftime("%Y-%m-%d %H.%M.%S")}.csv')
+LOGGING_PATH_FILE = path.join(LOGGING_DATA_PATH, f'scrapping {datetime.now().strftime("%Y-%m-%d %H.%M.%S")}.csv')
 
 """
     DRIVER CONSTANTS

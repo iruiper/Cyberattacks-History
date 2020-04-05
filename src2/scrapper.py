@@ -1,4 +1,4 @@
-from constants import FIELDS_NAME, URL_SITE_STATICS_TIMELINE, LOGGING_DATA_PATH, DESKTOP_PATH, RAW_DATA_PATH,\
+from constants import FIELDS_NAME, URL_SITE_STATICS_TIMELINE, LOGGING_PATH_FILE, DESKTOP_PATH, RAW_DATA_PATH,\
     TIMELINE_PATH_FILE, URL_SITE_MASTER_TABLE_2018, URL_SITE_MASTER_TABLE_2017, FIREFOX_DRIVER_EXE,\
     FIREFOX_PROFILE, FIREFOX_OPTIONS, CHROME_DRIVER_EXE, CHROME_OPTIONS, MASTER_2017_PATH_FILE, MASTER_2018_PATH_FILE
 
@@ -15,7 +15,7 @@ from selenium.common.exceptions import NoSuchElementException, ElementClickInter
 from requests import get, HTTPError
 from requests.exceptions import MissingSchema
 from scrapper_utils import time_exec, log_info, get_fin_date, get_ini_date, check_header, transform_header, \
-    create_logger
+    create_logger, check_dates
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -24,12 +24,11 @@ from selenium.webdriver.support import expected_conditions as EC
 class BeautyScraper:
 
     def __init__(self):
-        self.time = {'last_calls': [0, 0, 0], 'mean_time': 0, 'lambda': 0, 'wait_time': 0}
+        self.time = {'last_calls': [0, 0, 0], 'mean_time': 0, 'lambda': 0, 'wait_time': 0.5}
         self.missing_calls = [False, False, False]
         self.df = DataFrame(columns=FIELDS_NAME)
         self.request = None
-        self.logger = create_logger(
-            os.path.join(LOGGING_DATA_PATH, f'scrapping {datetime.now().strftime("%Y-%m-%d %H.%M.%S")}.csv'))
+        self.logger = create_logger(LOGGING_PATH_FILE)
         self.set_driver('chrome')
 
     @time_exec
@@ -56,6 +55,37 @@ class BeautyScraper:
         except ElementClickInterceptedException:
             raise ElementClickInterceptedException
 
+    def download_workaround(self):
+        self.driver.command_executor._commands["send_command"] = \
+            ("POST", '/session/$sessionId/chromium/send_command')
+        params = {'cmd': 'Page.setDownloadBehavior', 'params': {'behavior': 'allow', 'downloadPath': DESKTOP_PATH}}
+        self.driver.execute("send_command", params)
+
+    def check_download(self, searh_file):
+        files_on_desktop = glob.glob(os.path.join(DESKTOP_PATH, searh_file))
+        timer = 0
+        while len(files_on_desktop) == 0 and timer < 10:
+            files_on_desktop = glob.glob(os.path.join(DESKTOP_PATH, searh_file))
+            sleep(1)
+            timer += 1
+        self.driver.quit()
+        assert len(files_on_desktop) != 0, "No se ha descargado el archivo"
+        return files_on_desktop[0]
+
+    def writter_download(self, input, output, start_date, end_date):
+        try:
+            df = read_csv(input)
+            ini_date = datetime(start_date.year, start_date.month, start_date.day)
+            fin_date = datetime(end_date.year, end_date.month, end_date.day)
+
+            df.loc[:, 'Date'] = to_datetime(df['Date'], format="%d/%m/%Y")
+            self.df = df.loc[df["Date"].between(ini_date, fin_date, inclusive=True), :]
+            self.finish_scrapping(output)
+            os.remove(input)
+        except Exception as err:
+            shutil.move(input, RAW_DATA_PATH)
+            raise AssertionError(f"Ha sucedido un error ineseperado. Se copiará {input} en {RAW_DATA_PATH}\n{err}")
+
     def set_driver(self, driver):
         if str(driver).lower() == 'chrome':
             self.driver = Chrome(executable_path=CHROME_DRIVER_EXE, chrome_options=CHROME_OPTIONS)
@@ -78,62 +108,52 @@ class BeautyScraper:
 
     def finish_scrapping(self, file_name):
         self.df.to_csv(file_name, index=False, decimal=',', sep=";")
-        print('SCRAPPING FINALIZADO')
+        print(f'SCRAPPING {file_name} FINALIZADO')
 
     def start_scrapping(self, ini_date=datetime(2017, 1, 1).date(), fin_date=datetime.now().date(),
                         driver_name='chrome'):
-        try:
-            ini_date = get_ini_date(date=ini_date) if isinstance(ini_date, str) else ini_date
-            fin_date = get_fin_date(date=fin_date) if isinstance(fin_date, str) else fin_date
-            assert ini_date < fin_date, f"{ini_date} es superior a {fin_date}"
+        ini_date, fin_date = check_dates(ini_date=ini_date, fin_date=fin_date)
+        if ini_date.year > 2018:
+            self._scrap_timeline(start_date=ini_date, end_date=fin_date, driver_name=driver_name)
 
-            if ini_date.year > 2018:
-                self._scrap_timeline(start_date=ini_date, end_date=fin_date, driver_name=driver_name)
+        elif 2017 < ini_date.year <= 2018:
+            if fin_date.year > 2018:
+                self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=fin_date, driver_name=driver_name)
+                self._scrap_2018(start_date=ini_date, driver_name=driver_name)
+            else:
+                self._scrap_2018(start_date=ini_date, end_date=fin_date, driver_name=driver_name)
 
-            elif 2017 < ini_date.year <= 2018:
-                if fin_date.year > 2018:
-                    self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=fin_date,
-                                         driver_name=driver_name)
-                    self._scrap_2018(start_date=ini_date, driver_name=driver_name)
-                else:
-                    self._scrap_2018(start_date=ini_date, end_date=fin_date, driver_name=driver_name)
+        elif 2016 < ini_date.year <= 2017:
+            if fin_date.year > 2018:
+                self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=datetime.now().date(),
+                                     driver_name=driver_name)
+                self._scrap_2018(driver_name=driver_name)
+                self._scrap_2017(start_date=ini_date, driver_name=driver_name)
+            elif fin_date.year > 2017:
+                self._scrap_2018(end_date=fin_date, driver_name=driver_name)
+                self._scrap_2017(start_date=ini_date, driver_name=driver_name)
+            else:
+                self._scrap_2017(start_date=ini_date, end_date=fin_date, driver_name=driver_name)
 
-            elif 2016 < ini_date.year <= 2017:
-                if fin_date.year > 2018:
-                    self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=datetime.now().date(),
-                                         driver_name=driver_name)
-                    self._scrap_2018(driver_name=driver_name)
-                    self._scrap_2017(start_date=ini_date, driver_name=driver_name)
-                elif fin_date.year > 2017:
-                    self._scrap_2018(end_date=fin_date, driver_name=driver_name)
-                    self._scrap_2017(start_date=ini_date, driver_name=driver_name)
-                else:
-                    self._scrap_2017(start_date=ini_date, end_date=fin_date, driver_name=driver_name)
-
-            elif ini_date.year <= 2016:
-                if fin_date.year > 2018:
-                    self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=datetime.now().date(),
-                                         driver_name=driver_name)
-                    self._scrap_2018(driver_name=driver_name)
-                    self._scrap_2017(driver_name=driver_name)
-                elif fin_date.year > 2017:
-                    self._scrap_2018(end_date=fin_date, driver_name=driver_name)
-                    self._scrap_2017(driver_name=driver_name)
-                elif fin_date.year > 2016:
-                    self._scrap_2017(end_date=fin_date, driver_name=driver_name)
-                else:
-                    print('no se puede generar el scrapping para fechas anteriores al 2016')
-
-        except Exception as err:
-            print(err)
+        elif ini_date.year <= 2016:
+            if fin_date.year > 2018:
+                self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=datetime.now().date(),
+                                     driver_name=driver_name)
+                self._scrap_2018(driver_name=driver_name)
+                self._scrap_2017(driver_name=driver_name)
+            elif fin_date.year > 2017:
+                self._scrap_2018(end_date=fin_date, driver_name=driver_name)
+                self._scrap_2017(driver_name=driver_name)
+            elif fin_date.year > 2016:
+                self._scrap_2017(end_date=fin_date, driver_name=driver_name)
+            else:
+                print('no se puede generar el scrapping para fechas anteriores al 2016')
 
     def _scrap_timeline(self, url=URL_SITE_STATICS_TIMELINE, start_date=datetime(2019, 1, 1).date(),
                         end_date=datetime.now().date(), driver_name='chrome'):
 
         self.set_driver(driver_name)
-        ini_date = get_ini_date(date=start_date) if isinstance(start_date, str) else start_date
-        fin_date = get_fin_date(date=end_date) if isinstance(end_date, str) else end_date
-        assert ini_date < fin_date, f"{ini_date} es superior a {fin_date}"
+        ini_date, fin_date = check_dates(ini_date=start_date, fin_date=end_date)
 
         if ini_date.year < 2019:
             print("Warning. El año de la fecha de inicio es anterior a 2019. Se pondrá por defecto el 01/01/2019")
@@ -141,7 +161,7 @@ class BeautyScraper:
 
         html_bs = self.request_url(url, javascript=False)
         link, next_page_link = url, url
-        title = ''
+        title, start = '', 0
         while True:
             try:
                 for tags in html_bs.find_all('h2'):
@@ -160,9 +180,6 @@ class BeautyScraper:
                         if not follow:
                             self.missing_calls.pop(0)
                             self.missing_calls.append(True)
-                            log_txt = f'No leído, report no contenido en las fechas {ini_date} y {fin_date}'
-                            log_info(logger=self.logger, title=title, url=link, status='INFO', registers=0,
-                                     time_scrap=time() - start, info=log_txt)
 
                         log_txt = f'No leído, report no contenido en las fechas {ini_date} y {fin_date}'
                         log_info(logger=self.logger, title=title, url=link, status='INFO', registers=0,
@@ -174,21 +191,19 @@ class BeautyScraper:
                 html_bs = self.request_url(next_page_link.get('href'), javascript=False)
             except HTTPError:
                 log_info(logger=self.logger, title=title, url=next_page_link, status='KO', registers=0,
-                         time_scrap=time() - start, info='Error de conexión ')
+                         time_scrap=0, info='Error de conexión')
             except MissingSchema:
                 log_info(logger=self.logger, title=title, url=next_page_link, status='KO', registers=0,
-                         time_scrap=time() - start, info='Error de conexión ')
+                         time_scrap=0, info='Error de conexión')
             except AssertionError as err:
-                log_info(logger=self.logger, title=title, url=link, status='KO', registers=0,
-                         time_scrap=time() - start, error=err)
+                log_info(logger=self.logger, title='', url='', status='KO', registers=0, time_scrap=0, error=err)
                 break
             except Exception as err:
                 log_info(logger=self.logger, title=title, url=link, status='KO', registers=0,
                          time_scrap=time() - start, error=err)
-                break
 
+        self.driver.quit()
         self.finish_scrapping(file_name=TIMELINE_PATH_FILE)
-        self.driver.close()
 
     def _scrap_report(self, url):
         report_df = DataFrame(columns=FIELDS_NAME)
@@ -245,17 +260,12 @@ class BeautyScraper:
     def _scrap_2017(self, url_master=URL_SITE_MASTER_TABLE_2017, driver_name='chrome',
                     start_date=datetime(2017, 1, 1).date(), end_date=datetime(2017, 12, 31).date()):
 
+        ini_date, fin_date = check_dates(ini_date=start_date, fin_date=end_date)
+        assert ini_date.year <= 2017, "Error el año de la fecha de inicio es superior a 2017"
+
         self.set_driver(driver_name)
         if driver_name == 'chrome':
-            self.driver.command_executor._commands["send_command"] = \
-                ("POST", '/session/$sessionId/chromium/send_command')
-            params = {'cmd': 'Page.setDownloadBehavior', 'params': {'behavior': 'allow', 'downloadPath': DESKTOP_PATH}}
-            self.driver.execute("send_command", params)
-
-        ini_date = get_ini_date(date=start_date) if isinstance(start_date, str) else start_date
-        fin_date = get_fin_date(date=end_date) if isinstance(end_date, str) else end_date
-        assert ini_date < fin_date, f"{ini_date} es superior a {fin_date}"
-        assert ini_date.year == 2017, "Error el año de la fecha de inicio es superior a 2017"
+            self.download_workaround()
 
         if ini_date.year < 2016:
             print("Warning. El año de la fecha de inicio es anterior a 2017. Se pondrá por defecto el 01/01/2017")
@@ -264,9 +274,6 @@ class BeautyScraper:
             if fin_date.year > 2017:
                 print("Warning. El año de la fecha de fin es posterior a 2017. Se pondrá por defecto el 31/12/2017")
                 fin_date = datetime(2017, 12, 31)
-
-        # get desktop elements with name..
-        files_on_desktop = glob.glob(os.path.join(DESKTOP_PATH, '2017 Master *.csv'))
 
         start = time()
         try:
@@ -277,103 +284,55 @@ class BeautyScraper:
             self.next_page(xpath_exp="//div[@id=':2z']")
             self.next_page(xpath_exp="//*[text()[contains(.,'.csv')]]")
 
-            new_files_on_desktop = glob.glob(os.path.join(DESKTOP_PATH, '2017 Master *.csv'))
-            timer = 0
+            new_file = self.check_download(searh_file='2017 Master *.csv')
+            self.writter_download(input=new_file, output=MASTER_2017_PATH_FILE, start_date=ini_date, end_date=fin_date)
+            log_info(logger=self.logger, title='MASTER TABLE 2017', url=URL_SITE_MASTER_TABLE_2017, status='OK',
+                     registers=len(self.df), time_scrap=time() - start, info=f'Carga Completa')
 
-            while len(files_on_desktop) == len(new_files_on_desktop) and timer < 10:
-                new_files_on_desktop = glob.glob(os.path.join(DESKTOP_PATH, '2017 Master *.csv'))
-                sleep(1)
-                timer += 1
-            self.driver.close()
-
-            assert len(files_on_desktop) < len(new_files_on_desktop), "No se ha descargado el archivo"
-
-            new_file = [f for f in new_files_on_desktop if f not in files_on_desktop][0]
-
-            try:
-                df = read_csv(new_file)
-                df.loc[:, 'Date'] = to_datetime(df['Date'], format="%d/%m/%Y")
-                self.df = df.loc[df["Date"].between(ini_date, fin_date), :]
-                self.finish_scrapping(MASTER_2017_PATH_FILE)
-                os.remove(new_file)
-                log_info(logger=self.logger, title='MASTER TABLE', url=URL_SITE_MASTER_TABLE_2017, status='OK',
-                         registers=0, time_scrap=time() - start, info=f'Leídos {len(self.df)} Registros')
-            except Exception as err:
-                shutil.move(new_file, RAW_DATA_PATH)
-                print('El fichero de Master Table 2017 se ha leído pero no se ha podido filtrar. '
-                      f'Se copiará directamente en {RAW_DATA_PATH}')
-                log_info(logger=self.logger, title='MASTER TABLE', url=URL_SITE_MASTER_TABLE_2017, status='KO',
-                         registers=0, time_scrap=time() - start, error=err)
-        except AttributeError:
-            print('No se ha encontrado el link de descarga para Master Table 2017')
+        except AssertionError as err:
+            log_info(logger=self.logger, title='MASTER TABLE 2017', url=URL_SITE_MASTER_TABLE_2017, status='KO',
+                     registers=0, time_scrap=time() - start, error=err)
         except Exception as err:
             print('Ha ocurrido un error inesperado')
             log_info(logger=self.logger, title='MASTER TABLE 2017', url=URL_SITE_MASTER_TABLE_2017, status='KO',
                      registers=0, time_scrap=time() - start, error=err)
 
-    def _scrap_2018(self, url_master=URL_SITE_MASTER_TABLE_2018, driver_name='chrome', start_date=datetime(2018, 1, 1),
-                    end_date=datetime(2018, 12, 31)):
+    def _scrap_2018(self, url_master=URL_SITE_MASTER_TABLE_2018, driver_name='chrome',
+                    start_date=datetime(2018, 1, 1).date(), end_date=datetime(2018, 12, 31).date()):
+
         start = time()
+        ini_date, fin_date = check_dates(ini_date=start_date, fin_date=end_date)
+
+        assert ini_date.year <= 2018,  "Error el año de la fecha de inicio es superior a 2018"
+
         self.set_driver(driver_name)
         if driver_name == 'chrome':
-            self.driver.command_executor._commands["send_command"] = \
-                ("POST", '/session/$sessionId/chromium/send_command')
-            params = {'cmd': 'Page.setDownloadBehavior', 'params': {'behavior': 'allow', 'downloadPath': DESKTOP_PATH}}
-            self.driver.execute("send_command", params)
+            self.download_workaround()
 
-        ini_date = get_ini_date(date=start_date) if isinstance(start_date, str) else start_date
-        fin_date = get_fin_date(date=end_date) if isinstance(end_date, str) else end_date
-        assert ini_date < fin_date, f"{ini_date} es superior a {fin_date}"
-
-        if ini_date.year > 2018:
-            print("Error el año de la fecha de inicio es superior a 2018")
-            self._scrap_timeline(start_date=ini_date, end_date=fin_date)
+        if ini_date.year < 2018:
+            print("Warning. El año de la fecha de inicio es anterior a 2018. Se pondrá por defecto el 01/01/2018")
+            ini_date = datetime(2018, 1, 1).date()
         else:
-            if ini_date.year < 2017:
-                print("Warning. El año de la fecha de inicio es anterior a 2017. Se pondrá por defecto el 01/01/2018")
-                ini_date = datetime(2018, 1, 1).date()
-            else:
-                if fin_date.year > 2018:
-                    print("Warning. El año de la fecha de fin es posterior a 2018. Se pondrá por defecto el 31/12/2018")
-                    fin_date = datetime(2018, 12, 31)
+            if fin_date.year > 2018:
+                print("Warning. El año de la fecha de fin es posterior a 2018. Se pondrá por defecto el 31/12/2018")
+                fin_date = datetime(2018, 12, 31).date()
 
-        files_on_desktop = glob.glob(os.path.join(DESKTOP_PATH, '2018 Master *.csv'))
         try:
             # Asignamos el perfil al driver de Selenium que manejará la navegación por la URL
             self.request_url(url_master, javascript=True)
             # Averiguamos la secuencia de clicks necesarios para descargar el archivo a través del elemento dinámico
             self.next_page(xpath_exp="//span[contains(., 'CSV')]")
 
-            new_files_on_desktop = glob.glob(os.path.join(DESKTOP_PATH, '2018 Master *.csv'))
-            timer = 0
+            new_file = self.check_download(searh_file='2018 Master *.csv')
+            self.writter_download(input=new_file, output=MASTER_2018_PATH_FILE, start_date=ini_date, end_date=fin_date)
+            log_info(logger=self.logger, title='MASTER TABLE 2018', url=URL_SITE_MASTER_TABLE_2018, status='OK',
+                     registers=len(self.df), time_scrap=time() - start, info=f'Carga Completa')
 
-            while len(files_on_desktop) == len(new_files_on_desktop) and timer < 10:
-                new_files_on_desktop = glob.glob(os.path.join(DESKTOP_PATH, '2018 Master *.csv'))
-                sleep(1)
-                timer += 1
-            self.driver.close()
+        except AssertionError as err:
+            log_info(logger=self.logger, title='MASTER TABLE 2018', url=URL_SITE_MASTER_TABLE_2018, status='KO',
+                     registers=0, time_scrap=time() - start, error=err)
 
-            assert len(files_on_desktop) < len(new_files_on_desktop), "No se ha descargado el archivo"
-
-            new_file = [f for f in new_files_on_desktop if f not in files_on_desktop][0]
-            try:
-                df = read_csv(new_file)
-                df.loc[:, 'Date'] = to_datetime(df['Date'], format="%d/%m/%Y")
-                self.df = df.loc[df["Date"].between(ini_date, fin_date, inclusive=True), :]
-                self.finish_scrapping(MASTER_2018_PATH_FILE)
-                os.remove(new_file)
-                log_info(logger=self.logger, title='MASTER TABLE', url=URL_SITE_MASTER_TABLE_2018, status='OK',
-                         registers=0, time_scrap=time() - start, info=f'Leídos {len(self.df)} Registros')
-            except Exception as err:
-                shutil.move(new_file, RAW_DATA_PATH)
-                print('El fichero de Master Table 2018 se ha leído pero no se ha podido filtrar. '
-                      f'Se copiará directamente en {RAW_DATA_PATH}')
-                log_info(logger=self.logger, title='MASTER TABLE', url=URL_SITE_MASTER_TABLE_2017, status='KO',
-                         registers=0, time_scrap=time() - start, error=err)
-
-        except AttributeError:
-            print('No se ha encontrado el link de descarga para Master Table 2018')
         except Exception as err:
             print('Ha ocurrido un error inesperado')
-            log_info(logger=self.logger, title='MASTER TABLE 2018', url=URL_SITE_MASTER_TABLE_2017, status='KO',
+            log_info(logger=self.logger, title='MASTER TABLE 2018', url=URL_SITE_MASTER_TABLE_2018, status='KO',
                      registers=0, time_scrap=time() - start, error=err)

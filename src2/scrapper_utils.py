@@ -29,6 +29,13 @@ def get_fin_date(date):
         raise ValueError("Error, la fecha de fin debe tener el formato YYYY-mm-dd")
 
 
+def check_dates(ini_date, fin_date):
+    ini_date = get_ini_date(date=ini_date) if isinstance(ini_date, str) else ini_date
+    fin_date = get_fin_date(date=fin_date) if isinstance(fin_date, str) else fin_date
+    assert ini_date < fin_date, f"{ini_date} es superior a {fin_date}"
+    return ini_date, fin_date
+
+
 def transform_header(title):
     return "-".join("-".join(title.split(" ")[:3]).split("-")[1:])
 
@@ -36,7 +43,7 @@ def transform_header(title):
 def check_header(str_time, frmt_time, start, end):
     try:
         read = start <= datetime.strptime(str_time, frmt_time).date() <= end
-        follow = end <= datetime.strptime(str_time, frmt_time).date()
+        follow = end < datetime.strptime(str_time, frmt_time).date()
     except ValueError:
         read, follow = False, False
     return read, follow
@@ -66,8 +73,8 @@ def create_logger(file_path):
     formatter = pygogo.logging.Formatter(logging_fmt, datefmt=pygogo.formatters.DATEFMT)
     fhdlr = create_file_formatter(file_path)
 
-    return  pygogo.Gogo(name='', low_hdlr=fhdlr, low_formatter=formatter, high_hdlr=fhdlr, high_formatter=formatter,
-                        monolog=True).get_logger()
+    return pygogo.Gogo(name='', low_hdlr=fhdlr, low_formatter=formatter, high_hdlr=fhdlr, high_formatter=formatter,
+                       monolog=True).get_logger()
 
 
 def log_info(logger, **kwargs_msg):
