@@ -14,8 +14,7 @@ from selenium.webdriver import Firefox, Chrome
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
 from requests import get, HTTPError
 from requests.exceptions import MissingSchema
-from scrapper_utils import time_exec, log_info, get_fin_date, get_ini_date, check_header, transform_header, \
-    create_logger, check_dates
+from scrapper_utils import time_exec, log_info, check_header, transform_header, create_logger, check_dates
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -125,8 +124,7 @@ class BeautyScraper:
 
         elif 2016 < ini_date.year <= 2017:
             if fin_date.year > 2018:
-                self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=datetime.now().date(),
-                                     driver_name=driver_name)
+                self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=fin_date, driver_name=driver_name)
                 self._scrap_2018(driver_name=driver_name)
                 self._scrap_2017(start_date=ini_date, driver_name=driver_name)
             elif fin_date.year > 2017:
@@ -137,8 +135,7 @@ class BeautyScraper:
 
         elif ini_date.year <= 2016:
             if fin_date.year > 2018:
-                self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=datetime.now().date(),
-                                     driver_name=driver_name)
+                self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=fin_date, driver_name=driver_name)
                 self._scrap_2018(driver_name=driver_name)
                 self._scrap_2017(driver_name=driver_name)
             elif fin_date.year > 2017:
