@@ -67,7 +67,7 @@ class BeautyScraper:
             files_on_desktop = glob.glob(os.path.join(DESKTOP_PATH, searh_file))
             sleep(1)
             timer += 1
-        self.driver.quit()
+
         assert len(files_on_desktop) != 0, "No se ha descargado el archivo"
         return files_on_desktop[0]
 
@@ -166,7 +166,7 @@ class BeautyScraper:
                     title = tags.a.text
                     link = tags.a.get('href')
                     read, follow = check_header(str_time=transform_header(title), frmt_time='%d-%B-%Y',
-                                                start=start_date, end=end_date)
+                                                start=ini_date, end=fin_date)
                     if read:
                         report_data, total_entries = self._scrap_report(link)
                         self.df = self.df.append(report_data, ignore_index=False)
@@ -199,7 +199,7 @@ class BeautyScraper:
                 log_info(logger=self.logger, title=title, url=link, status='KO', registers=0,
                          time_scrap=time() - start, error=err)
 
-        self.driver.quit()
+
         self.finish_scrapping(file_name=TIMELINE_PATH_FILE)
 
     def _scrap_report(self, url):
