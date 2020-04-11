@@ -56,14 +56,15 @@ La carpeta data se divide en:
      - **_Master Data 2018 YYYY-mm-dd HH.MM.SS.csv_** o **_2018 Master Table.csv_**: contiene la información extraída de Master Data 2018.
      
      - **_Master Data 2017 YYYY-mm-dd HH.MM.SS.csv_** o **_2017 Master Table Sheet1.csv_**: contiene la información extraída de Master data 2017.
-Finalmente, los datos extraídos contienen los siguientes campos
-   - **ID**: Identificador de registros de cada campo.
+
+    Finalmente, los datos extraídos contienen los siguientes campos
+    - **ID**: Identificador de registros de cada campo.
     
-   - **DATE**: Fecha en la que se ha realizado el ataque.
+    - **DATE**: Fecha en la que se ha realizado el ataque.
      
-   - **AUTHOR**: Autor que ha realizado el ataque cibernético.
+    - **AUTHOR**: Autor que ha realizado el ataque cibernético.
      
-   - **TARGET**: Empresa o entidad receptora del ataque cibernético.
+    - **TARGET**: Empresa o entidad receptora del ataque cibernético.
      
    - **DESCRIPTION**: Texto descriptivo de lo sucedido en el ataque.
      
