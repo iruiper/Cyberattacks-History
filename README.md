@@ -1,6 +1,4 @@
 # Cyberattacks-History
-
-# Contexto
 Este proyecto, pretende recopilar datos históricos de ciberataques con el objetivo de crear una base de datos estructurada. Esta base de datos, servirá para poder aplicar modelos predictivos que sirvan de soporte a los distintos equipos de seguridad de una empresa.  Para la realización del proyecto, se desarrolla un rasgado web de la página https://www.hackmageddon.com/. 
 
 A continuación, se detallan los autores del proyecto y su contenido.
