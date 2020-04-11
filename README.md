@@ -56,29 +56,29 @@ La carpeta data se divide en:
      3- **_Master Data 2017 YYYY-mm-dd HH.MM.SS.csv_** o **_2017 Master Table Sheet1.csv _**: contiene la información extraída de Master data 2017.
 
 Finalmente, los datos extraídos contienen los siguientes campos:
-     1- **ID**: Identificador de registros de cada campo.
+    1- **ID**: Identificador de registros de cada campo.
      
-     2- **DATE**: Fecha en la que se ha realizado el ataque.
+    2- **DATE**: Fecha en la que se ha realizado el ataque.
      
-     3- **AUTHOR**: Autor que ha realizado el ataque cibernético.
+    3- **AUTHOR**: Autor que ha realizado el ataque cibernético.
      
-     4- **TARGET**: Empresa o entidad receptora del ataque cibernético.
+    4- **TARGET**: Empresa o entidad receptora del ataque cibernético.
      
-     5- **DESCRIPTION**: Texto descriptivo de lo sucedido en el ataque.
+    5- **DESCRIPTION**: Texto descriptivo de lo sucedido en el ataque.
      
-     6- **ATTACK**: Ataque realizado.
+    6- **ATTACK**: Ataque realizado.
      
-     7- **TARGET_CLASS**:  Clasificación de las empresas o entidades receptoras del ataque cibernético.
+    7- **TARGET_CLASS**:  Clasificación de las empresas o entidades receptoras del ataque cibernético.
      
-     8- **ATTACK_CLASS**: Clasificación del ataque cibernético según un conjunto de tipologías acotadas.
+    8- **ATTACK_CLASS**: Clasificación del ataque cibernético según un conjunto de tipologías acotadas.
      
-     9- **COUNTRY**: País receptor del ataque cibernético.
+    9- **COUNTRY**: País receptor del ataque cibernético.
      
-     10- **LINK**: URL con información adicional de lo ocurrido y del impacto del ataque.
+    10- **LINK**: URL con información adicional de lo ocurrido y del impacto del ataque.
      
-     11-**AUTHOR_REPORT**: Nombre del autor que ha publicado el report en el Timeline. No aplica para Master Table 2018 y 2017.
+    11-**AUTHOR_REPORT**: Nombre del autor que ha publicado el report en el Timeline. No aplica para Master Table 2018 y 2017.
      
-     12-**DATE_REPORT**: Fecha de publicación del report en el Timeline. No aplica para Master Table 2018 y 2017.
+    12-**DATE_REPORT**: Fecha de publicación del report en el Timeline. No aplica para Master Table 2018 y 2017.
      
      13-**VIEWS**: Número de visualizaciones del report en el Timeline. No aplica para Master Table 2018 y 2017.
 
@@ -87,7 +87,7 @@ Finalmente, los datos extraídos contienen los siguientes campos:
 ### PDF
 Carpeta que contiene el documento de la práctica.
 
- ## Referéncias
+ ## Referencias
  [1] https://www.hackmageddon.com/category/security/cyber-attacks-timeline/
  
  [2] https://www.hackmageddon.com/2018-master-table/
