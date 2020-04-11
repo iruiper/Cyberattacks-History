@@ -15,13 +15,14 @@ Contiene el código del proyecto con el que se realiza el scrapping de la págin
 - **main.py**: punto de entrada del programa. Se inicia el proceso de scraping mediante un objeto de la clase _BeautyScraper_.
 
 - **scrapper.py**: contiene la implementación de la clase _BeautyScraper_ para generar el conjunto de datos a partir de la pagina web de la práctica. Esta clase contiene 4 métodos principales:
-    1- **start_scrapping**. Adminte como parámetros de entrada una fecha de inicio (_ini_date_) y una fecha de fin (_fin_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. En función del periodo de tiempo especificado se realiza el scrapping de las paginas web Timeline [1], Master Table 2018 [2] y Master Table 2017 [3].
     
-    2- **_scrap_timeline**. Adminte como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear las distintas tablas de los reports contenidos en el Timeline de la web. 
+    - **start_scrapping**. Adminte como parámetros de entrada una fecha de inicio (_ini_date_) y una fecha de fin (_fin_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. En función del periodo de tiempo especificado se realiza el scrapping de las paginas web Timeline [1], Master Table 2018 [2] y Master Table 2017 [3].
     
-    3- **_scrap_2017**. Adminte como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear el historial anual del año 2017. Se basa en la descarga de una archivo almacenado en google docs y un procesado para seleccionar el periodo de tiempo deseado.
+    - **_scrap_timeline**. Adminte como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear las distintas tablas de los reports contenidos en el Timeline de la web. 
     
-     4- **_scrap_2018**. Adminte como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear el historial anual del año 2018. Se basa en la descarga de una archivo csv a través de la interacción con un botón de JavaScript y un procesado para seleccionar el periodo de tiempo deseado.
+    - **_scrap_2017**. Adminte como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear el historial anual del año 2017. Se basa en la descarga de una archivo almacenado en google docs y un procesado para seleccionar el periodo de tiempo deseado.
+    
+     - **_scrap_2018**. Adminte como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear el historial anual del año 2018. Se basa en la descarga de una archivo csv a través de la interacción con un botón de JavaScript y un procesado para seleccionar el periodo de tiempo deseado.
      
 - **scrapper_utils.py**. Script que contiene funciones auxiliares empleadas por la clase _BeautyScraper_. 
 
@@ -49,17 +50,18 @@ Carpeta utilizada para almacenar la información extraída por el programa al fi
 
 La carpeta data se divide en:
 - **00_raw_:** Carpeta destinada a almacenar los datos crudos extraídos del proceso de web scrapping. Estos datos no han sido procesados, limpiados o manipulados. Adicionalmente, al tener 3 fuentes de datos distintas (Timeline, Master Table 2017 y Master Table 2018), los archivos almacenados se dividen en:
-     1- **_scrapping YYYY-mm-dd HH.MM.SS.csv_**: contiene la información extraída del Timeline.
      
-     2- **_Master Data 2018 YYYY-mm-dd HH.MM.SS.csv_** o **_2018 Master Table.csv_**: contiene la información extraída de Master Data 2018.
+     - **_scrapping YYYY-mm-dd HH.MM.SS.csv_**: contiene la información extraída del Timeline.
      
-     3- **_Master Data 2017 YYYY-mm-dd HH.MM.SS.csv_** o **_2017 Master Table Sheet1.csv _**: contiene la información extraída de Master data 2017.
+     - **_Master Data 2018 YYYY-mm-dd HH.MM.SS.csv_** o **_2018 Master Table.csv_**: contiene la información extraída de Master Data 2018.
+     
+     - **_Master Data 2017 YYYY-mm-dd HH.MM.SS.csv_** o **_2017 Master Table Sheet1.csv _**: contiene la información extraída de Master data 2017.
 
-Finalmente, los datos extraídos contienen los siguientes campos:
+Finalmente, los datos extraídos contienen los siguientes campos
 
-    1- **ID**: Identificador de registros de cada campo.
-     
-    2- **DATE**: Fecha en la que se ha realizado el ataque.
+    - **ID**: Identificador de registros de cada campo.
+    
+    - **DATE**: Fecha en la que se ha realizado el ataque.
      
     3- **AUTHOR**: Autor que ha realizado el ataque cibernético.
      
