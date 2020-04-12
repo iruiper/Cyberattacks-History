@@ -37,13 +37,38 @@ class BeautyScraper:
 
     @time_exec
     def request_url(self, url, javascript=True, **wait_kwargs):
+        """
+        Función que sirve para realizar peticiones http. En función del valor del parámetro javascript, la petición se
+        realizará utilizando la librería selenium o la librería requests.
+
+        Se devolverá un objeto BeautifulSoup con el código html de la URL.
+
+        :param url: dirección url sobre la que se realizará la petición
+        :param javascript: Si es True, se realizará una petición http a través de la librería selenium, la cual perimte
+                           cargar los elemetos javascript de la página web. Si es False, se utilziará la librería
+                           requests, que carga el html sin su contenido javascript.
+        :param wait_kwargs: Parámetros adicionales utilizados para controlar que el contenido javascript se ha cargado
+                            adecuadamente antes de devolver el html.
+        :return: objeto BeautifulSoup con el html de la URL.
+        """
+
+        # Se inicia un bucle que comprueba el estado de la petición a la página web. El máximo de intentos permitidos
+        # son 4.
         connect_atempts = 1
         while connect_atempts < 4:
             try:
+                # Se realiza la petición http mediante el método get de la librería requests. Para ello se modifica el
+                # user agent para simular que la petició es realizada por un humano y no un script.
+                # Como el objetivo es chequear el estado de conexión, no es necesario cargar el JavaScript.
                 self.request = get(url, headers={'User-Agent': USER_AGENT})
+                # Si la conexión no es exitosa (código <> 2XX) se lanza una excepción HTTPError. En caso contrario,
+                # se continua el código y se para el bucle.
                 self.request.raise_for_status()
                 break
             except Timeout:
+                # Si la connexión falla debido a que se ha superado el Timeout por defecto, se incrementa el número de
+                # intentos de conexión, se loggea el error y se esperan 5 segundos antes de realizar la siguiente
+                # petición.
                 info_txt = f'Timeout superado al realizar la petición a {url}.' + \
                        f'Se realizará otra petición en 5 segs. Peticion {connect_atempts} de 3'
                 log_info(logger=self.logger, title='', url=url, status='KO', registers=0, time_scrap=0, info=info_txt,
@@ -51,6 +76,9 @@ class BeautyScraper:
                 connect_atempts += 1
                 sleep(5)
             except HTTPError:
+                # Si la connexión falla debido a un problema de conexión (por ejemplo un error 5XX), se incrementa el
+                # número de intentos de conexión, se loggea el error y se esperan 5 segundos antes de realizar la
+                # siguiente petición.
                 info_txt = f'Error de conexión {self.request.status_code} superado al realizar la petición a {url}.' + \
                            f'Se realizará otra petición en 5 segs. Peticion {connect_atempts} de 3'
                 log_info(logger=self.logger, title='', url=url, status='KO', registers=0, time_scrap=0, info=info_txt,
@@ -58,15 +86,25 @@ class BeautyScraper:
                 connect_atempts += 1
                 sleep(5)
             except ConnectionError:
+                # Si la connexión falla debido a un problema de connectividad a internet (por ejemplo, no existe
+                # connexión a internet) se incrementa el número de intentos de conexión, se loggea el error y se
+                # esperan 5 segundos antes de realizar la siguiente petición.
                 info_txt = f'No se puede establecer una conezión con la {url}.' + \
                            f'Se realizará otra petición en 5 segs. Peticion {connect_atempts} de 3'
                 log_info(logger=self.logger, title='', url=url, status='KO', registers=0, time_scrap=0, info=info_txt,
                          req_time=f"{self.time['request_time']:.2f}")
                 connect_atempts += 1
                 sleep(5)
+
+        # Se comprueba que el motivo de finalización del bucle ha sido una conexión exitosa y no porque se ha llegado
+        # al número máximo de intentos fallidos.
         assert connect_atempts < 4, f"Máximo intento de connexiones superado. No se puede acceder a {url}"
+        # En caso de conexión exitosa, se realiza la petición en función de si se debe cargar el JavaScript contenido
+        # en la URL o no.
         if javascript:
             self.driver.get(url)
+            # Si se ha especificado una condición de espera, se detiene el proceso hasta que se cumple. El Tout máximo
+            # de espera son 10 segundos. En caso contrario se lanza una exception por Tout superado.
             if 'wait_contidion' in wait_kwargs:
                 WebDriverWait(self.driver, 10).until(wait_kwargs['wait_contidion'])
             return BeautifulSoup(self.driver.page_source,  'html.parser')
@@ -75,34 +113,77 @@ class BeautyScraper:
 
     @time_exec
     def next_page(self, xpath_exp, **wait_kwargs):
-        try:
-            self.driver.find_element_by_xpath(xpath_exp).click()
-            if 'wait_contidion' in wait_kwargs:
-                WebDriverWait(self.driver, 10).until(wait_kwargs['wait_contidion'])
-            return BeautifulSoup(self.driver.page_source,  'html.parser')
-        except NoSuchElementException:
-            raise NoSuchElementException
-        except ElementClickInterceptedException:
-            raise ElementClickInterceptedException
+        """
+        Función que sirve para interactuar con un elemento contenido en una página web mediante la librería selenium.
+        La interacción consiste en hacer click en un elemento indicado a través de su xpath
+
+        :param xpath_exp: expressión xpath para identificar el elemento
+        :param wait_kwargs: Parámetros adicionales utilizados para controlar que el contenido javascript se ha cargado
+                            adecuadamente antes de devolver el contenido html actualizado.
+        :return: objeto BeautifulSoup con el html actualizado después de realizar la interacción con el elemento
+                especificado en xpath.
+        """
+
+        # Se busca el elemento a clicar mediante el xpath
+        self.driver.find_element_by_xpath(xpath_exp).click()
+
+        # Si se ha especificado una condición de espera, se detiene el proceso hasta que se cumple. El Tout máximo
+        # de espera son 10 segundos. En caso contrario se lanza una exception por Tout superado.
+        if 'wait_contidion' in wait_kwargs:
+            WebDriverWait(self.driver, 10).until(wait_kwargs['wait_contidion'])
+        return BeautifulSoup(self.driver.page_source,  'html.parser')
 
     def writer_download(self, input_, output, start_date, end_date):
+        """
+        Función que sirve para procesar el archivo contenido en la ruta input_. El archivo se abre y se filtra
+        mediante la columna 'Date', descartando aquellos registros no contenidos en el rango start_date y end_date.
+        El fichero procesado se guarda en output. Finalmente, el archivo contenido en input_ se elimina.
+
+        En caso de suceder algún error, se copia y se pega el archivo input a la carepta .\Data\00_RAW.
+
+        Esta función, tiene el objetivo de procesar los archivos Master Table 2018 y Master Table 2017 almacenados
+        en el escritorio y guardarlos en la carpeta de Data del proyecto.
+
+        :param input_: Ruta del archivo de origen.
+        :param output:  Ruta del archivo de destino
+        :param start_date: Fecha mínima contenida en los datos
+        :param end_date: Fecha máxmia contenida en los datos
+        """
         try:
+            # Se lee el fichero a través de la librería pandas. El archivo debe ser .csv
             df = read_csv(input_)
+            # Se transforma el tipo de datos de ini_date y fin_date, conviertiendolos a datetime.
             ini_date = datetime(start_date.year, start_date.month, start_date.day)
             fin_date = datetime(end_date.year, end_date.month, end_date.day)
+            # Se transforma el tipo de datos de la columna date contenida en el archivo csv
             df.loc[:, 'Date'] = to_datetime(df['Date'], format="%d/%m/%Y")
+            # Se realiza el procesado del archivo, filtrando aquellos registros contenidos entre las fechas deseadas.
             self.df = df.loc[df["Date"].between(ini_date, fin_date, inclusive=True), :]
+            # Se finaliza el proceso de scrapping
             self.finish_scrapping(output)
+            # Se elimina el archivo input_
             os.remove(input_)
         except Exception as err:
+            # En caso de suceder un error inesperado, se corta y pega el archivo a la ruta .\Data\00_raw y se
+            # informa del error.
             shutil.move(input_, RAW_DATA_PATH)
             raise AssertionError(f"Ha sucedido un error ineseperado. Se copiará {input} en {RAW_DATA_PATH}\n{err}")
 
     def set_driver(self, driver):
+        """
+        Función que sirve para iniciar el driver de selenium deseado.
+
+        :param: driver: Indica el driver a iniciar. valores posibles: 'chrome' o 'firefox'.
+        """
+
+        # Si ya existe un driver, se finaliza.
         if not self.driver:
             self.close_driver()
+
+        # Si se decide inicializar el driver de google Chrome.
         if str(driver).lower() == 'chrome':
-            # Se oculta la ventana de Chrome, de esta forma, el proceso es 'invisible' para el usuario.
+            # Se declaran las opciones del driver para ocultar la ventana de la aplicación, de esta forma, el proceso es
+            # 'invisible' para el usuario.
             chrome_options = Chrome_Options()
             chrome_options.add_argument("--headless")
             # En modo de incógnito, google chrome no deja descargar archivos. A través de las siguientes constantes
@@ -114,11 +195,15 @@ class BeautyScraper:
                                                              "download.directory_upgrade": True,
                                                              "safebrowsing_for_trusted_sources_enabled": False,
                                                              "safebrowsing.enabled": False})
+            # Se crea driver y se inicializa indicando la ruta del ejecutable y las opciones predefinidas anteriormente.
             self.driver = Chrome(executable_path=CHROME_DRIVER_EXE, chrome_options=chrome_options)
+            # Se lanza el comando que permite la descarga de archivos en modo de incógnito.
             self.driver.command_executor._commands["send_command"] = \
                 ("POST", '/session/$sessionId/chromium/send_command')
             params = {'cmd': 'Page.setDownloadBehavior', 'params': {'behavior': 'allow', 'downloadPath': DESKTOP_PATH}}
             self.driver.execute("send_command", params)
+
+        # Si se decide inicializar el driver de Firefox.
         elif str(driver).lower() == 'firefox':
             # Se crea un perfil para definir la configuración a seguir durante la conexión
             firefox_profile = FirefoxProfile()
@@ -132,55 +217,128 @@ class BeautyScraper:
             firefox_options = Firefox_Options()
             firefox_options.add_argument('--headless')
 
+            # Se crea driver y se inicializa indicando la ruta del ejecutable y las opciones predefinidas anteriormente.
             self.driver = Firefox(firefox_profile=firefox_profile, executable_path=FIREFOX_DRIVER_EXE,
                                   options=firefox_options)
+
+        # En caso de que el driver no sea 'Chrome' o 'Firefox' se printea un mensaje informativo.
         else:
             print(f'{driver} no se corresponde con uno de los siguientes drivers: chrome o firefox.')
 
     def close_driver(self):
+        # Función que sirve para eliminar, en caso de existir, el driver de selenium iniciado durante el proceso de
+        # scrapping
+
         if self.driver:
+            # Se cierra la sesión abierta mediante la librería de selenium eliminando las preferencias definidas.
             self.driver.quit()
+            # Se resetea el driver.
             self.driver = None
 
     def set_request_time(self, time_call):
+        """
+        Función que almacena el tiempo necesario para realizar una llamada y actualiza el tiempo de espera entre
+        peticiones.
+
+        :param time_call: tiempo en segundos requerido para realizar la última petición http.
+        """
+
+        # Se almacena el tiempo de petición
         self.time['request_time'] = time_call
+        # Se actualiza el tiempo de peticiónes. Se ha decidio utilizar un tiempo de espera proporcional al logarítmo
+        # neperiano para reducir el impacto de peticiones que se demoren mucho.
         self.time['wait_time'] = time_call * log(time_call + 1)
 
     def finish_scrapping(self, file_name):
+        """
+        Función que sirve para escribir los datos obtenidos durante el proceso de scrapping. Estos datos se almacenan
+        en formato csv.
+
+        :param file_name: nombre del archivo de salida
+        """
+
+        #Escritura de los datos a formato csv con separador de campos: punto-coma ';' y, separador decimal: coma ','.
         self.df.to_csv(file_name, index=False, decimal=',', sep=";")
         print(f'SCRAPPING {file_name} FINALIZADO')
 
     def start_scrapping(self, ini_date=datetime(2017, 1, 1).date(), fin_date=datetime.now().date(),
                         driver_name='chrome'):
+        """
+        Función que sirve para realizar el scrapping de la página web. Dependiendo de las fechas de entrada se llama
+        a las funciones extractoras correspondientes para realizar el rasgado del Timeline, Master Table 2017 y Master
+        Table 2018 adecuando las fechas para el procesado de estas funciones.
+
+        :param ini_date: fecha de inicio del scraping. Debe estar en formato YYYY-mm-dd. Por defecto: 01/01/2017.
+        :param fin_date: fecha de finalización del scraping. Debe estar en formato YYYY-mm-dd. Por defecto: fecha de hoy
+        :param driver_name: nombre del driver a utilizar para cargar el contenido JavaScript mediante selenium. Debe
+                            contener los valores Firefox o Chrome.
+        """
+
+        # Se validan que las fechas de entrada sean válidas.
         ini_date, fin_date = check_dates(ini_date=ini_date, fin_date=fin_date)
+
+        # Si la fecha de inicio es posterior al 31/12/2018, únicamente se realizará el scrapping del timeline entre
+        # ini_date y fin_date.
         if ini_date.year > 2018:
             self._scrap_timeline(start_date=ini_date, end_date=fin_date, driver_name=driver_name)
+
+        # Si la fecha de inicio está entre 01/01/2018 al 31/12/2018, se realizará el scrapping de Master Table 2018 y,
+        # dependiendo de la fecha de fin, tambien se deberá realizar el scraping del timeline.
         elif 2017 < ini_date.year <= 2018:
+
+            # Si la fecha de fin es superior al 31/12/2018 se debe scrapear Master Table 2018 (fecha ini - 31/12/2018)
+            # y el Timeline (01/01/2019 - fecha fin).
             if fin_date.year > 2018:
                 self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=fin_date, driver_name=driver_name)
                 self._scrap_2018(start_date=ini_date, driver_name=driver_name)
+
+            # En caso contrario, solo se debe scrapear Master Table 2018 entre las fechas de inicio y fin definidas
             else:
                 self._scrap_2018(start_date=ini_date, end_date=fin_date, driver_name=driver_name)
+
+        # Si la fecha de inicio está entre 01/01/2017 al 31/12/2017, se realizará el scrapping de Master Table 2017 y,
+        # dependiendo de la fecha de fin, tambien se deberá realizar el scraping de Mater Table 2018 o Timeline o ambos.
         elif 2016 < ini_date.year <= 2017:
+
+            # Si la fecha de fin es superior al 31/12/2018 se debe scrapear Master Table 2017 (fecha_ini - 31/12/2017),
+            # Master Table 2018 (01/01/2018 - 31/12/2018) y el Timeline (01/01/2019 - fecha fin).
             if fin_date.year > 2018:
                 self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=fin_date, driver_name=driver_name)
                 self._scrap_2018(driver_name=driver_name)
                 self._scrap_2017(start_date=ini_date, driver_name=driver_name)
+
+            # Si la fecha de fin es superior al 31/12/2017 se debe scrapear Master Table 2017 (fecha_ini - 31/12/2017) y
+            # Master Table 2018 (01/01/2018 - fecha fin).
             elif fin_date.year > 2017:
                 self._scrap_2018(end_date=fin_date, driver_name=driver_name)
                 self._scrap_2017(start_date=ini_date, driver_name=driver_name)
+
+            # En caso contrario, solo se debe scrapear Master Table 2017 entre las fechas de inicio y fin definidas
             else:
                 self._scrap_2017(start_date=ini_date, end_date=fin_date, driver_name=driver_name)
+
+        # Si la fecha de inicio es anterior a 01/01/2017, dependiendo de la fecha de fin, se realizará el scrapping de
+        # Master Table 2017, Mater Table 2018 o Timeline o todos.
         elif ini_date.year <= 2016:
+
+            # Si la fecha de fin es superior al 31/12/2018 se debe scrapear Master Table 2017 (01/01/2017 - 31/12/2017),
+            # Master Table 2018 (01/01/2018 - 31/12/2018) y el Timeline (01/01/2019 - fecha fin).
             if fin_date.year > 2018:
                 self._scrap_timeline(start_date=datetime(2019, 1, 1).date(), end_date=fin_date, driver_name=driver_name)
                 self._scrap_2018(driver_name=driver_name)
                 self._scrap_2017(driver_name=driver_name)
+
+            # Si la fecha de fin es superior al 31/12/2017 se debe scrapear Master Table 2017 (01/01/2017 - 31/12/2017)
+            # y Master Table 2018 (01/01/2018 - fecha fin).
             elif fin_date.year > 2017:
                 self._scrap_2018(end_date=fin_date, driver_name=driver_name)
                 self._scrap_2017(driver_name=driver_name)
+
+            # Si la fecha de fin es superior al 31/12/2016 se debe scrapear Master Table 2017 (01/01/2017 - fecha fin)
             elif fin_date.year > 2016:
                 self._scrap_2017(end_date=fin_date, driver_name=driver_name)
+
+            # Si la fecha de fin es anterior a 01/01/2017 no se realziará ningún scrapeado, ya que no está codificado.
             else:
                 print('no se puede generar el scrapping para fechas anteriores al 2016')
 
