@@ -257,7 +257,7 @@ class BeautyScraper:
         :param file_name: nombre del archivo de salida
         """
 
-        #Escritura de los datos a formato csv con separador de campos: punto-coma ';' y, separador decimal: coma ','.
+        # Escritura de los datos a formato csv con separador de campos: punto-coma ';' y, separador decimal: coma ','.
         self.df.to_csv(file_name, index=False, decimal=',', sep=";")
         print(f'SCRAPPING {file_name} FINALIZADO')
 
@@ -344,27 +344,60 @@ class BeautyScraper:
 
     def _scrap_timeline(self, start_date=datetime(2019, 1, 1).date(), end_date=datetime.now().date(),
                         driver_name='chrome'):
+        """
+        Función que sirve para realizar el scraping de los reports contenidos en el timeline. Los reports rasgados
+        estarán contenidos entre las fechas start_date y end_date.
 
+        El rasgado de los reports se hará a partir de la página de inicio del timeline y retrocediendo en el tiempo. Es
+        decir, se accede por defecto a https://www.hackmageddon.com/category/security/cyber-attacks-timeline y se va
+        retroceciendo hacía las páginas anteriores para obtener la información deseada.
+
+        Para evitar tener una araña infinita, existe el atributo self.missing_calls que sirve para detectar reports
+        anteriores a la fecha de inicio. De esta forma, al alcanzar el tercer report anterior a fecha_ini, se para el
+        proceso. Este parámetro, por lo tanto, sirve para determinar un profundidad de red variable adaptandonos al
+        periodo de tiempo requerido por el usuario.
+
+        :param start_date: fecha de inicio del scraping. Debe estar en formato YYYY-mm-dd. Por defecto: 01/01/2019.
+        :param end_date: fecha fin del scraping. Debe estar en formato YYYY-mm-dd. Por defecto: fecha de hoy
+        :param driver_name: nombre del driver a utilizar para cargar el contenido JavaScript mediante selenium. Debe
+                            contener los valores Firefox o Chrome.
+        """
+
+        # Inicialización del driver de selenium
         self.set_driver(driver_name)
+        # Validación de las fechas de inicio y de fin introducidas como paráemtros.
         ini_date, fin_date = check_dates(ini_date=start_date, fin_date=end_date)
         url = URL_SITE_STATICS_TIMELINE
-        url_dict = {}
 
+        # Si la fecha de inicio es anterior al 01/01/2019, se corrige por defecto y se asigna la fecha 01/01/2019
+        # mostrando un mensaje de alerta
         if ini_date.year < 2019:
             print("Warning. El año de la fecha de inicio es anterior a 2019. Se pondrá por defecto el 01/01/2019")
             ini_date = datetime(2019, 1, 1).date()
 
         try:
+            # Se obtiene el html de la página del timeline, sobre este html se parsearán los títulos de los distintos
+            # reports sobre los cuales se obtendrá la información. Como no es necesario cargar contenido javascript,
+            # se llama la función con el parametro a False.
             html_bs = self.request_url(url, javascript=False)
         except Exception as err:
+            # En caso de suceder algún error inesperado, se informa el log de errores y se detiene la ejecución.
             log_info(logger=self.logger, title='TIMELINE', url=url, status='KO', registers=0, time_scrap=0, error=err,
                      req_time=f"{self.time['request_time']:.2f}")
         else:
             while True:
                 try:
-                    url_dict[url] = {}
+                    # Los títulos de los distintos reports están contenidos a través de los tags 'h2'.
                     for tags in html_bs.find_all('h2'):
+
+                        # Se inicia el contador que permitirá tener trazabilidad del tiempo de rasgado para cada report
                         start = time()
+
+                        # Los tags h2 tienen como descendiente directo el tag 'a' que contiene como atributos title
+                        # (título del report) y href (dirección url del report).
+                        # En caso de que no se encuentren dichos tags o atributos, se ponen por defecto los valores No
+                        # Title y No URL. Adicionalmente, se informará el log de errores advirtiendo de una posible
+                        # modificaciónn en el codigo html.
                         if tags.findChild('a'):
                             title = tags.a.get('title') if tags.a.has_attr('title') else 'No Title'
                             link = tags.a.get('href') if tags.a.has_attr('href') else 'No URL'
@@ -374,32 +407,76 @@ class BeautyScraper:
                                      info=f'Existe un header en {url} sin un hijo (tag "a"). Posible modificación HTML',
                                      req_time=f"{self.time['request_time']:.2f}")
 
-                        url_dict[url][title] = link
+                        # Una vez obtenido el título del report, se procesará para determinar si el report es válido
+                        # comprobando que la fecha esta contenida entre ini_date y fin_date.
+
+                        # En el timeline existen dos tipos de reports. Los quinzenales que presentan un formato de
+                        # título "%d_1-%d_2 %b %Y Cyber Attacks Timeline" y los agregados, con un formato distinto.
+
+                        # En nuestro caso, nos interesa obtener la información quinzenal y no agregada. Por este motivo,
+                        # se realiza una validación de las títulos encontrados mediante la función check_header. Esta
+                        # función, comprueba que el formato de título y la fecha contenida en él, son válidas.
+
+                        # En caso de tener un título válido (formato y fecha), los parámetros read y follow serán True.
+                        # En caso de tener un título válido, pero con fecha posterior a la fecha de fin, el parámetro
+                        # read sera False y el parámetro follow será True. Ya que, recordemos que se hace un scraping
+                        # hacía 'atras en el tiempo' y se debe indicar al proceso de rasgado que continue hasta alcanzar
+                        # el primer report válido.
+                        # En caso de no tener un título válido en cuanto a formato o fechas, tanto read como follow
+                        # serán False.
                         read, follow = check_header(str_time=transform_header(title), frmt_time='%d-%B-%Y',
                                                     start=ini_date, end=fin_date)
+
                         if read:
+                            # Si el título es válido se resetea el contandor de reports fallidos. Este reseteo se
+                            # realiza para evitar acumular intentos fallidos producidos por reports mensuales o anuales
+                            # (aquellos reports cuya agregación es diferente a la quinzenal).
+                            self.missing_calls = [False] * 3
                             try:
+                                # Si el título es válido, se realizará el scrapping del report, passando como parámetro
+                                # la url contenida en la variable link.
                                 report_data, total_entries = self._scrap_report(url=link, title_report=title)
                             except Exception as err:
+                                # En caso de suceder algún error durante el rasgado del report, se informa del proceso
+                                # en el logging del programa y se continua con el siguiente rerpot a rasgar (en caso de
+                                # existir).
                                 log_info(logger=self.logger, title=title, url=link, status='KO', registers=0,
                                          time_scrap=f"{time() - start:.2f}", error=err,
                                          req_time=f"{self.time['request_time']:.2f}")
                             else:
+                                # En caso de realizarse correctamente el scrapping del report, se añaden los datos
+                                # rasgados a los almacenados previamente. Además, se informa del éxito en el logging,
+                                # informando del número de registros leídos correctamente.
                                 self.df = self.df.append(report_data, ignore_index=False)
                                 log_txt = f'Leídas {len(report_data)} de {total_entries}'
                                 log_info(logger=self.logger, title=title, url=link, status='OK',
                                          registers=len(report_data), time_scrap=f"{time() - start:.2f}", info=log_txt,
                                          req_time=f"{self.time['request_time']:.2f}")
                         else:
+                            # En caso de que el título no sea válido y, además no se deba continuar, se actualiza el
+                            # contador de 'reports fallidos'.
                             if not follow:
                                 self.missing_calls.pop(0)
                                 self.missing_calls.append(True)
 
+                            # Se informa al usuario de la exclusión del título. De esta forma se puede tener un control
+                            # y detectar si se han producido cambios en el formato de los títulos.
                             log_info(logger=self.logger, title=title, url=link, status='INFO', registers=0,
                                      time_scrap=f"{time() - start:.2f}", info=f'Report {title} en {url} excluido',
                                      req_time=f"{self.time['request_time']:.2f}")
+
+                            # En caso de alcanzar el máximo número de reports no válidos, se finaliza el scrapping
+                            # del timeline.
                             assert not all(self.missing_calls), "No existen más reports para el periodo seleccionado"
 
+                    # Una vez se han scrapeado todas las cabeceras, se debe navegar hacía la siguiente página del
+                    # timeline, es decir, la página prévia.
+                    # Para ello, es necesario obtener su dirección URL. Esta, se encuentra en el tag cuyo atributo es
+                    # class=previous. Este tag, tiene un tag hijo del tipo 'a' que contiene el atributo 'href' cuyo
+                    # valor es la dirección URL deseada.
+
+                    # A continuación se realizan validaciones para obtener dicho tag. En caso de no encontrarse,
+                    # se lanza un error y se avisa al usuario de una posible modificación del HTML.
                     txt_error = "No existen más tags '{name}' para continuar con el scrapping. " \
                                 "Posible modificación del HTML"
                     assert html_bs.find(class_='previous'), txt_error.format(name='<class=previous>')
@@ -407,18 +484,34 @@ class BeautyScraper:
                     assert html_bs.find(class_='previous').find_next('a').has_attr('href'), \
                         txt_error.format(name='<class=previous> <a, href>')
 
+                    # En caso de existir dicho tag, se realiza la petición html y se sigue con el scraping en la
+                    # siguiente página.
                     url = html_bs.find(class_='previous').find_next('a').get('href')
                     html_bs = self.request_url(url=url, javascript=False)
 
                 except Exception as err:
+                    # En caso de existir algún error inesperado, se finaliza el scrapping del timeline y se
+                    # informa al usuario.
                     log_info(logger=self.logger, title='TIMELINE', url=url, status='KO', registers=0, time_scrap=0,
                              error=err, req_time=f"{self.time['request_time']:.2f}")
                     break
 
+            # Una vez finalizado el rasgado del time_line, se almacenan los resultados mediante finish_scrapping
             self.finish_scrapping(file_name=TIMELINE_PATH_FILE)
+
+        # Se cierra el driver de selenium
         self.close_driver()
 
     def _scrap_report(self, url, title_report):
+        """
+        Función que sirve para rasgar la información de los reports quincenales individuales. Esta función tiene el
+        objetivo de itneraccionar con la página web para conseguir rasgar todos los datos.
+
+        :param url: dirección URL del report a scrapear
+        :param title_report: Título del report
+        :return: dataframe con la información rasgada
+        """
+
         report_df = DataFrame(columns=FIELDS_NAME)
         html_bs = self.request_url(url, javascript=True,
                                    wait_contidion=ec.presence_of_element_located((By.XPATH, '//table[@id="table_1"]')))
@@ -471,27 +564,52 @@ class BeautyScraper:
 
     @staticmethod
     def _scrap_table(html, author=None, report_date=None, views=None):
+        """
+        Función que sirve para escrapear los datos contenidos en la tabla de cada report individual.
+
+        :param html: Código html del report a rasgar
+        :param author: autor que ha publicado el report
+        :param report_date: fecha de publicación del report
+        :param views: número de visualizaciones del report
+        :return: dataframe con los datos rasgados
+        """
+
+        # Se crea un diccionario que contendrá la información rasgada
         raw_data = {f: [] for f in FIELDS_NAME}
 
+        # Los datos a rasgar se encuentran distribuidos a lo largo de una tabla. Para ello, primero se accede al tag
+        # padre 'tbody' y se itera sobre todos los hijos 'tr' que contienen el atributo 'role'='row'.
         for row in html.find('tbody').find_all(['tr'], {'role': 'row'}):
+
+            # Para cada hilera recorrida, se añade la información de autor, fecha del report y visitas.
             raw_data['author_report'] = author
             raw_data['date_report'] = report_date
             raw_data['views'] = views
 
+            # La información a rasgar se encuentra en forma de NavigableString en los tags cuyo atributo class
+            # tiene el formato 'columna-nombre del campo a rasgar'. Esta información es válida para los campos:
+            # "id", "date", "author", "target", "description", "attack", "target_class", "attack_class", "country".
+            # En caso de no encontrar dicho elemento, se pondrá por defecto Not Found.
             for col in FIELDS_NAME[:-4]:
                 texto = row.find(['td'], {'class': f'column-{col.replace("_", "-")}'})
                 raw_data[col].append(texto.text if texto else 'Not Found')
 
+            # Para rasgar la información del link, primero se debe obtener aquella hilera cuyco atributo class='column-
+            # link'. A continuación, se deberá acceder al atributo href del tag hijo 'a'.
+            # En caso de no encontrar dicho elemento, se informará por defecto el valor 'not found'
             tag_link = row.find(['td'], {'class': f'column-link'})
             if tag_link.find('a'):
                 raw_data['link'] = tag_link.a.get('href') if tag_link.a.has_attr('href') else 'Not Found'
             else:
                 raw_data['link'] = 'Not Found'
+
+        # A través del método from_dict, se transforma el diccionario a dataframe.
         return DataFrame.from_dict(raw_data)
 
-    def _scrap_2017(self, url_master=URL_SITE_MASTER_TABLE_2017, driver_name='chrome',
-                    start_date=datetime(2017, 1, 1).date(), end_date=datetime(2017, 12, 31).date()):
+    def _scrap_2017(self, start_date=datetime(2017, 1, 1).date(), end_date=datetime(2017, 12, 31).date(),
+                    driver_name='chrome'):
 
+        url_master = URL_SITE_MASTER_TABLE_2017
         ini_date, fin_date = check_dates(ini_date=start_date, fin_date=end_date)
         assert ini_date.year <= 2017, "Error el año de la fecha de inicio es superior a 2017"
 
@@ -535,9 +653,9 @@ class BeautyScraper:
                      req_time=f"{self.time['request_time']:.2f}")
         self.close_driver()
 
-    def _scrap_2018(self, url_master=URL_SITE_MASTER_TABLE_2018, driver_name='chrome',
-                    start_date=datetime(2018, 1, 1).date(), end_date=datetime(2018, 12, 31).date()):
-
+    def _scrap_2018(self, start_date=datetime(2018, 1, 1).date(), end_date=datetime(2018, 12, 31).date(),
+                    driver_name='chrome'):
+        url_master = URL_SITE_MASTER_TABLE_2018
         start = time()
         ini_date, fin_date = check_dates(ini_date=start_date, fin_date=end_date)
 
