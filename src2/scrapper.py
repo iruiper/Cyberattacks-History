@@ -504,62 +504,131 @@ class BeautyScraper:
 
     def _scrap_report(self, url, title_report):
         """
-        Función que sirve para rasgar la información de los reports quincenales individuales. Esta función tiene el
-        objetivo de itneraccionar con la página web para conseguir rasgar todos los datos.
+        Función que sirve para rasgar la información de los reports quinzenales. Para conseguir tal objetivo, es
+        necesario interaccionar con los elementos javascript presentes en la web.
 
         :param url: dirección URL del report a scrapear
         :param title_report: Título del report
         :return: dataframe con la información rasgada
         """
 
+        # Se crea un dataframe vacío que contendrá la información rasgada.
         report_df = DataFrame(columns=FIELDS_NAME)
+
+        # Se realiza la petición http a la dirección web contenida en la variable URL. En este caso, es necesario
+        # cargar el contenido javascript de la página.
+        # Adicionalmente, es necesario asegurar que se carga el contenido de la pagina necesario. En concreto, los datos
+        # contenidos en un objeto BeautifulSoup de la clase 'Table'. Este objeto 'Table' tiene el atributo id="table_1".
         html_bs = self.request_url(url, javascript=True,
                                    wait_contidion=ec.presence_of_element_located((By.XPATH, '//table[@id="table_1"]')))
+
+        # A continuación, antes de realizar el rasgado de la tabla, es necesario obtener la información relacionada
+        # con el autor, la fecha de report, el número de visualizaciones del articulo y el número total de registros que
+        # almacena la tabla.
+        # Este último parámetro, será utilizado para validar los datos leídos ante la datos totales.
+
+        # Primero, se asigna el valor Not Found a las variables. Al asignar como Not Found estos valores, al revisar
+        # los datos extraídos por el proceso, se pueden detectar incosistencias y revisar si el contenido HTML ha sido
+        # modificado.
         total_data, report_date, author, views = 'Not Found', 'Not Found', 'Not Found', 'Not Found'
+
+        # El número total de registros está almacenado en forma de NavigableString en un objeto BeautifulSoup que tiene
+        # el atributo class='dataTable_info'.
         if html_bs.find_all(class_='dataTables_info'):
-            # Como dataTables info tiene un único hijo del tipo NavigableString, se pude acceder al texto mediante
-            # el atributo string
+
+            # En caso de encontrar tal objeto, se deberá acceder al texto contenido en él. Como el objeto únicamente
+            # tiene un único hijo del tipo NavigableString, se pude acceder a él mediante el atributo string.
             total_text = html_bs.find(class_='dataTables_info').string
             if total_text:
+                # En caso de existir dicho Navigable String en el tag, se debe realizar un procesado de datos.
+                # El formato del Navigable String es, por ejemplo: 'Showing 1 to 10 of 107 entries'. El objetivo, por
+                # lo tanto, es obtener el número total de entradas. Para ello, se divide el string a través de los
+                # espacios, y se filtran aquellos elementos numéricos, obteniendo una lista formada por 3 numeros.
+                # Siguiendo con el ejemplo, la lista obtenida sería: [1, 10, 107].
                 total_numbers = [s for s in total_text.split() if s.isdigit()]
-                total_data = total_numbers[-1] if len(total_numbers) > 0 else 'Not Found'
+
+                # Una vez obtenida la lista, el siguiente paso es guardar el último elemento validando que la lista
+                # tiene longitud 3.
+                total_data = total_numbers[-1] if len(total_numbers) == 3 else 'Not Found'
             else:
+                # En caso de no encontrar dicho elemento, se asigna por defecto el valor Not Found.
                 total_data = 'Not Found'
 
+        # Para obtener el número total de visualizaciones, es necesario acceder al atributo 'datetime' del tag 'time'.
         if html_bs.find('time'):
             report_date = html_bs.find('time').get('datetime') if html_bs.find('time').has_attr('datetime') \
                 else 'Not Found'
 
+        # Para obtener el nombre del autor, se deberá buscar un objeto Navigablestrinc contenido en un tag 'a' y cuyo
+        # atributo class sea 'url fn n'.
         if html_bs.find('a', {'class': 'url fn n'}):
             author = html_bs.find('a', {'class': 'url fn n'}).string
 
+        # Para obtener el número de visitas se deberá buscar un objeto Navigablestring contenido en un tag 'span' y cuyo
+        # atributo class sea 'post-views-count'.
         if html_bs.find('span', {'class': 'post-views-count'}):
             views = html_bs.find('span', {'class': 'post-views-count'}).string
 
+        # Una vez extraída la información referente al autor, fecha report, visualizaciones y número total de registros,
+        # el siguiente paso consistirá en rasgar la información contenida en la tabla. Esta información, se identifica a
+        # través del tag tbody.
         while True:
             try:
+                # Si no existe el tag tbody, se finaliza el proceso de rasgado de la tabla y se informa al usuario, a
+                # través del logging del proceso, de una posible modificación del código html.
                 assert html_bs.find('tbody'), 'No existe el tag <tbody> de la tabla. Posible modificación HTML'
+
+                # En caso de existir el tag tbody, se realizará el rasgado de los tags hijos contenidos en él. Estos
+                # tags serán únicamente los visibles.
                 table_df = self._scrap_table(html=html_bs, author=author, report_date=report_date, views=views)
+
+                # Se actualiza la información rasgada.
                 report_df = report_df.append(table_df, ignore_index=True)
 
+                # A continuación, el siguiente paso consiste en interactuar con la tabla para poder mostrar el resto
+                # de registros contenidos en ella.
+
+                # Para ello, es necesario clicar sobre el botón 'siguiente' representado por el simbolo '>'. Para
+                # simular este proceso, se buscará el elemento Beautifulsoup cuya atributto class es 'paginate_button
+                # current¡. Este elemento, contiene un NavigableString con información de la página actual.
+
+                # Se comprueba que existe dicho elemento NavigableString y se accede a él. En caso de no existir,
+                # se interrumple el rasgado del report y se informa al usuario de una posible modificación en el html.
                 txt_error = "No existen el tag '%s'. Posible modificación del HTML"
                 assert html_bs.find(class_='paginate_button current'), txt_error % '<class=paginate_button current'
+
+                # Se comprueba que el texto obtenido en el elemento NavigableString es numérico.
                 current_page_number = html_bs.find(class_='paginate_button current').string
                 assert current_page_number.isdigit(), "El tag '%s' no contiene un número de página correcto."
+
+                # Una vez encontrado el objeto, se interaccionará con él. Para asegurar que el contenido javascript se
+                # ha cargado correctamente y se ha modificado el contenido visualizado en la tabla, y por lo tanto, se
+                # puede continuar con el rasgado web, se pasa a la función una condición de espera.
+                # Está condición bloquea el programa hasta leer la página siguiente en el objeto Beautifulsoup con
+                # atributo class=paginate_button current.
                 next_page = str(int(current_page_number) + 1)
                 html_bs = \
                     self.next_page(xpath_exp='//a[@class="paginate_button next"]',
                                    wait_contidion=ec.text_to_be_present_in_element(
                                        (By.XPATH, '//a[@class="paginate_button current"]'), next_page))
+
+            # Excepción que servirá para controlar los errores producidos por validaciones de contenido html.
+            # La funcionalidad de esta excepción consiste en informar al usuario a través del logging y finalizar el
+            # scrapping del report.
             except AssertionError as err:
                 log_info(logger=self.logger, title=title_report, url=url, status='KO', registers=0, time_scrap=0,
                          error=err, req_time=f"{self.time['request_time']:.2f}")
                 break
-            except NoSuchElementException:
-                break
+
+            # Las siguiente excepción se utiliza para controlar los errores producidos al interactuar con el
+            # contenido JavaScript. En concreto, cuando un elemento deja de ser interaccionable, caso que sucede
+            # cuando se ha alcanzado el número máximo de elementos visualizados en la tabla. El botón '>' queda
+            # desactivado.
             except ElementClickInterceptedException:
                 break
-
+            # Esta excepción controla que el elemento seleccionado sobre el cual realizar la interacción exista.
+            except NoSuchElementException:
+                break
         return report_df, total_data
 
     @staticmethod
@@ -608,81 +677,153 @@ class BeautyScraper:
 
     def _scrap_2017(self, start_date=datetime(2017, 1, 1).date(), end_date=datetime(2017, 12, 31).date(),
                     driver_name='chrome'):
+        """
+        Función que permite realizar la descarga y filtrado de la información contenida en el Master Table 2017
 
+        :param start_date: fecha de inicio del scraping. Debe estar en formato YYYY-mm-dd. Por defecto: 01/01/2017.
+        :param start_date: fecha de finalización del scraping. Debe estar en formato YYYY-mm-dd. Por defecto: 31/12/2017
+        :param driver_name: nombre del driver a utilizar para cargar el contenido JavaScript mediante selenium. Debe
+                            contener los valores Firefox o Chrome.
+        """
+        # Se asigna la variable que contiene la dirección URL de la web Master Table 2017.
         url_master = URL_SITE_MASTER_TABLE_2017
-        ini_date, fin_date = check_dates(ini_date=start_date, fin_date=end_date)
-        assert ini_date.year <= 2017, "Error el año de la fecha de inicio es superior a 2017"
 
+        # Se validan las fechas introducidas. En caso de que el año de finalización de los datos sean anteriores al
+        # 01/01/2017, se finaliza el proceso de rasgado informando el error.
+        ini_date, fin_date = check_dates(ini_date=start_date, fin_date=end_date)
+        assert fin_date.year <= 2017, "Error el año de la fecha de fin del rasgado es anterior a 2017"
+
+        # Si el año de inicio del rasgado es anterior a 2016, se corrige a la fecha 01/01/2017 y se avisa al usuario.
         if ini_date.year < 2016:
             print("Warning. El año de la fecha de inicio es anterior a 2017. Se pondrá por defecto el 01/01/2017")
             ini_date = datetime(2017, 1, 1).date()
+
+        # Si el año de finalización del rasgado es posterior a 2017, se corrige a la fecha 31/12/2017 y se avisa al
+        # usuario.
         else:
             if fin_date.year > 2017:
                 print("Warning. El año de la fecha de fin es posterior a 2017. Se pondrá por defecto el 31/12/2017")
                 fin_date = datetime(2017, 12, 31)
 
+        # Se declara una variable de tiempo para obtener trazabilidad del tiempo necesario para realizar el rasgado.
         start = time()
+
         try:
+            # Inicialización del driver
             self.set_driver(driver_name)
+
+            # Se realiza la petición html sin necesidad de cargar el contenido JavaScript, ya que la finalidad es
+            # encontrar el link a Google Sheets que contendrá la información a descargar.
             bs = self.request_url(url=url_master, javascript=False)
+
+            # Para obtener el link de descarga se debe acceder a un objeto BeautifulSoup cuyo texto sea 'Google Sheet'.
+            # En caso de no encontrar el elemento, se avisa al usuario de una posible modificación del html.
             assert bs.find(text='Google Sheet'), 'No se ha encontrado texto: "Google Sheet". Posible modificación HTML'
+
+            # Una vez localizado el elemento, será necesario obtener el valor del atributo href, el cual contiene la
+            # dirección url.
             tag_download_url = bs.find(text='Google Sheet').parent
             download_url = tag_download_url.get('href') if tag_download_url.has_attr('href') else ''
+
+            # El siguiente paso consistirá en cargar la dirección URL mediante selenium, ya que será necesario realizar
+            # una descarga de archivos. Para ello, se irá interaccionando a través del contenido HTML mediante clicks
+            # realizados por la librería selenium hasta llegar a realizar la descarga del archivo. Cada uno de estos
+            # clicks, contendrá una condición de pausa hasta que el siguiente elemento sea interaccionable.
+
+            # Se abre google Sheets.
             self.request_url(url=download_url, javascript=True,
                              wait_contidion=ec.element_to_be_clickable((By.XPATH, "//div[@id='docs-file-menu']")))
+            # Acceso al elemento 'Achivo' de Google Sheets
             self.next_page(xpath_exp="//div[@id='docs-file-menu']",
                            wait_contidion=ec.element_to_be_clickable((By.XPATH, "//div[@id=':2z']")))
+            # Acceso al elemento 'Descarga' la ventana 'Archivo'
             self.next_page(xpath_exp="//div[@id=':2z']",
                            wait_contidion=ec.element_to_be_clickable((By.XPATH, "//*[text()[contains(.,'.csv')]]")))
+            # Acceso al elemento 'Descarga en formato csv'
             self.next_page(xpath_exp="//*[text()[contains(.,'.csv')]]")
 
+            # Una vez realizadas las interacciones se comprueba que el archivo se ha descargado correctamente.
             new_file = check_download(searh_file='2017 Master *.csv', file_size=300000)
+            # En caso afirmativo, se procesa el archivo y se almacena en formato csv.
             self.writer_download(input_=new_file, output=MASTER_2017_PATH_FILE, start_date=ini_date, end_date=fin_date)
+            # Se infora del exito del proceso
             log_info(logger=self.logger, title='MASTER TABLE 2017', url=URL_SITE_MASTER_TABLE_2017, status='OK',
                      registers=len(self.df), time_scrap=f"{time() - start:.2f}", info=f'Carga Completa',
                      req_time=f"{self.time['request_time']:.2f}")
 
+        # En caso de suceder algún error inesperado se informa al usuario
         except AssertionError as err:
             log_info(logger=self.logger, title='MASTER TABLE 2017', url=URL_SITE_MASTER_TABLE_2017, status='KO',
                      registers=0, time_scrap=f"{time() - start:.2f}", error=err,
                      req_time=f"{self.time['request_time']:.2f}")
+
         except Exception as err:
             print('Ha ocurrido un error inesperado')
             log_info(logger=self.logger, title='MASTER TABLE 2017', url=URL_SITE_MASTER_TABLE_2017, status='KO',
                      registers=0, time_scrap=f"{time() - start:.2f}", error=err,
                      req_time=f"{self.time['request_time']:.2f}")
+
+        # Se cierra el driver de selenium inicializado.
         self.close_driver()
 
     def _scrap_2018(self, start_date=datetime(2018, 1, 1).date(), end_date=datetime(2018, 12, 31).date(),
                     driver_name='chrome'):
+        """
+        Función que permite realizar la descarga y filtrado de la información contenida en el Master Table 2018
+
+        :param start_date: fecha de inicio del scraping. Debe estar en formato YYYY-mm-dd. Por defecto: 01/01/2018.
+        :param start_date: fecha de finalización del scraping. Debe estar en formato YYYY-mm-dd. Por defecto: 31/12/2018
+        :param driver_name: nombre del driver a utilizar para cargar el contenido JavaScript mediante selenium. Debe
+                            contener los valores Firefox o Chrome.
+        """
+        # Se asigna la variable que contiene la dirección URL de la web Master Table 2018.
         url_master = URL_SITE_MASTER_TABLE_2018
-        start = time()
+
+        # Se validan las fechas introducidas. En caso de que el año de finalización de los datos sean anteriores al
+        # 01/01/2018, se finaliza el proceso de rasgado informando el error.
         ini_date, fin_date = check_dates(ini_date=start_date, fin_date=end_date)
+        assert fin_date.year <= 2018,  "Error el año de la fecha de fin del rasgado es anterior a 2018"
 
-        assert ini_date.year <= 2018,  "Error el año de la fecha de inicio es superior a 2018"
-
+        # Si el año de inicio del rasgado es anterior a 2018, se corrige a la fecha 01/01/2018 y se avisa al usuario.
         if ini_date.year < 2018:
             print("Warning. El año de la fecha de inicio es anterior a 2018. Se pondrá por defecto el 01/01/2018")
             ini_date = datetime(2018, 1, 1).date()
+
+        # Si el año de finalización del rasgado es posterior a 2018, se corrige a la fecha 31/12/2018 y se avisa al
+        # usuario.
         else:
             if fin_date.year > 2018:
                 print("Warning. El año de la fecha de fin es posterior a 2018. Se pondrá por defecto el 31/12/2018")
                 fin_date = datetime(2018, 12, 31).date()
 
+        # Se declara una variable de tiempo para obtener trazabilidad del tiempo necesario para realizar el rasgado.
+        start = time()
+
         try:
+            # Inicialización del driver
             self.set_driver(driver_name)
-            # Asignamos el perfil al driver de Selenium que manejará la navegación por la URL
+
+            # Se realiza la petición html para realizar la descarga del archivo. Para iniciar dicha descarga, es
+            # necesario interactuar con un elemento haciendo click en él. Por ello, la petición se realiza mediante
+            # selenium deteniendo el proceso hasta que el elemnto necesario para realizar la descarga es interaccionable
+
+            # En concreto, el elemto a pulsar se encuentra en un 'span' cuyo contenido es 'CSV'.
             self.request_url(url_master, javascript=True,
                              wait_contidion=ec.element_to_be_clickable((By.XPATH, "//span[contains(., 'CSV')]")))
-            # Averiguamos la secuencia de clicks necesarios para descargar el archivo a través del elemento dinámico
+
+            # Una vez cargada la página web, se interacciona con el elemento para realizar la descarga
             self.next_page(xpath_exp="//span[contains(., 'CSV')]")
 
+            # Una vez realizadas las interacciones se comprueba que el archivo se ha descargado correctamente.
             new_file = check_download(searh_file='2018 Master *.csv', file_size=300000)
+            # En caso afirmativo, se procesa el archivo y se almacena en formato csv.
             self.writer_download(input_=new_file, output=MASTER_2018_PATH_FILE, start_date=ini_date, end_date=fin_date)
+            # Se infora del exito del proceso
             log_info(logger=self.logger, title='MASTER TABLE 2018', url=URL_SITE_MASTER_TABLE_2018, status='OK',
                      registers=len(self.df), time_scrap=f"{time() - start:.2f}", info=f'Carga Completa',
                      req_time=f"{self.time['request_time']:.2f}")
 
+        # En caso de suceder algún error inesperado se informa al usuario
         except AssertionError as err:
             log_info(logger=self.logger, title='MASTER TABLE 2018', url=URL_SITE_MASTER_TABLE_2018, status='KO',
                      registers=0, time_scrap=f"{time() - start:.2f}", error=err,
@@ -693,4 +834,5 @@ class BeautyScraper:
             log_info(logger=self.logger, title='MASTER TABLE 2018', url=URL_SITE_MASTER_TABLE_2018, status='KO',
                      registers=0, time_scrap=f"{time() - start:.2f}", error=err,
                      req_time=f"{self.time['request_time']:.2f}")
+        # Se cierra el driver de selenium inicializado.
         self.close_driver()
