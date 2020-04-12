@@ -58,31 +58,20 @@ La carpeta data se divide en:
      - **_Master Data 2017 YYYY-mm-dd HH.MM.SS.csv_** o **_2017 Master Table Sheet1.csv_**: contiene la información extraída de Master data 2017.
 
     Finalmente, los datos extraídos contienen los siguientes campos
-    - **ID**: Identificador de registros de cada campo.
-    
+    - **ID**: Identificador de registros de cada campo. No aplica para Master Table 2018.
     - **DATE**: Fecha en la que se ha realizado el ataque.
-     
     - **AUTHOR**: Autor que ha realizado el ataque cibernético.
-     
     - **TARGET**: Empresa o entidad receptora del ataque cibernético.
-     
    - **DESCRIPTION**: Texto descriptivo de lo sucedido en el ataque.
-     
    - **ATTACK**: Ataque realizado.
-     
    - **TARGET_CLASS**:  Clasificación de las empresas o entidades receptoras del ataque cibernético.
-     
    - **ATTACK_CLASS**: Clasificación del ataque cibernético según un conjunto de tipologías acotadas.
-     
    - **COUNTRY**: País receptor del ataque cibernético.
-     
    - **LINK**: URL con información adicional de lo ocurrido y del impacto del ataque.
-     
    - **AUTHOR_REPORT**: Nombre del autor que ha publicado el report en el Timeline. No aplica para Master Table 2018 y 2017.
-     
    - **DATE_REPORT**: Fecha de publicación del report en el Timeline. No aplica para Master Table 2018 y 2017.
-     
    - **VIEWS**: Número de visualizaciones del report en el Timeline. No aplica para Master Table 2018 y 2017.
+   - **TAGS**: Conjunto de etiquetas asignadas a un ciberataque que describen características de este.
 
 - **01_clean:** Carpeta destinada a almacenar los datos procesados y limpos procedentes de _00_raw_. Durante la realización de esta practica, no se ha empleado esta carpeta.
 
