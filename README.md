@@ -4,7 +4,7 @@ Este proyecto, pretende recopilar datos históricos de ciberataques, con el obje
 Para la obtención de los datos, se ha desarrollado un rasgado web de la página https://www.hackmageddon.com/. A continuación, se detallan los autores del proyecto y su contenido.
 
 ## Miembros del equipo
-La actividad ha sido realizada por **Ivan Ruiz** y **Joel Bustos**.
+La actividad ha sido realizada por **Iván Ruiz** y **Joel Bustos**.
 
 ## Contenido
 El proyecto está estructurado en las siguientes carpetas.
@@ -16,20 +16,20 @@ Contiene el código del proyecto con el que se realiza el scrapping de la págin
 
 - **scrapper.py**: contiene la implementación de la clase _BeautyScraper_ para generar el conjunto de datos a partir de la pagina web de la práctica. Esta clase contiene 4 métodos principales:
     
-    - **start_scrapping**. Adminte como parámetros de entrada una fecha de inicio (_ini_date_) y una fecha de fin (_fin_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. En función del periodo de tiempo especificado se realiza el scrapping de las paginas web Timeline [1], Master Table 2018 [2] y Master Table 2017 [3].
+    - **start_scrapping**. Admite como parámetros de entrada una fecha de inicio (_ini_date_) y una fecha de fin (_fin_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. En función del periodo de tiempo especificado se realiza el scrapping de las paginas web Timeline [1], Master Table 2018 [2] y Master Table 2017 [3].
     
-    - **_scrap_timeline**. Adminte como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear las distintas tablas de los reports contenidos en el Timeline de la web. 
+    - **_scrap_timeline**. Admite como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear las distintas tablas de los reports contenidos en el Timeline de la web. 
     
-    - **_scrap_2017**. Adminte como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear el historial anual del año 2017. Se basa en la descarga de una archivo almacenado en google docs y un procesado para seleccionar el periodo de tiempo deseado.
+    - **_scrap_2017**. Admite como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear el historial anual del año 2017. Se basa en la descarga de una archivo almacenado en google docs y un procesado para seleccionar el periodo de tiempo deseado.
     
-     - **_scrap_2018**. Adminte como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear el historial anual del año 2018. Se basa en la descarga de una archivo csv a través de la interacción con un botón de JavaScript y un procesado para seleccionar el periodo de tiempo deseado.
+     - **_scrap_2018**. Admite como parámetros de entrada una fecha de inicio (_start_date_) y una fecha de fin (_end_date_) para seleccionar el periodo de tiempo sobre el cual se realizará el scrapping. Adicionalmente, permite la opción de escoger entre el driver empleado ('chrome' o 'firefox') mediante el parámetro _driver_name_. Este método permite scrapear el historial anual del año 2018. Se basa en la descarga de una archivo csv a través de la interacción con un botón de JavaScript y un procesado para seleccionar el periodo de tiempo deseado.
      
 - **scrapper_utils.py**. Script que contiene funciones auxiliares empleadas por la clase _BeautyScraper_. 
 
 - **constants.py**. Script que contiene las constantes utilizadas por el programa.
 
 ### Logging
-Carpeta utilizada para almacenar los distintos logs generados durante el proceso de scrapping. Para poder identidicar el archivo con el momento en el que se inicia el proceso de rasgado web, se ha definido la siguiente nomenclatura: _scrapping dd-mm-YYYY HH.MM.SS.csv_. 
+Carpeta utilizada para almacenar los distintos logs generados durante el proceso de scrapping. Para poder identificar el archivo con el momento en el que se inicia el proceso de rasgado web, se ha definido la siguiente nomenclatura: _scrapping dd-mm-YYYY HH.MM.SS.csv_. 
 
 Cada uno de estos archivos, contiene la siguiente información:
 - **Fecha:** Momento en el que se ha realizado el proceso de scrapping.
@@ -73,7 +73,7 @@ La carpeta data se divide en:
    - **VIEWS**: Número de visualizaciones del report en el Timeline. No aplica para Master Table 2018 y 2017.
    - **TAGS**: Conjunto de etiquetas asignadas a un ciberataque que describen características de este.
 
-- **01_clean:** Carpeta destinada a almacenar los datos procesados y limpos procedentes de _00_raw_. Durante la realización de esta practica, no se ha empleado esta carpeta.
+- **01_clean:** Carpeta destinada a almacenar los datos procesados y limpios procedentes de _00_raw_. Durante la realización de esta practica, no se ha empleado esta carpeta.
 
 ### PDF
 Carpeta que contiene el documento de la práctica.
