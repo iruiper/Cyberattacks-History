@@ -187,7 +187,7 @@ En consecuencia, y dado que resulta necesario dar un paso atrás, y combinar las
 
 Tal y como subimos al GitHub, complementa al código dinámico de R que incluye el presente informe, el código "**XXX.py**" **[por desarrollar]**, que viene a tratar de resolver todos los problemas que hemos expuesto y analizado anteriormente. Como resultado, hemos generado el fichero que nos acompañará en el resto del estudio, y que denominamos "**EstadisticasAtaques2017_2020_Input.csv**" **pendiente de crear**
 
-Como hemos comentado anteriormente, las variables que componen cada observación del dataset que utilizaremos para limpiar y analizar son las siguientes:
+Como hemos comentado anteriormente, las variables que componen cada observación del dataset que utilizaremos para limpiar y analizar son las siguientes *modificar con lo que finalmente componga el set de datos que genera Joel con Python*:
 
 * **Anyo**. Año en el que se se documenta el número de ataques que recoge la observación.
 * **Mes**. Mes en el que se se documenta el número de ataques que recoge la observación.
@@ -203,6 +203,66 @@ Como hemos comentado anteriormente, las variables que componen cada observación
 * **AtaquesTotal**. Número de ataques de tipo "Cyber Crime" que se han producido que se han producido para ese tipo de entidad, en el mes y año correspondiente. Variable creada a partir de conteo de casos, a través de la variable original "Attack.Class".
 * **ProblemasQC**. Identificador que señala si la observación concreta ha tenido problemas de calidad identificados en la etapa de generación de la información. Nos indica que los valores cuantificados pueden ser imprecisos, estar clasificados en categorías genéricas, o en entidades no identificadas.
 
+
+* 2.2 Carga del nuevo archivo tras el preprocesado
+=========================
+
+Como hemos referido anteriormente, las extracciones en bruto de que disponíamos, no ofrecían un formato ni estructura adecuados para los objetivos del estudio, por lo que ha sido necesario dar un paso atrás y llevar a cabo tareas preliminares de limpieza y acondicionamiento desde el propio origen de los datos. Como hemos explicado, para ello ha resultado más eficiente y eficaz realizar algunas de estas tareas como mejora/modificación de los *scripts* desarrollados en la primera práctica. Y a tal efecto incluimos el código "**XXX.py**" **[por desarrollar]** en GitHub. 
+
+A continuación cargaremos el nuevo fichero de *input*, y explicaremos brevemente cómo vamos a avanzar en las siguientes secciones con dichos datos.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Almacenamos el nuevo set de datos en el frame "attacks_Input" para una validación adicional, y para explicar algunos de los tratamientos que llevaremos a cabo a lo largo del análisis
+attacks_Input <- read.csv2(file='processed_data.csv',stringsAsFactors = TRUE)
+attacks_Input$Year <- as.factor(attacks_Input$Year)
+attacks_Input$Mes <- as.factor(attacks_Input$Mes)
+
+# Creamos una nueva variable con el número total de ataques por observación
+attacks_Input$NumeroAtaques <- attacks_Input$Code_attack_class_.1+attacks_Input$Code_attack_class_CC+attacks_Input$Code_attack_class_CE+attacks_Input$Code_attack_class_CW+attacks_Input$Code_attack_class_H+attacks_Input$Code_attack_class_UK
+
+# Mostramos la estructura del archivo recién cargado
+str(attacks_Input)
+
+```
+
+Podemos hacer una comprobación sobra una de las variables más relevantes para nuestros análisis numéricos: el número de ataques totales que estamos analizando, y segmentados en las distintas categorías de ataques que nos indica el atributo original "Attack.Class".
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Análisis de integridad en la carga: comprobación de la completitud del dataset y la consistencia entre variables numéricas.
+
+colSums(attacks_Input[7:15])
+cat("Suma del número de ataques por categoría: ",sum(colSums(attacks_Input[8:15])[3:8]),"\n")
+cat("Suma del número de ataques de acuerdo a si se conoce el atacante: ",sum(colSums(attacks_Input[8:15])[1:2]),"\n")
+cat("Valor acumulado en la variable NumeroAtaques: ",sum(attacks_Input$NumeroAtaques))
+```
+
+
+Con lo anterior, ya podemos considerar que tenemos un primer set de datos completo, y limpio de errores de procesamiento, aunque deberemos acabar de analizar si existen otros problemas de valores extremos a lo largo de la siguiente sección. No obstante, gracias al trabajo de preprocesamiento, hemos conseguido resolver algunos problemas importantes:
+
+* Hemos llevado a cabo tareas de acondicionamiento para poder disponer de cuantificaciones basadas en Año/Mes/País/Entidad.
+
+* Como veíamos al principio del análisis, teníamos muchísimas observaciones que constituían valores perdidos, por fallos en el proceso de extracción. Gracias a los **mecanismos de control de errores y de control de calidad** que hemos desarrollado en la primera práctica y que hemos complementado en la presente, conseguimos de alguna manera la mejor solución al caso de datos perdidos: recuperarlos manualmente. En esta ocasión el proceso no es del todo manual, sino que consiste en volver a ejecutar el *scraper* en los informes que había fallado, y de este modo completamos los datos que aparecían como "Not Found".
+
+* Mostramos a continuación un ejemplo del archivo de *log* generado en el proceso de rascado de datos, que ha permitido identificar aquellos casos en los que no se estaban leyendo todos los incidentes disponibles en el informe (resaltado sobre la captura algún ejemplo).
+
+* Como resultado, no solo corregimos los valores ausentes, sino que hemos conseguido aumentar el número de casos a considerar en el análisis, desde los 4.468 de que disponíamos en el archivo inicial "DatosAtaques_2017_2020_RAW.csv", hasta los 4.684 que hemos conseguido recuperar tras el rascado adicional de los informes con error.
+
+* Con el preprocesamiento hemos conseguido también reducir el número de errores en la identificación del tipo de ataque (inicialmente teníamos 1.314 casos "Not found", y ahora tenemos únicamente 118 ataques documentados como "Unknown".)
+
+* Para el caso de las entidades, sigue habiendo ciertos problemas que no se han podido resolver en el preprocesamiento, pero al menos hemos podido identificarlos claramente, y podremos utilizarlos en nuestros análisis, siempre que tengamos la cautela de que son casos para los que se desconoce el tipo de entidad (inicialmente teníamos 1.314 casos "Not found", y ahora tenemos 295 casos, pero que siguen correspondiendo a un número de ataques, 1.397, muy similar al que se apreciaba inicialmente como observamos en la consulta siguiente.)
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Analizaremos la calidad de los datos de la variable Entidad Atacada tras las tareas de preprocesamiento
+
+tipoEntidad <- attacks_Input$Desc_target_class
+table(tipoEntidad)
+
+colSums(attacks_Input[attacks_Input$Desc_target_class=="Unknown",8:16])
+
+```
 
 ******
 # 3. Limpieza de los datos.
