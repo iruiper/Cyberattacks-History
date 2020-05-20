@@ -3,9 +3,9 @@ title: 'Tipología y Ciclo de Vida de los Datos: PRA2 - Limpieza y validación d
 author: "Autores: Joel Bustos - Iván Ruiz"
 date: "Junio 2020"
 output:
-  word_document:
-    toc: yes
   pdf_document:
+    toc: yes
+  word_document:
     toc: yes
   html_document:
     toc: yes
@@ -276,6 +276,200 @@ colSums(attacks_Input[attacks_Input$Desc_target_class=="Unknown",8:16])
 * 3.2 Identificación y tratamiento de valores extremos
 =========================
 
+Como hemos visto en secciones anteriores, gran parte de las variables o atributos que utilizamos en nuestro estudio son cualitativas, por lo que los principales retos a resolver en dichos casos ya se han tratado en las tareas de preprocesamiento y de de tratamiento de elementos ausentes. En realidad, cuando hablamos de valores extremos o outliers, las variables que pueden sufrir este problema son las variables cuantitativas. De hecho, según la definición de Subirats, Pérez y Calvo [1], "son observaciones que se desvían tanto del resto, que levantan sospechas sobre si fueron generadas mediante el mismo mecanismo". En nuestro set de datos, teniendo en cuanta que las variables numéricas han tenido que ser construidas directamente por nosotros, en realidad no existe el problema de que el cálculo sea heterogéneo. Sin embargo, sí que sigue existiendo la posibilidad de que al cuantificar los incidentes individuales, sigamos teniendo una cuantificación de datos que pueda suponer algún problema en el resto del análisis, por lo que procederemos a estudiarlo.
+
+En primer lugar, y vamos a ir anticipando algunos asuntos que será necesario explicar en la sección 4, en realidad las preguntas que nos estamos haciendo en el caso real que estamos planteando, requieren poner el foco en distintas dimensiones del set de datos (por tipo de entidad afectada, por dimensión geográfica, por dimensión temporal, etc.), por lo que algunas de las variables cuantitativas que utilizaremos para dar respuesta a las distintas preguntas puede que requieran procesos de agregación, y que en consecuencia los valores concretos que tomen las variables agregadas requieran de anális o tratamiento particular. De todos modos, en caso de que resulte necesario algún proceso de agregacion específico, lo justificaremos y explicaremos en la sección correspondiente. Para el resto de esta subsección consideraremos el caso de observaciones/casos cuantificados por la combinación de Año/Mes/Entidad/Pais. Para cada una de esas observaciones, disponemos de las siguientes variables numéricas:
+
+* Author_processed_Conocido: Número de casos observados con autor reconocido y documentado. En el análisis renombraremos la variable como "casosConAutor".
+* Author_processed_Desconocido: Número de casos observados con autor no identificado, y para los cuales resultaría por lo tanto mucho más difícil analizar patrones o reincidencia de algún tipo por autor. En el análisis renombraremos la variable como "casosAnonimos"
+* NumeroAtaques: Número total de incidentes de seguridad o ataques que se han documentado para la selección Año/Mes/Entidad/País.
+* Code_attack_class_.1: Número de incidentes con más de un tipo de ataque empleado. En el análisis renombraremos la variable como "casosMultiataque"
+* Code_attack_class_CC: Número de incidentes de tipo "Cyber Crime". En el análisis renombraremos la variable como "casosCyberCrime"
+* Code_attack_class_CE: Número de incidentes de tipo "Cyber Espionage". En el análisis renombraremos la variable como "casosCyberEspionage"
+* Code_attack_class_CW: Número de incidentes de tipo "Cyber Warfare". En el análisis renombraremos la variable como "casosCyberWarfare"
+* Code_attack_class_H: Número de incidentes de tipo "Hacktivism". En el análisis renombraremos la variable como "casosHacktivism"
+* Code_attack_class_UK: Número de incidentes de tipo "Unknown". En el análisis renombraremos la variable como "casosTipoAtaqueDesconocido"
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Creación de las variables anteriores
+
+casosConAutor <- attacks_Input$Author_processed_Conocido
+casosAnonimos <- attacks_Input$Author_processed_Desconocido
+NumeroAtaques <- attacks_Input$NumeroAtaques
+casosMultiataque <- attacks_Input$Code_attack_class_.1
+casosCyberCrime <- attacks_Input$Code_attack_class_CC
+casosCyberEspionage <- attacks_Input$Code_attack_class_CE
+casosCyberWarfae <- attacks_Input$Code_attack_class_CW
+casosHacktivism <- attacks_Input$Code_attack_class_H
+casosTipoAtaqueDesconocido <- attacks_Input$Code_attack_class_UK
+
+```
+
+En primer lugar, vamos a ver, mediante gráficos de dispersión, boxplot e histogramas, si encontramos valores extremos para alguna de ellas.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Representación de los gráficos de dispersión de valores
+
+par(mfrow=c(3,3)) 
+
+plot(casosConAutor)
+plot(casosAnonimos)
+plot(NumeroAtaques)
+plot(casosMultiataque)
+plot(casosCyberCrime)
+plot(casosCyberEspionage)
+plot(casosCyberWarfae)
+plot(casosHacktivism)
+plot(casosTipoAtaqueDesconocido)
+
+
+```
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Representación de los boxplot para las variables numéricas
+
+par(mfrow=c(3,3)) 
+
+boxplot(casosConAutor)
+boxplot(casosAnonimos)
+boxplot(NumeroAtaques)
+boxplot(casosMultiataque)
+boxplot(casosCyberCrime)
+boxplot(casosCyberEspionage)
+boxplot(casosCyberWarfae)
+boxplot(casosHacktivism)
+boxplot(casosTipoAtaqueDesconocido)
+
+
+```
+
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Representación de los histogramas para las variables numéricas
+
+par(mfrow=c(3,3)) # Establecemos gráficos 3x3
+
+hist(casosConAutor)
+hist(casosAnonimos)
+hist(NumeroAtaques)
+hist(casosMultiataque)
+hist(casosCyberCrime)
+hist(casosCyberEspionage)
+hist(casosCyberWarfae)
+hist(casosHacktivism)
+hist(casosTipoAtaqueDesconocido)
+
+
+```
+
+Como anticipábamos antes de llevar a cabo el análisis gráfico, en realidad lo que está ocurriendo es que el grado de granularidad elegido para los casos, basado en hasta cuatro variables cualitativas (Año, Mes, Entidad y País), nos lleva a una distribución de valores de número de ataques por observación muy bajo. Esto justifica plenamente que los análisis que vayamos a hacer por las distintas dimensiones, necesariamente tengan que agregar en un máximo de 3 dimensiones de las anteriores. Un primer intento de reducción de la dimensionalidad se ha llevado a cabo ya en las tareas de preprocesamiento, consiguiendo traducir los códigos de país a los países que corresponde, para a continuación agregar por continente, y así poder hacer el análisis geográfico reduciendo el número de niveles de 158 países, a 7 zonas (5 continentes + desconocido + incidente global).
+
+Aunque, como decimos, estas agregaciones podrán depender del análisis concreto que vayamos a hacer, vamos a analizar, para valorar la utilidad de los mecanismos de agregación, la comparación de los gráficos anteriores, con los que obtendríamos de un nuevo nivel de consideración de casos basado en Entidad y Continente. Para profundizar en la utilidad y mecanismos de agregación, hemos seguido el sistema de trabajo propuesto en [3].
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# En primer lugar necesitaremos reconstruir la agregación de datos considerando las cuatro variables cualitativas seleccionadas. El cambio principal con respecto al set de datos inicial es el cambio en la dimensión geográfica de país a continente
+
+library("dplyr") # Librería que utilizaremos para las tareas de agregación [3]
+
+attacks_agg1 <- attacks_Input %>% group_by(Code_target_class, Desc_target_class, Continent) %>% summarize(NumeroAtaques=sum(NumeroAtaques),casosConAutor=sum(Author_processed_Conocido),casosAnonimos=sum(Author_processed_Desconocido))
+
+# Representación de los gráficos de dispersión de valores
+
+par(mfrow=c(1,3)) 
+
+plot(attacks_agg1$casosConAutor, col=attacks_agg1$Code_target_class)
+plot(attacks_agg1$casosAnonimos, col=attacks_agg1$Code_target_class)
+plot(attacks_agg1$NumeroAtaques, col=attacks_agg1$Code_target_class)
+
+# Representación de los boxplot para las variables numéricas
+
+par(mfrow=c(1,3)) 
+
+boxplot(attacks_agg1$casosConAutor, col=attacks_agg1$Code_target_class)
+boxplot(attacks_agg1$casosAnonimos, col=attacks_agg1$Code_target_class)
+boxplot(attacks_agg1$NumeroAtaques, col=attacks_agg1$Code_target_class)
+
+# Representación de los histogramas para las variables numéricas
+
+par(mfrow=c(1,3)) 
+
+hist(attacks_agg1$casosConAutor, col=attacks_agg1$Code_target_class, breaks = 50)
+hist(attacks_agg1$casosAnonimos, col=attacks_agg1$Code_target_class, breaks = 50)
+hist(attacks_agg1$NumeroAtaques, col=attacks_agg1$Code_target_class, breaks = 50)
+
+```
+
+En este caso, para la agregación concreta que queríamos analizar, hemos reducido el número de variables a analizar para no sobrecargar el informe de gráficos, y para los datos de ataques, consideramos únicamente el número total de ataques en lugar de por casuística.
+
+En cualquier caso, seguimos observando valores muy alejados, por lo que hemos querido ver de manera visual si pueden estar correspondiendo a tipologías de entidades concretas. Así se confirma, viendo valores alejados principalmente para 3 colores distintos. Vamos a ver en modo tabla a qué valores corresponden, a través por ejemplo del número total de ataques.
+
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Análisis de entidades que ocasionan valores extremos
+
+temp <- attacks_agg1 %>% group_by(Code_target_class, Desc_target_class) %>% summarize(sum(NumeroAtaques))
+temp2 <- as.data.frame(temp)
+head(temp2[order(-temp2$`sum(NumeroAtaques)`),])
+
+```
+
+Se aprecia que, efectivamente, los casos que hemos clasificado como desconocidos por errores de lectura o captura de datos, así como los valores de individuos particulares o múltiples sectores, en realidad están introduciendo un ruido que hace incomparables los valores entre unos y otros sectores. Seguramente la mejor decisión que deberemos tomar para estos valores es excluirlos de los análisis sectoriales, o incluso tratar de reasignar los valores desconocidos a alguno de los otros tipos de entidades. Comentaremos más sobre este aspecto en la sección 4 de análisis. 
+
+Por el momento, como último análisis visual, vamos a presentar los gráficos por casos iniciales, con la agrupación con máxima granularidad que venimos trabajando (Año, Mes, Entidad y País), con y sin la consideración de los valores que hemos identificado como causantes de las anomalías.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Representación de los gráficos de dispersión de valores
+
+par(mfrow=c(3,3)) 
+
+plot(casosConAutor, col=attacks_Input$Code_target_class)
+plot(casosAnonimos, col=attacks_Input$Code_target_class)
+plot(NumeroAtaques, col=attacks_Input$Code_target_class)
+plot(casosMultiataque, col=attacks_Input$Code_target_class)
+plot(casosCyberCrime, col=attacks_Input$Code_target_class)
+plot(casosCyberEspionage, col=attacks_Input$Code_target_class)
+plot(casosCyberWarfae, col=attacks_Input$Code_target_class)
+plot(casosHacktivism, col=attacks_Input$Code_target_class)
+plot(casosTipoAtaqueDesconocido, col=attacks_Input$Code_target_class)
+
+
+```
+
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Representación de los gráficos de dispersión de valores, excluyendo las entidades que generan valores extremos
+
+par(mfrow=c(3,3)) 
+
+exclEnt <- attacks_Input$Code_target_class!="X" & attacks_Input$Code_target_class!="Y" & attacks_Input$Code_target_class!="Z"
+
+plot(casosConAutor[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
+plot(casosAnonimos[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
+plot(NumeroAtaques[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
+plot(casosMultiataque[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
+plot(casosCyberCrime[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
+plot(casosCyberEspionage[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
+plot(casosCyberWarfae[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
+plot(casosHacktivism[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
+plot(casosTipoAtaqueDesconocido[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
+
+
+```
+
+De todo lo anterior, podemos extraer varias conclusiones muy interesantes sobre la presencia de valores extremos:
+
+* Comprobamos que, efectivamente, las categorías X, Y, Z de tipos de entidad, constituyen casos particulares a considerar separadamente. En concreto, el valor "Unknown" no debería contemplarse de ningún modo en aquellos análisis que consideren un atributo relevante el tipo de entidad, ya que pueden incluir valores agregados de otros tipos de entidades, y en consecuencia generan valores extremos.
+* Observamos que la tipología de ataques "Multiataque" tiene un único valor espúreo, siendo siempre 0, por lo que constituye una variable que puede omitirse sin pérdida de generalidad.
+* Vemos que una vez excluidas las categorías X, Y, Z, no existen observaciones con tipo de ataque desconocido, por lo que ambas variables vienen a recoger los valores perdidos.
+* Con todas las consideraciones anteriores, venimos a observar que el número de casos muestra una distribución de valores con una larga cola a derechas, o lo que es lo mismo, una alta preponderancia de valores bajos. Será necesario corregir este hecho en todos aquellos análisis en los que vayamos a necesitar normalidad de los valores, por lo que será necesaria la normalización. 
 
 
 ******
@@ -331,4 +525,4 @@ colSums(attacks_Input[attacks_Input$Desc_target_class=="Unknown",8:16])
 
 [3] Osborne, Jason W. (2013). "Best practices in data cleaning: A complete guide to everything you need to do before and after collecting your data." Thousand Oaks, CA. Sage Publications.
 
-
+[4] Datacarpentry (2018). "Aggregating and analyzing data with dplyr" [en línea] [Última consulta: 20/May/2020] <https://datacarpentry.org/R-genomics/04-dplyr.html>
