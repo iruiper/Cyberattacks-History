@@ -1,0 +1,1749 @@
+Year;Mes;Continent;Country_name;Code_target_class;Desc_target_class;ProblemasQC;Author_processed_Conocido;Author_processed_Desconocido;Code_attack_class_>1;Code_attack_class_CC;Code_attack_class_CE;Code_attack_class_CW;Code_attack_class_H;Code_attack_class_UK;NumeroAtaques
+2017;1;América;Brasil;J;Information and communication;False;1;0;0;1;0;0;0;0;1
+2017;1;América;Brasil;Z;Unknown;False;0;1;0;1;0;0;0;0;1
+2017;1;América;Canadá;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;1;América;Estados Unidos de América;C;Manufacturing;False;0;3;0;3;0;0;0;0;3
+2017;1;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;3;0;3;0;0;0;0;3
+2017;1;América;Estados Unidos de América;J;Information and communication;False;1;5;0;6;0;0;0;0;6
+2017;1;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2017;1;América;Estados Unidos de América;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2017;1;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;1;4;0;5;0;0;0;0;5
+2017;1;América;Estados Unidos de América;P;Education;False;0;10;0;10;0;0;0;0;10
+2017;1;América;Estados Unidos de América;Q;Human health and social work activities;False;0;8;0;8;0;0;0;0;8
+2017;1;América;Estados Unidos de América;R;Arts entertainment and recreation;False;1;5;0;6;0;0;0;0;6
+2017;1;América;Estados Unidos de América;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;1;América;Venezuela;O;Public administration and defence, compulsory social security;False;2;0;0;0;0;0;2;0;2
+2017;1;Asia;Arabia Saudita;Y;Multiple Industries;False;0;1;0;0;0;1;0;0;1
+2017;1;Asia;China;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;1;Asia;Corea del Sur;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;1;Asia;Hong kong;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;1;Asia;India;J;Information and communication;False;1;0;0;1;0;0;0;0;1
+2017;1;Asia;India;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;1;Asia;India;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;1;Asia;India;Q;Human health and social work activities;False;1;0;0;1;0;0;0;0;1
+2017;1;Asia;India;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;1;Asia;Israel;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;1;Asia;Israel;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2017;1;Asia;Japón;R;Arts entertainment and recreation;False;1;0;0;1;0;0;0;0;1
+2017;1;Asia;Tailandia;O;Public administration and defence, compulsory social security;False;0;2;0;0;0;0;2;0;2
+2017;1;Asia;Turquía;D;Electricity gas steam and air conditioning supply;True;0;1;0;0;0;0;1;0;1
+2017;1;Australia y Oceanía;Australia;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;1;Desconocido;Desconocido;G;Wholesale and retail trade;False;1;0;0;1;0;0;0;0;1
+2017;1;Europa;Austria;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2017;1;Europa;Finlandia;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;1;Europa;Italia;X;Individual;False;1;0;0;0;1;0;0;0;1
+2017;1;Europa;Países Bajos;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;1;Europa;Polonia;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2017;1;Europa;Polonia;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;1;Europa;Reino Unido;J;Information and communication;False;1;2;0;2;1;0;0;0;3
+2017;1;Europa;Reino Unido;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;1;Europa;Reino Unido;O;Public administration and defence, compulsory social security;False;0;2;0;0;1;0;1;0;2
+2017;1;Europa;Reino Unido;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2017;1;Europa;República Checa;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;1;Europa;República Checa;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;1;Europa;Rusia;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;1;Europa;Suecia;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;1;International;International;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;1;International;International;O;Public administration and defence, compulsory social security;False;1;1;0;0;2;0;0;0;2
+2017;1;International;International;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;1;International;International;X;Individual;False;1;0;0;1;0;0;0;0;1
+2017;1;International;International;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2017;2;América;Brasil;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;2;América;Canadá;G;Wholesale and retail trade;False;0;2;0;2;0;0;0;0;2
+2017;2;América;Canadá;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;2;América;Estados Unidos de América;C;Manufacturing;False;0;3;0;3;0;0;0;0;3
+2017;2;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;2;0;2;0;0;0;0;2
+2017;2;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;3;0;3;0;0;0;0;3
+2017;2;América;Estados Unidos de América;J;Information and communication;False;2;1;0;2;1;0;0;0;3
+2017;2;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2017;2;América;Estados Unidos de América;N;Administrative and support service activities;False;1;1;0;1;0;0;1;0;2
+2017;2;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;4;0;4;0;0;0;0;4
+2017;2;América;Estados Unidos de América;P;Education;False;0;2;0;2;0;0;0;0;2
+2017;2;América;Estados Unidos de América;Q;Human health and social work activities;False;0;4;0;4;0;0;0;0;4
+2017;2;América;Estados Unidos de América;R;Arts entertainment and recreation;False;1;0;0;1;0;0;0;0;1
+2017;2;América;México;Q;Human health and social work activities;False;0;1;0;0;1;0;0;0;1
+2017;2;Asia;Arabia Saudita;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2017;2;Asia;China;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;2;Asia;Corea del Sur;H;Transportation and storage;False;1;0;0;0;0;0;1;0;1
+2017;2;Asia;Corea del Sur;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;2;Asia;India;C;Manufacturing;False;0;1;0;0;1;0;0;0;1
+2017;2;Asia;India;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;2;Asia;Israel;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;2;Asia;Japón;Y;Multiple Industries;False;0;1;0;0;1;0;0;0;1
+2017;2;Asia;Singapur;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;2;Asia;Taiwán;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;2;Australia y Oceanía;Australia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;2;Desconocido;Desconocido;J;Information and communication;False;0;1;0;0;0;0;1;0;1
+2017;2;Desconocido;Desconocido;V;Fintech;False;0;2;0;2;0;0;0;0;2
+2017;2;Desconocido;Desconocido;X;Individual;False;0;1;0;0;1;0;0;0;1
+2017;2;Europa;Austria;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;0;1;0;1
+2017;2;Europa;Francia;X;Individual;False;0;1;0;0;0;1;0;0;1
+2017;2;Europa;Irlanda;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2017;2;Europa;Irlanda;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2017;2;Europa;Italia;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;2;Europa;Luxemburgo;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;2;Europa;Montenegro;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;1;0;0;1
+2017;2;Europa;Noruega;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2017;2;Europa;Reino Unido;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2017;2;Europa;Reino Unido;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;2;Europa;Reino Unido;O;Public administration and defence, compulsory social security;False;0;2;0;1;0;1;0;0;2
+2017;2;Europa;Reino Unido;Q;Human health and social work activities;False;1;0;0;0;0;0;1;0;1
+2017;2;Europa;Reino Unido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;2;Europa;Reino Unido;Y;Multiple Industries;False;1;0;0;1;0;0;0;0;1
+2017;2;Europa;Ucrania;O;Public administration and defence, compulsory social security;False;2;0;0;0;1;1;0;0;2
+2017;2;International;International;C;Manufacturing;False;1;0;0;0;1;0;0;0;1
+2017;2;International;International;J;Information and communication;False;1;0;0;1;0;0;0;0;1
+2017;2;International;International;K;Financial and insurance activities;False;2;0;0;2;0;0;0;0;2
+2017;2;International;International;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;2;International;International;X;Individual;False;3;1;0;2;2;0;0;0;4
+2017;2;International;International;Y;Multiple Industries;False;1;4;0;4;1;0;0;0;5
+2017;3;América;Brasil;R;Arts entertainment and recreation;False;0;1;0;0;0;0;1;0;1
+2017;3;América;Canadá;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2017;3;América;Canadá;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;3;América;Estados Unidos de América;E;Water supply, sewerage waste management, and remediation activities;False;0;1;0;1;0;0;0;0;1
+2017;3;América;Estados Unidos de América;J;Information and communication;False;1;4;0;5;0;0;0;0;5
+2017;3;América;Estados Unidos de América;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2017;3;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2017;3;América;Estados Unidos de América;N;Administrative and support service activities;False;0;3;0;3;0;0;0;0;3
+2017;3;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;4;0;4;0;0;0;0;4
+2017;3;América;Estados Unidos de América;P;Education;False;0;8;0;8;0;0;0;0;8
+2017;3;América;Estados Unidos de América;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2017;3;América;Estados Unidos de América;R;Arts entertainment and recreation;False;1;1;0;1;0;0;1;0;2
+2017;3;América;Estados Unidos de América;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2017;3;América;México;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2017;3;Asia;Arabia Saudita;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;3;Asia;China;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;3;Asia;Corea del Sur;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2017;3;Asia;Japón;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;3;Asia;Taiwán;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2017;3;Asia;Turquía;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2017;3;Australia y Oceanía;Australia;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;3;Desconocido;Desconocido;J;Information and communication;False;0;1;0;0;1;0;0;0;1
+2017;3;Europa;Alemania;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;3;Europa;Dinamarca;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;3;Europa;Países Bajos;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;3;Europa;Países Bajos;Y;Multiple Industries;False;0;1;0;0;0;0;1;0;1
+2017;3;Europa;Reino Unido;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2017;3;Europa;Reino Unido;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2017;3;Europa;Reino Unido;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;3;Europa;Rusia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;3;International;International;J;Information and communication;False;1;1;0;2;0;0;0;0;2
+2017;3;International;International;O;Public administration and defence, compulsory social security;False;1;1;0;1;1;0;0;0;2
+2017;3;International;International;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;3;International;International;X;Individual;False;0;8;0;7;1;0;0;0;8
+2017;3;International;International;Y;Multiple Industries;False;0;3;0;2;1;0;0;0;3
+2017;3;África;Kenia;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;4;América;Brasil;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;4;América;Estados Unidos de América;C;Manufacturing;False;0;3;0;3;0;0;0;0;3
+2017;4;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2017;4;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;2;0;2;0;0;0;0;2
+2017;4;América;Estados Unidos de América;J;Information and communication;False;2;6;0;8;0;0;0;0;8
+2017;4;América;Estados Unidos de América;K;Financial and insurance activities;False;1;0;0;1;0;0;0;0;1
+2017;4;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2017;4;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;2;6;0;6;2;0;0;0;8
+2017;4;América;Estados Unidos de América;P;Education;False;0;6;0;6;0;0;0;0;6
+2017;4;América;Estados Unidos de América;Q;Human health and social work activities;False;0;5;0;5;0;0;0;0;5
+2017;4;América;Estados Unidos de América;R;Arts entertainment and recreation;False;1;1;0;2;0;0;0;0;2
+2017;4;América;Estados Unidos de América;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;4;Asia;China;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;4;Asia;China;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;4;Asia;Corea del Norte;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;1;0;0;1
+2017;4;Asia;Corea del Sur;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;4;Asia;Corea del Sur;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;4;Asia;India;K;Financial and insurance activities;False;1;0;0;1;0;0;0;0;1
+2017;4;Asia;Israel;O;Public administration and defence, compulsory social security;False;1;0;0;1;0;0;0;0;1
+2017;4;Asia;Japón;Y;Multiple Industries;False;0;1;0;0;1;0;0;0;1
+2017;4;Australia y Oceanía;Australia;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;4;Desconocido;Desconocido;S;Other service activities;False;1;0;0;0;0;0;1;0;1
+2017;4;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;1;0;0;0;1;0;0;0;1
+2017;4;Desconocido;Desconocido;X;Individual;False;0;1;0;0;0;0;1;0;1
+2017;4;Desconocido;Desconocido;Z;Unknown;False;0;1;0;0;1;0;0;0;1
+2017;4;Europa;Alemania;N;Administrative and support service activities;False;1;0;0;0;1;0;0;0;1
+2017;4;Europa;Alemania;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;4;Europa;Dinamarca;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2017;4;Europa;Francia;X;Individual;False;1;0;0;0;1;0;0;0;1
+2017;4;Europa;Lituania;Q;Human health and social work activities;False;1;0;0;1;0;0;0;0;1
+2017;4;Europa;Reino Unido;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2017;4;Europa;Reino Unido;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2017;4;Europa;Reino Unido;P;Education;False;1;1;0;2;0;0;0;0;2
+2017;4;International;International;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;4;International;International;O;Public administration and defence, compulsory social security;False;2;0;0;0;2;0;0;0;2
+2017;4;International;International;S;Other service activities;False;1;0;0;0;1;0;0;0;1
+2017;4;International;International;X;Individual;False;2;12;0;12;1;0;1;0;14
+2017;4;International;International;Y;Multiple Industries;False;1;4;0;1;4;0;0;0;5
+2017;5;América;Canadá;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;5;América;Estados Unidos de América;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2017;5;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2017;5;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2017;5;América;Estados Unidos de América;J;Information and communication;False;0;7;0;7;0;0;0;0;7
+2017;5;América;Estados Unidos de América;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;5;América;Estados Unidos de América;N;Administrative and support service activities;False;0;2;0;1;1;0;0;0;2
+2017;5;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;5;0;3;2;0;0;0;5
+2017;5;América;Estados Unidos de América;P;Education;False;1;6;0;7;0;0;0;0;7
+2017;5;América;Estados Unidos de América;Q;Human health and social work activities;False;2;3;0;5;0;0;0;0;5
+2017;5;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;5;América;Estados Unidos de América;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;5;Asia;India;J;Information and communication;False;1;0;0;1;0;0;0;0;1
+2017;5;Asia;Qatar;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;5;Asia;Singapur;P;Education;False;0;1;0;0;1;0;0;0;1
+2017;5;Australia y Oceanía;Australia;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;5;Australia y Oceanía;Australia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;5;Australia y Oceanía;Australia;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;5;Australia y Oceanía;Nueva Zelanda;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;5;Desconocido;Desconocido;Z;Unknown;False;0;1;0;0;1;0;0;0;1
+2017;5;Europa;Alemania;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;5;Europa;Francia;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2017;5;Europa;Francia;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2017;5;Europa;Francia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;5;Europa;Reino Unido;G;Wholesale and retail trade;False;0;2;0;2;0;0;0;0;2
+2017;5;Europa;Reino Unido;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;5;Europa;Reino Unido;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;5;Europa;Ucrania;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;1;0;0;1
+2017;5;International;International;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;0;1;0;0;1
+2017;5;International;International;X;Individual;False;2;6;0;6;2;0;0;0;8
+2017;5;International;International;Y;Multiple Industries;False;2;6;0;2;6;0;0;0;8
+2017;6;América;Argentina;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2017;6;América;Canadá;Y;Multiple Industries;False;1;0;0;1;0;0;0;0;1
+2017;6;América;Estados Unidos de América;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2017;6;América;Estados Unidos de América;D;Electricity gas steam and air conditioning supply;False;0;1;0;0;0;1;0;0;1
+2017;6;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2017;6;América;Estados Unidos de América;I;Accommodation and food service activities;False;1;1;0;2;0;0;0;0;2
+2017;6;América;Estados Unidos de América;J;Information and communication;False;1;5;0;6;0;0;0;0;6
+2017;6;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;2;5;0;1;0;4;2;0;7
+2017;6;América;Estados Unidos de América;P;Education;False;1;3;0;3;0;0;1;0;4
+2017;6;América;Estados Unidos de América;Q;Human health and social work activities;False;0;2;0;2;0;0;0;0;2
+2017;6;América;Estados Unidos de América;R;Arts entertainment and recreation;False;1;1;0;2;0;0;0;0;2
+2017;6;América;Estados Unidos de América;X;Individual;False;0;2;0;2;0;0;0;0;2
+2017;6;América;Estados Unidos de América;Y;Multiple Industries;False;1;0;0;0;0;1;0;0;1
+2017;6;América;México;X;Individual;False;1;0;0;0;1;0;0;0;1
+2017;6;Asia;China;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;6;Asia;Corea del Sur;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2017;6;Asia;Corea del Sur;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;6;Asia;Hong kong;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;6;Asia;India;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;6;Asia;Israel;Q;Human health and social work activities;False;0;1;0;0;1;0;0;0;1
+2017;6;Asia;Qatar;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;6;Asia;Vietnam;X;Individual;False;1;0;0;0;1;0;0;0;1
+2017;6;Desconocido;Desconocido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;6;Europa;Italia;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;6;Europa;Italia;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2017;6;Europa;Montenegro;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;1;0;0;1
+2017;6;Europa;Polonia;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;6;Europa;Reino Unido;O;Public administration and defence, compulsory social security;False;0;2;0;2;0;0;0;0;2
+2017;6;Europa;Reino Unido;P;Education;False;0;2;0;2;0;0;0;0;2
+2017;6;Europa;Reino Unido;X;Individual;False;1;0;0;1;0;0;0;0;1
+2017;6;Europa;Rusia;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;6;Europa;Ucrania;Y;Multiple Industries;False;0;2;0;0;0;2;0;0;2
+2017;6;International;International;X;Individual;False;0;3;0;3;0;0;0;0;3
+2017;6;International;International;Y;Multiple Industries;False;5;2;0;3;3;1;0;0;7
+2017;7;América;Canadá;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2017;7;América;Canadá;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2017;7;América;Canadá;Z;Unknown;False;0;1;0;1;0;0;0;0;1
+2017;7;América;Estados Unidos de América;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2017;7;América;Estados Unidos de América;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2017;7;América;Estados Unidos de América;I;Accommodation and food service activities;False;1;4;0;5;0;0;0;0;5
+2017;7;América;Estados Unidos de América;J;Information and communication;False;0;4;0;4;0;0;0;0;4
+2017;7;América;Estados Unidos de América;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;7;América;Estados Unidos de América;L;Real estate activities;False;0;1;0;1;0;0;0;0;1
+2017;7;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;1;3;0;2;0;1;1;0;4
+2017;7;América;Estados Unidos de América;Q;Human health and social work activities;False;0;6;0;6;0;0;0;0;6
+2017;7;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;2;0;2;0;0;0;0;2
+2017;7;América;Estados Unidos de América;V;Fintech;False;0;2;0;2;0;0;0;0;2
+2017;7;América;Estados Unidos de América;X;Individual;False;2;2;0;4;0;0;0;0;4
+2017;7;Asia;China;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2017;7;Asia;India;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2017;7;Asia;Japón;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;7;Australia y Oceanía;Australia;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2017;7;Desconocido;Desconocido;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2017;7;Europa;Alemania;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;7;Europa;Francia;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;7;Europa;Francia;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;7;Europa;Italia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;7;Europa;Reino Unido;D;Electricity gas steam and air conditioning supply;False;0;2;0;0;0;2;0;0;2
+2017;7;Europa;Reino Unido;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;7;Europa;Reino Unido;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;7;Europa;Reino Unido;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;7;Europa;Reino Unido;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;7;Europa;Suiza;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;7;International;International;D;Electricity gas steam and air conditioning supply;False;0;1;0;0;1;0;0;0;1
+2017;7;International;International;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;7;International;International;X;Individual;False;1;12;0;11;2;0;0;0;13
+2017;7;International;International;Y;Multiple Industries;False;2;1;0;1;2;0;0;0;3
+2017;8;América;Canadá;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;8;América;Estados Unidos de América;J;Information and communication;False;1;3;0;3;0;0;1;0;4
+2017;8;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;1;4;0;2;1;0;2;0;5
+2017;8;América;Estados Unidos de América;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;8;América;Estados Unidos de América;Q;Human health and social work activities;False;0;5;0;5;0;0;0;0;5
+2017;8;América;Estados Unidos de América;R;Arts entertainment and recreation;False;1;1;0;2;0;0;0;0;2
+2017;8;América;Estados Unidos de América;V;Fintech;False;0;2;0;2;0;0;0;0;2
+2017;8;América;Estados Unidos de América;X;Individual;False;0;5;0;5;0;0;0;0;5
+2017;8;América;Venezuela;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;0;1;0;1
+2017;8;Asia;Armenia;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;1;0;0;1
+2017;8;Asia;China;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2017;8;Asia;China;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;8;Asia;Corea del Norte;Y;Multiple Industries;False;0;1;0;0;0;1;0;0;1
+2017;8;Asia;Corea del Sur;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2017;8;Asia;Corea del Sur;J;Information and communication;False;0;1;0;0;1;0;0;0;1
+2017;8;Asia;Corea del Sur;V;Fintech;False;0;1;0;0;0;1;0;0;1
+2017;8;Asia;Corea del Sur;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;8;Asia;Israel;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;8;Asia;Japón;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;8;Asia;Malasia;Y;Multiple Industries;False;0;1;0;0;0;1;0;0;1
+2017;8;Asia;Pakistán;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;1;0;0;1
+2017;8;Asia;Vietnam;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;1;0;0;1
+2017;8;Europa;Alemania;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;8;Europa;España;R;Arts entertainment and recreation;False;2;0;0;2;0;0;0;0;2
+2017;8;Europa;Francia;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2017;8;Europa;Hungría;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;8;Europa;Reino Unido;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2017;8;Europa;Reino Unido;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2017;8;Europa;Reino Unido;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;8;Europa;Reino Unido;Q;Human health and social work activities;False;0;2;0;1;0;0;1;0;2
+2017;8;Europa;Reino Unido;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2017;8;Europa;Rusia;Y;Multiple Industries;False;0;1;0;0;1;0;0;0;1
+2017;8;Europa;Suecia;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;8;Europa;Suiza;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;8;Europa;Ucrania;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;8;Europa;Ucrania;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;8;International;International;O;Public administration and defence, compulsory social security;False;2;1;0;0;3;0;0;0;3
+2017;8;International;International;U;Activities of extraterritorial organizations and bodies;False;0;1;0;1;0;0;0;0;1
+2017;8;International;International;X;Individual;False;1;21;0;22;0;0;0;0;22
+2017;8;International;International;Y;Multiple Industries;False;2;6;0;6;2;0;0;0;8
+2017;8;África;Kenia;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;9;América;Argentina;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;9;América;Brasil;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;9;América;Canadá;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;9;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2017;9;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2017;9;América;Estados Unidos de América;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;9;América;Estados Unidos de América;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;9;América;Estados Unidos de América;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2017;9;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;4;0;3;1;0;0;0;4
+2017;9;América;Estados Unidos de América;P;Education;False;1;2;0;3;0;0;0;0;3
+2017;9;América;Estados Unidos de América;Q;Human health and social work activities;False;4;4;0;8;0;0;0;0;8
+2017;9;América;Estados Unidos de América;R;Arts entertainment and recreation;False;1;3;0;4;0;0;0;0;4
+2017;9;América;Estados Unidos de América;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2017;9;América;Estados Unidos de América;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;9;Asia;Camboya;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;9;Asia;Corea del Sur;X;Individual;False;0;1;0;0;1;0;0;0;1
+2017;9;Asia;Emiratos Árabes Unidos;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;9;Asia;Hong kong;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2017;9;Asia;India;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;9;Asia;Singapur;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;9;Asia;Singapur;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;9;Asia;Singapur;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;9;Asia;United Arab Emirates;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;9;Australia y Oceanía;Australia;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;9;Australia y Oceanía;Australia;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;9;Desconocido;Desconocido;J;Information and communication;False;0;1;0;0;1;0;0;0;1
+2017;9;Europa;Alemania;N;Administrative and support service activities;False;0;1;0;0;0;1;0;0;1
+2017;9;Europa;Dinamarca;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;0;1;0;1
+2017;9;Europa;Irlanda;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;9;Europa;Italia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;9;Europa;Países Bajos;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;9;Europa;Reino Unido;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2017;9;Europa;Reino Unido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;9;Europa;Rusia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;9;Europa;Suiza;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2017;9;International;International;C;Manufacturing;False;1;0;0;1;0;0;0;0;1
+2017;9;International;International;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;1;0;0;0;1
+2017;9;International;International;N;Administrative and support service activities;False;0;1;0;0;1;0;0;0;1
+2017;9;International;International;V;Fintech;False;1;0;0;1;0;0;0;0;1
+2017;9;International;International;X;Individual;False;0;17;0;17;0;0;0;0;17
+2017;9;International;International;Y;Multiple Industries;False;1;4;0;4;1;0;0;0;5
+2017;10;América;Estados Unidos de América;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2017;10;América;Estados Unidos de América;D;Electricity gas steam and air conditioning supply;False;2;0;0;1;1;0;0;0;2
+2017;10;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;2;0;2;0;0;0;0;2
+2017;10;América;Estados Unidos de América;J;Information and communication;False;2;3;0;4;1;0;0;0;5
+2017;10;América;Estados Unidos de América;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;10;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;2;0;2;0;0;0;0;2
+2017;10;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;2;0;1;1;0;0;0;2
+2017;10;América;Estados Unidos de América;Q;Human health and social work activities;False;1;8;0;9;0;0;0;0;9
+2017;10;América;Estados Unidos de América;R;Arts entertainment and recreation;False;2;0;0;2;0;0;0;0;2
+2017;10;América;Estados Unidos de América;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2017;10;América;Estados Unidos de América;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;10;América;Estados Unidos de América;X;Individual;False;0;2;0;1;1;0;0;0;2
+2017;10;América;Estados Unidos de América;Y;Multiple Industries;False;0;1;0;0;1;0;0;0;1
+2017;10;América;Panamá;M;Professional scientific and technical activities;False;0;1;0;0;0;0;1;0;1
+2017;10;Asia;China;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;10;Asia;Corea del Sur;C;Manufacturing;False;1;0;0;0;1;0;0;0;1
+2017;10;Asia;Corea del Sur;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;10;Asia;Corea del Sur;Y;Multiple Industries;False;0;1;0;0;1;0;0;0;1
+2017;10;Asia;Irán;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;10;Asia;Japón;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;10;Asia;Japón;Y;Multiple Industries;False;1;1;0;1;1;0;0;0;2
+2017;10;Asia;Malasia;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;10;Asia;Taiwán;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;10;Asia;United Arab Emirates;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2017;10;Australia y Oceanía;Australia;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2017;10;Australia y Oceanía;Australia;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2017;10;Desconocido;Desconocido;J;Information and communication;False;1;1;0;2;0;0;0;0;2
+2017;10;Europa;España;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2017;10;Europa;Irlanda;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2017;10;Europa;Italia;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2017;10;Europa;Países Bajos;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2017;10;Europa;Reino Unido;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;10;Europa;Reino Unido;Q;Human health and social work activities;False;1;0;0;1;0;0;0;0;1
+2017;10;Europa;República Checa;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2017;10;Europa;Rusia;J;Information and communication;False;1;0;0;0;1;0;0;0;1
+2017;10;Europa;Suecia;O;Public administration and defence, compulsory social security;False;0;2;0;2;0;0;0;0;2
+2017;10;Europa;Ucrania;Y;Multiple Industries;False;0;1;0;0;0;1;0;0;1
+2017;10;International;International;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;0;0;1;0;1
+2017;10;International;International;K;Financial and insurance activities;False;1;2;0;3;0;0;0;0;3
+2017;10;International;International;O;Public administration and defence, compulsory social security;False;3;2;0;0;4;0;1;0;5
+2017;10;International;International;X;Individual;False;2;18;0;19;1;0;0;0;20
+2017;10;International;International;Y;Multiple Industries;False;2;4;0;3;3;0;0;0;6
+2017;11;América;Canadá;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;11;América;Canadá;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;0;1;0;1
+2017;11;América;Canadá;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;11;América;Canadá;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2017;11;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2017;11;América;Estados Unidos de América;H;Transportation and storage;False;0;2;0;2;0;0;0;0;2
+2017;11;América;Estados Unidos de América;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2017;11;América;Estados Unidos de América;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2017;11;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;2;0;2;0;0;0;0;2
+2017;11;América;Estados Unidos de América;P;Education;False;1;4;0;4;0;0;1;0;5
+2017;11;América;Estados Unidos de América;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2017;11;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;2;0;2;0;0;0;0;2
+2017;11;América;Estados Unidos de América;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;11;América;Estados Unidos de América;X;Individual;False;1;3;0;4;0;0;0;0;4
+2017;11;América;Panamá;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;11;Asia;Arabia Saudita;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2017;11;Asia;Corea del Norte;J;Information and communication;False;0;1;0;0;0;0;1;0;1
+2017;11;Asia;Corea del Sur;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2017;11;Asia;Corea del Sur;R;Arts entertainment and recreation;False;0;1;0;0;1;0;0;0;1
+2017;11;Asia;Hong kong;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;11;Asia;Israel;J;Information and communication;False;1;0;0;0;0;0;1;0;1
+2017;11;Asia;Nepal;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;11;Asia;Singapur;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;11;Australia y Oceanía;Australia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;11;Australia y Oceanía;Australia;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2017;11;Australia y Oceanía;Australia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;11;Desconocido;Desconocido;S;Other service activities;False;1;0;0;0;0;0;1;0;1
+2017;11;Desconocido;Desconocido;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;11;Europa;Alemania;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;11;Europa;Austria;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;11;Europa;Austria;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;11;Europa;Italia;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2017;11;Europa;Reino Unido;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2017;11;Europa;Reino Unido;G;Wholesale and retail trade;False;0;2;0;2;0;0;0;0;2
+2017;11;Europa;Reino Unido;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2017;11;Europa;Reino Unido;J;Information and communication;False;1;0;0;0;1;0;0;0;1
+2017;11;Europa;Reino Unido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;11;Europa;Reino Unido;X;Individual;False;2;1;0;2;0;1;0;0;3
+2017;11;Europa;Rusia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;11;Europa;Suecia;J;Information and communication;False;0;1;0;0;0;0;1;0;1
+2017;11;International;International;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2017;11;International;International;N;Administrative and support service activities;False;0;1;0;0;0;0;1;0;1
+2017;11;International;International;X;Individual;False;0;15;0;15;0;0;0;0;15
+2017;11;International;International;Y;Multiple Industries;False;6;4;0;3;7;0;0;0;10
+2017;11;África;Algeria;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;11;África;Sudáfrica;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;12;América;Brasil;G;Wholesale and retail trade;False;1;0;0;1;0;0;0;0;1
+2017;12;América;Brasil;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;12;América;Brasil;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2017;12;América;Canadá;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2017;12;América;Estados Unidos de América;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2017;12;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2017;12;América;Estados Unidos de América;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2017;12;América;Estados Unidos de América;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2017;12;América;Estados Unidos de América;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2017;12;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;5;0;5;0;0;0;0;5
+2017;12;América;Estados Unidos de América;P;Education;False;0;5;0;5;0;0;0;0;5
+2017;12;América;Estados Unidos de América;Q;Human health and social work activities;False;0;11;0;11;0;0;0;0;11
+2017;12;América;Estados Unidos de América;V;Fintech;False;0;3;0;3;0;0;0;0;3
+2017;12;América;Estados Unidos de América;X;Individual;False;0;6;0;6;0;0;0;0;6
+2017;12;América;Islas Vírgenes Británicas;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;12;Asia;Arabia Saudita;D;Electricity gas steam and air conditioning supply;False;0;1;0;0;0;1;0;0;1
+2017;12;Asia;Corea del Sur;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;12;Asia;Israel;X;Individual;False;1;0;0;0;1;0;0;0;1
+2017;12;Asia;Japón;P;Education;False;0;1;0;1;0;0;0;0;1
+2017;12;Australia y Oceanía;Australia;H;Transportation and storage;False;1;0;0;1;0;0;0;0;1
+2017;12;Australia y Oceanía;Australia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;12;Desconocido;Desconocido;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2017;12;Europa;Italia;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2017;12;Europa;Países Bajos;J;Information and communication;False;0;2;0;1;1;0;0;0;2
+2017;12;Europa;Polonia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;12;Europa;Reino Unido;K;Financial and insurance activities;False;1;0;0;0;1;0;0;0;1
+2017;12;Europa;Reino Unido;Q;Human health and social work activities;False;0;2;0;1;0;0;1;0;2
+2017;12;Europa;Reino Unido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2017;12;Europa;Reino Unido;X;Individual;False;0;2;0;1;1;0;0;0;2
+2017;12;Europa;Rusia;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2017;12;Europa;Rusia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2017;12;Europa;Rusia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2017;12;International;International;K;Financial and insurance activities;False;1;0;0;1;0;0;0;0;1
+2017;12;International;International;M;Professional scientific and technical activities;False;1;0;0;0;1;0;0;0;1
+2017;12;International;International;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2017;12;International;International;U;Activities of extraterritorial organizations and bodies;False;1;0;0;0;1;0;0;0;1
+2017;12;International;International;X;Individual;False;3;19;0;20;2;0;0;0;22
+2017;12;International;International;Y;Multiple Industries;False;0;4;0;4;0;0;0;0;4
+2018;1;América;Canadá;H;Transportation and storage;False;0;1;0;0;1;0;0;0;1
+2018;1;América;Canadá;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2018;1;América;Canadá;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2018;1;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;2;0;2;0;0;0;0;2
+2018;1;América;Estados Unidos de América;J;Information and communication;False;1;3;0;4;0;0;0;0;4
+2018;1;América;Estados Unidos de América;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;1;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;1;3;0;3;1;0;0;0;4
+2018;1;América;Estados Unidos de América;P;Education;False;1;4;0;5;0;0;0;0;5
+2018;1;América;Estados Unidos de América;Q;Human health and social work activities;False;0;8;0;8;0;0;0;0;8
+2018;1;América;Estados Unidos de América;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;1;América;Estados Unidos de América;X;Individual;False;2;2;0;4;0;0;0;0;4
+2018;1;América;Estados Unidos de América;Z;Unknown;False;0;1;0;1;0;0;0;0;1
+2018;1;Asia;China;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;1;Asia;Corea del Norte;X;Individual;False;0;1;0;0;1;0;0;0;1
+2018;1;Asia;Corea del Sur;U;Activities of extraterritorial organizations and bodies;False;0;1;0;0;1;0;0;0;1
+2018;1;Asia;Corea del Sur;X;Individual;False;1;0;0;0;1;0;0;0;1
+2018;1;Asia;Corea del Sur;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2018;1;Asia;Corea del Sur;Z;Unknown;False;1;0;0;1;0;0;0;0;1
+2018;1;Asia;Hong kong;R;Arts entertainment and recreation;False;0;2;0;2;0;0;0;0;2
+2018;1;Asia;India;K;Financial and insurance activities;False;1;0;0;1;0;0;0;0;1
+2018;1;Asia;India;X;Individual;False;2;0;0;0;1;0;1;0;2
+2018;1;Asia;Islas Cocos (Keeling);X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;1;Asia;Japón;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;1;Asia;Malasia;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2018;1;Asia;Turquía;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;1;Australia y Oceanía;Australia;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;1;Australia y Oceanía;Nueva Zelanda;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;1;Desconocido;Desconocido;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;1;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;1;0;0;1;0;0;0;0;1
+2018;1;Europa;Alemania;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;1;Europa;Alemania;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;1;Europa;Italia;X;Individual;False;0;1;0;0;1;0;0;0;1
+2018;1;Europa;Noruega;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2018;1;Europa;Noruega;X;Individual;False;1;0;0;0;0;0;1;0;1
+2018;1;Europa;Países Bajos;K;Financial and insurance activities;False;0;3;0;0;0;3;0;0;3
+2018;1;Europa;Países Bajos;O;Public administration and defence, compulsory social security;False;0;2;0;0;0;2;0;0;2
+2018;1;Europa;Reino Unido;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;1;Europa;Rusia;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2018;1;Europa;Rusia;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2018;1;Europa;Rusia;P;Education;False;0;1;0;1;0;0;0;0;1
+2018;1;Europa;Suiza;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;1;Europa;Ucrania;X;Individual;False;0;2;0;1;1;0;0;0;2
+2018;1;International;International;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2018;1;International;International;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;1;International;International;V;Fintech;False;0;3;0;3;0;0;0;0;3
+2018;1;International;International;X;Individual;False;1;30;0;30;1;0;0;0;31
+2018;1;International;International;Y;Multiple Industries;False;2;5;0;5;2;0;0;0;7
+2018;2;América;Brasil;P;Education;False;0;1;0;1;0;0;0;0;1
+2018;2;América;Canadá;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;2;América;Canadá;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2018;2;América;Estados Unidos de América;C;Manufacturing;False;0;2;0;2;0;0;0;0;2
+2018;2;América;Estados Unidos de América;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2018;2;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;2;0;2;0;0;0;0;2
+2018;2;América;Estados Unidos de América;I;Accommodation and food service activities;False;1;0;0;1;0;0;0;0;1
+2018;2;América;Estados Unidos de América;J;Information and communication;False;1;8;0;9;0;0;0;0;9
+2018;2;América;Estados Unidos de América;K;Financial and insurance activities;False;0;3;0;3;0;0;0;0;3
+2018;2;América;Estados Unidos de América;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2018;2;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;13;0;12;0;0;1;0;13
+2018;2;América;Estados Unidos de América;P;Education;False;0;5;0;5;0;0;0;0;5
+2018;2;América;Estados Unidos de América;Q;Human health and social work activities;False;0;9;0;9;0;0;0;0;9
+2018;2;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;3;0;3;0;0;0;0;3
+2018;2;América;Estados Unidos de América;U;Activities of extraterritorial organizations and bodies;False;0;1;0;1;0;0;0;0;1
+2018;2;América;Estados Unidos de América;X;Individual;False;0;4;0;4;0;0;0;0;4
+2018;2;América;Estados Unidos de América;Y;Multiple Industries;False;1;0;0;1;0;0;0;0;1
+2018;2;Asia;China;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2018;2;Asia;Corea del Sur;U;Activities of extraterritorial organizations and bodies;False;0;1;0;0;0;1;0;0;1
+2018;2;Asia;India;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2018;2;Asia;Japón;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;2;Asia;Singapur;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;2;Australia y Oceanía;Australia;P;Education;False;1;0;0;0;1;0;0;0;1
+2018;2;Australia y Oceanía;Nueva Zelanda;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;2;Desconocido;Desconocido;E;Water supply, sewerage waste management, and remediation activities;False;0;1;0;1;0;0;0;0;1
+2018;2;Desconocido;Desconocido;K;Financial and insurance activities;False;1;0;0;0;1;0;0;0;1
+2018;2;Desconocido;Desconocido;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;2;Europa;Alemania;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;2;Europa;Francia;J;Information and communication;False;0;1;0;0;1;0;0;0;1
+2018;2;Europa;Italia;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;0;1;0;1
+2018;2;Europa;Italia;S;Other service activities;False;1;1;0;0;0;0;2;0;2
+2018;2;Europa;Italia;U;Activities of extraterritorial organizations and bodies;False;1;0;0;0;0;0;1;0;1
+2018;2;Europa;Italia;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;2;Europa;Reino Unido;M;Professional scientific and technical activities;False;1;0;0;0;1;0;0;0;1
+2018;2;Europa;Reino Unido;P;Education;False;0;1;0;1;0;0;0;0;1
+2018;2;Europa;Reino Unido;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;2;Europa;Reino Unido;Z;Unknown;False;0;1;0;1;0;0;0;0;1
+2018;2;Europa;Rusia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;2;Europa;Suiza;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;2;Europa;Ucrania;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;2;International;International;K;Financial and insurance activities;False;1;1;0;2;0;0;0;0;2
+2018;2;International;International;X;Individual;False;1;31;0;31;1;0;0;0;32
+2018;2;International;International;Y;Multiple Industries;False;6;10;0;11;5;0;0;0;16
+2018;3;América;Canadá;G;Wholesale and retail trade;False;1;0;0;1;0;0;0;0;1
+2018;3;América;Estados Unidos de América;C;Manufacturing;False;0;3;0;3;0;0;0;0;3
+2018;3;América;Estados Unidos de América;E;Water supply, sewerage waste management, and remediation activities;False;0;1;0;1;0;0;0;0;1
+2018;3;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2018;3;América;Estados Unidos de América;H;Transportation and storage;False;1;2;0;2;1;0;0;0;3
+2018;3;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;2;0;2;0;0;0;0;2
+2018;3;América;Estados Unidos de América;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2018;3;América;Estados Unidos de América;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2018;3;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;2;0;2;0;0;0;0;2
+2018;3;América;Estados Unidos de América;P;Education;False;1;5;0;6;0;0;0;0;6
+2018;3;América;Estados Unidos de América;Q;Human health and social work activities;False;0;7;0;7;0;0;0;0;7
+2018;3;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;2;0;2;0;0;0;0;2
+2018;3;América;Estados Unidos de América;S;Other service activities;False;0;2;0;2;0;0;0;0;2
+2018;3;América;Estados Unidos de América;X;Individual;False;0;2;0;1;1;0;0;0;2
+2018;3;América;Puerto Rico;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2018;3;Asia;Arabia Saudita;D;Electricity gas steam and air conditioning supply;False;0;1;0;0;0;1;0;0;1
+2018;3;Asia;China;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;3;Asia;China;X;Individual;False;0;2;0;1;1;0;0;0;2
+2018;3;Asia;Corea del Sur;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;3;Asia;India;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2018;3;Asia;India;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;3;Asia;India;M;Professional scientific and technical activities;False;1;0;0;1;0;0;0;0;1
+2018;3;Asia;Malasia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;3;Asia;Siria;X;Individual;False;0;1;0;0;1;0;0;0;1
+2018;3;Asia;Turquía;K;Financial and insurance activities;False;1;0;0;0;1;0;0;0;1
+2018;3;Asia;Turquía;X;Individual;False;1;0;0;0;1;0;0;0;1
+2018;3;Australia y Oceanía;Australia;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;3;Australia y Oceanía;Australia;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;3;Desconocido;Desconocido;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;3;Desconocido;Desconocido;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;3;Europa;Irlanda;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;3;Europa;Italia;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2018;3;Europa;Italia;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;3;Europa;Países Bajos;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;3;Europa;Reino Unido;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;3;Europa;Reino Unido;O;Public administration and defence, compulsory social security;False;1;1;0;1;1;0;0;0;2
+2018;3;Europa;Reino Unido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;3;Europa;Reino Unido;S;Other service activities;False;1;0;0;0;1;0;0;0;1
+2018;3;Europa;Reino Unido;X;Individual;False;1;1;0;2;0;0;0;0;2
+2018;3;Europa;Rusia;O;Public administration and defence, compulsory social security;False;0;2;0;0;0;2;0;0;2
+2018;3;Europa;Rusia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;3;International;International;D;Electricity gas steam and air conditioning supply;False;1;0;0;1;0;0;0;0;1
+2018;3;International;International;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2018;3;International;International;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;3;International;International;X;Individual;False;0;12;0;11;1;0;0;0;12
+2018;3;International;International;Y;Multiple Industries;False;5;10;0;9;6;0;0;0;15
+2018;4;América;Brasil;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;4;América;Brasil;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2018;4;América;Canadá;G;Wholesale and retail trade;False;1;0;0;1;0;0;0;0;1
+2018;4;América;Canadá;O;Public administration and defence, compulsory social security;False;0;2;0;2;0;0;0;0;2
+2018;4;América;Estados Unidos de América;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;4;América;Estados Unidos de América;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2018;4;América;Estados Unidos de América;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;4;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;2;0;2;0;0;0;0;2
+2018;4;América;Estados Unidos de América;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;4;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2018;4;América;Estados Unidos de América;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2018;4;América;Estados Unidos de América;P;Education;False;0;5;0;5;0;0;0;0;5
+2018;4;América;Estados Unidos de América;Q;Human health and social work activities;False;0;8;0;8;0;0;0;0;8
+2018;4;América;Estados Unidos de América;R;Arts entertainment and recreation;False;1;1;0;1;0;0;1;0;2
+2018;4;América;Estados Unidos de América;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;4;América;Estados Unidos de América;X;Individual;False;0;5;0;5;0;0;0;0;5
+2018;4;América;México;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;4;América;Saint Martin;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;4;Asia;Emiratos Árabes Unidos;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;4;Asia;Hong kong;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;4;Asia;India;O;Public administration and defence, compulsory social security;False;3;0;0;2;0;1;0;0;3
+2018;4;Asia;India;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;4;Asia;Israel;Y;Multiple Industries;False;1;0;0;0;0;0;1;0;1
+2018;4;Asia;Japón;O;Public administration and defence, compulsory social security;False;1;1;0;1;1;0;0;0;2
+2018;4;Asia;Pakistán;Y;Multiple Industries;False;1;0;0;0;0;1;0;0;1
+2018;4;Asia;Palestina;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;4;Asia;Tailandia;H;Transportation and storage;False;1;0;0;1;0;0;0;0;1
+2018;4;Desconocido;Desconocido;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;4;Desconocido;Desconocido;R;Arts entertainment and recreation;False;1;0;0;0;1;0;0;0;1
+2018;4;Desconocido;Desconocido;S;Other service activities;False;1;0;0;0;0;1;0;0;1
+2018;4;Desconocido;Desconocido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;4;Europa;Alemania;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;4;Europa;Austria;I;Accommodation and food service activities;False;1;0;0;1;0;0;0;0;1
+2018;4;Europa;Italia;J;Information and communication;False;1;0;0;0;0;0;1;0;1
+2018;4;Europa;Italia;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;0;1;0;1
+2018;4;Europa;Reino Unido;O;Public administration and defence, compulsory social security;False;1;0;0;1;0;0;0;0;1
+2018;4;Europa;Reino Unido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;4;Europa;Reino Unido;X;Individual;False;0;2;0;2;0;0;0;0;2
+2018;4;Europa;Ucrania;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;4;International;International;H;Transportation and storage;False;1;0;0;1;0;0;0;0;1
+2018;4;International;International;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;4;International;International;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2018;4;International;International;O;Public administration and defence, compulsory social security;False;2;0;0;0;2;0;0;0;2
+2018;4;International;International;Q;Human health and social work activities;False;1;0;0;0;1;0;0;0;1
+2018;4;International;International;X;Individual;False;0;17;0;17;0;0;0;0;17
+2018;4;International;International;Y;Multiple Industries;False;3;12;0;10;4;0;1;0;15
+2018;5;América;Brasil;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2018;5;América;Canadá;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2018;5;América;Canadá;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;5;América;Estados Unidos de América;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;5;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2018;5;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;2;0;2;0;0;0;0;2
+2018;5;América;Estados Unidos de América;J;Information and communication;False;1;0;0;0;0;0;1;0;1
+2018;5;América;Estados Unidos de América;K;Financial and insurance activities;False;1;2;0;3;0;0;0;0;3
+2018;5;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;2;0;2;0;0;0;0;2
+2018;5;América;Estados Unidos de América;N;Administrative and support service activities;False;0;2;0;2;0;0;0;0;2
+2018;5;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;5;0;5;0;0;0;0;5
+2018;5;América;Estados Unidos de América;P;Education;False;1;8;0;9;0;0;0;0;9
+2018;5;América;Estados Unidos de América;Q;Human health and social work activities;False;0;7;0;7;0;0;0;0;7
+2018;5;América;Estados Unidos de América;R;Arts entertainment and recreation;False;1;4;0;5;0;0;0;0;5
+2018;5;América;Estados Unidos de América;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;5;América;Estados Unidos de América;X;Individual;False;0;2;0;2;0;0;0;0;2
+2018;5;América;Estados Unidos de América;Y;Multiple Industries;False;2;0;0;0;1;0;1;0;2
+2018;5;América;México;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;5;Asia;Afganistán;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;5;Asia;China;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2018;5;Asia;Corea del Sur;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;5;Asia;Corea del Sur;X;Individual;False;1;1;0;0;2;0;0;0;2
+2018;5;Asia;Irán;H;Transportation and storage;False;0;1;0;0;0;0;1;0;1
+2018;5;Asia;Irán;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;5;Asia;Japón;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;5;Asia;Japón;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;5;Asia;Japón;Y;Multiple Industries;False;0;2;0;2;0;0;0;0;2
+2018;5;Asia;Turquía;J;Information and communication;False;0;1;0;0;0;1;0;0;1
+2018;5;Asia;Turquía;X;Individual;False;1;0;0;1;0;0;0;0;1
+2018;5;Australia y Oceanía;Australia;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2018;5;Desconocido;Desconocido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;5;Desconocido;Desconocido;V;Fintech;False;0;3;0;3;0;0;0;0;3
+2018;5;Europa;Dinamarca;H;Transportation and storage;False;0;2;0;2;0;0;0;0;2
+2018;5;Europa;Estonia;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;5;Europa;Grecia;C;Manufacturing;False;2;0;0;0;0;2;0;0;2
+2018;5;Europa;Grecia;I;Accommodation and food service activities;False;1;0;0;0;0;1;0;0;1
+2018;5;Europa;Grecia;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;1;0;0;1
+2018;5;Europa;Grecia;R;Arts entertainment and recreation;False;1;0;0;0;0;1;0;0;1
+2018;5;Europa;Malta;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;5;Europa;Reino Unido;J;Information and communication;False;0;1;0;0;1;0;0;0;1
+2018;5;Europa;Reino Unido;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;5;Europa;Reino Unido;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;5;Europa;Rusia;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2018;5;Europa;Rusia;X;Individual;False;1;0;0;1;0;0;0;0;1
+2018;5;International;International;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;1;0;0;0;1
+2018;5;International;International;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;5;International;International;V;Fintech;False;1;0;0;1;0;0;0;0;1
+2018;5;International;International;X;Individual;False;0;14;0;14;0;0;0;0;14
+2018;5;International;International;Y;Multiple Industries;False;3;14;0;13;4;0;0;0;17
+2018;5;África;Sudáfrica;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;5;África;Zimbabue;P;Education;False;0;1;0;1;0;0;0;0;1
+2018;6;América;Brasil;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;6;América;Canadá;P;Education;False;0;1;0;1;0;0;0;0;1
+2018;6;América;Canadá;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2018;6;América;Canadá;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;6;América;Chile;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;6;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2018;6;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;3;0;3;0;0;0;0;3
+2018;6;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;1;0;0;1;0;0;0;1
+2018;6;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;1;6;0;5;1;0;1;0;7
+2018;6;América;Estados Unidos de América;P;Education;False;0;4;0;4;0;0;0;0;4
+2018;6;América;Estados Unidos de América;Q;Human health and social work activities;False;1;10;0;11;0;0;0;0;11
+2018;6;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;6;América;Estados Unidos de América;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;6;América;Estados Unidos de América;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;6;América;Estados Unidos de América;X;Individual;False;0;4;0;4;0;0;0;0;4
+2018;6;América;Estados Unidos de América;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2018;6;América;México;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;6;Asia;China;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;6;Asia;Corea del Sur;O;Public administration and defence, compulsory social security;False;2;0;0;0;2;0;0;0;2
+2018;6;Asia;Corea del Sur;V;Fintech;False;0;2;0;2;0;0;0;0;2
+2018;6;Asia;Hong kong;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;6;Asia;India;S;Other service activities;False;0;1;0;0;0;0;1;0;1
+2018;6;Asia;India;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;6;Asia;Japón;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;6;Asia;Japón;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;6;Asia;Mongolia;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;6;Australia y Oceanía;Australia;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2018;6;Australia y Oceanía;Australia;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;6;Australia y Oceanía;Australia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;6;Australia y Oceanía;Nueva Zelanda;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;6;Desconocido;Desconocido;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;6;Desconocido;Desconocido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;6;Europa;Eslovaquia;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;6;Europa;España;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;6;Europa;Francia;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;6;Europa;Irlanda;P;Education;False;0;1;0;1;0;0;0;0;1
+2018;6;Europa;Italia;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2018;6;Europa;Reino Unido;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2018;6;Europa;Reino Unido;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;6;Europa;Rusia;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2018;6;Europa;Suecia;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;6;Europa;Suiza;J;Information and communication;False;1;0;0;1;0;0;0;0;1
+2018;6;International;International;O;Public administration and defence, compulsory social security;False;1;1;0;0;2;0;0;0;2
+2018;6;International;International;V;Fintech;False;0;2;0;2;0;0;0;0;2
+2018;6;International;International;X;Individual;False;0;13;0;13;0;0;0;0;13
+2018;6;International;International;Y;Multiple Industries;False;1;13;0;10;3;1;0;0;14
+2018;6;África;Sudáfrica;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;7;América;Chile;K;Financial and insurance activities;False;1;1;0;2;0;0;0;0;2
+2018;7;América;Estados Unidos de América;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;0;1;0;0;1
+2018;7;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;2;0;2;0;0;0;0;2
+2018;7;América;Estados Unidos de América;H;Transportation and storage;False;0;2;0;2;0;0;0;0;2
+2018;7;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;7;América;Estados Unidos de América;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2018;7;América;Estados Unidos de América;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;7;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2018;7;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;1;9;0;8;2;0;0;0;10
+2018;7;América;Estados Unidos de América;P;Education;False;1;4;0;5;0;0;0;0;5
+2018;7;América;Estados Unidos de América;Q;Human health and social work activities;False;1;17;0;18;0;0;0;0;18
+2018;7;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;3;0;3;0;0;0;0;3
+2018;7;América;Estados Unidos de América;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;7;América;Estados Unidos de América;X;Individual;False;1;0;0;1;0;0;0;0;1
+2018;7;América;Estados Unidos de América;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2018;7;Asia;Camboya;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;7;Asia;China;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;7;Asia;Corea del Sur;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;7;Asia;Filipinas;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;7;Asia;India;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;7;Asia;India;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2018;7;Asia;India;X;Individual;False;1;1;0;2;0;0;0;0;2
+2018;7;Asia;Israel;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;7;Asia;Palestina;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2018;7;Asia;Singapur;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2018;7;Asia;Singapur;Q;Human health and social work activities;False;0;1;0;0;1;0;0;0;1
+2018;7;Asia;Siria;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2018;7;Asia;Tailandia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;7;Asia;Taiwán;S;Other service activities;False;0;1;0;0;0;0;1;0;1
+2018;7;Asia;Turquía;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;7;Australia y Oceanía;Australia;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2018;7;Australia y Oceanía;Australia;P;Education;False;1;0;0;0;1;0;0;0;1
+2018;7;Australia y Oceanía;Australia;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2018;7;Australia y Oceanía;Nueva Zelanda;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2018;7;Australia y Oceanía;Nueva Zelanda;P;Education;False;0;1;0;1;0;0;0;0;1
+2018;7;Desconocido;Desconocido;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2018;7;Desconocido;Desconocido;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;7;Desconocido;Desconocido;V;Fintech;False;0;2;0;2;0;0;0;0;2
+2018;7;Desconocido;Desconocido;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2018;7;Europa;Alemania;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;7;Europa;España;N;Administrative and support service activities;False;1;0;0;1;0;0;0;0;1
+2018;7;Europa;Finlandia;Y;Multiple Industries;False;0;1;0;0;1;0;0;0;1
+2018;7;Europa;Francia;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;7;Europa;Italia;N;Administrative and support service activities;False;0;1;0;0;1;0;0;0;1
+2018;7;Europa;Italia;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;7;Europa;Italia;Q;Human health and social work activities;False;0;1;0;0;0;0;1;0;1
+2018;7;Europa;Reino Unido;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2018;7;Europa;Reino Unido;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2018;7;Europa;Reino Unido;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;7;Europa;Reino Unido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;7;Europa;República Checa;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;7;Europa;Rusia;K;Financial and insurance activities;False;1;0;0;1;0;0;0;0;1
+2018;7;Europa;Rusia;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;7;Europa;Suiza;M;Professional scientific and technical activities;False;1;0;0;0;0;1;0;0;1
+2018;7;Europa;Suiza;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;7;Europa;Ucrania;D;Electricity gas steam and air conditioning supply;False;0;1;0;0;0;1;0;0;1
+2018;7;Europa;Ucrania;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;7;Europa;Ucrania;X;Individual;False;0;1;0;0;1;0;0;0;1
+2018;7;International;International;U;Activities of extraterritorial organizations and bodies;False;0;1;0;1;0;0;0;0;1
+2018;7;International;International;X;Individual;False;2;18;0;20;0;0;0;0;20
+2018;7;International;International;Y;Multiple Industries;False;5;8;0;10;3;0;0;0;13
+2018;8;América;Brasil;G;Wholesale and retail trade;False;1;0;0;1;0;0;0;0;1
+2018;8;América;Brasil;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;8;América;Brasil;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;8;América;Canadá;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;8;América;Canadá;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;8;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;8;América;Estados Unidos de América;J;Information and communication;False;0;3;0;3;0;0;0;0;3
+2018;8;América;Estados Unidos de América;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;8;América;Estados Unidos de América;M;Professional scientific and technical activities;False;1;0;0;1;0;0;0;0;1
+2018;8;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;1;7;0;4;4;0;0;0;8
+2018;8;América;Estados Unidos de América;P;Education;False;0;5;0;5;0;0;0;0;5
+2018;8;América;Estados Unidos de América;Q;Human health and social work activities;False;0;2;0;2;0;0;0;0;2
+2018;8;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;8;América;Estados Unidos de América;S;Other service activities;False;1;0;0;1;0;0;0;0;1
+2018;8;América;Estados Unidos de América;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;8;América;Estados Unidos de América;X;Individual;False;0;2;0;1;1;0;0;0;2
+2018;8;América;Estados Unidos de América;Y;Multiple Industries;False;2;0;0;0;2;0;0;0;2
+2018;8;América;México;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;8;Asia;China;R;Arts entertainment and recreation;False;1;0;0;1;0;0;0;0;1
+2018;8;Asia;China;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;8;Asia;Corea del Sur;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;8;Asia;Corea del Sur;Y;Multiple Industries;False;0;1;0;0;1;0;0;0;1
+2018;8;Asia;Hong kong;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;8;Asia;India;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;8;Asia;Israel;C;Manufacturing;False;1;0;0;1;0;0;0;0;1
+2018;8;Asia;Tailandia;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;8;Asia;Vietnam;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;8;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;0;1;0;0;1;0;0;0;1
+2018;8;Desconocido;Desconocido;V;Fintech;False;1;0;0;0;1;0;0;0;1
+2018;8;Desconocido;Desconocido;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2018;8;Europa;Alemania;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;8;Europa;España;K;Financial and insurance activities;False;0;2;0;1;0;0;1;0;2
+2018;8;Europa;Francia;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;8;Europa;Francia;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2018;8;Europa;Reino Unido;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2018;8;Europa;Reino Unido;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;8;Europa;Reino Unido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;8;Europa;Suecia;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;1;0;0;1
+2018;8;International;International;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;1;0;0;0;1
+2018;8;International;International;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2018;8;International;International;K;Financial and insurance activities;False;1;3;0;4;0;0;0;0;4
+2018;8;International;International;O;Public administration and defence, compulsory social security;False;3;0;0;0;2;1;0;0;3
+2018;8;International;International;P;Education;False;1;0;0;1;0;0;0;0;1
+2018;8;International;International;X;Individual;False;1;12;0;13;0;0;0;0;13
+2018;8;International;International;Y;Multiple Industries;False;0;7;0;7;0;0;0;0;7
+2018;9;América;Brasil;K;Financial and insurance activities;False;1;2;0;3;0;0;0;0;3
+2018;9;América;Canadá;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;9;América;Canadá;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;9;América;Estados Unidos de América;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;9;América;Estados Unidos de América;G;Wholesale and retail trade;False;2;2;0;4;0;0;0;0;4
+2018;9;América;Estados Unidos de América;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;9;América;Estados Unidos de América;I;Accommodation and food service activities;False;1;0;0;1;0;0;0;0;1
+2018;9;América;Estados Unidos de América;J;Information and communication;False;0;4;0;4;0;0;0;0;4
+2018;9;América;Estados Unidos de América;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2018;9;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;3;0;2;1;0;0;0;3
+2018;9;América;Estados Unidos de América;P;Education;False;0;4;0;4;0;0;0;0;4
+2018;9;América;Estados Unidos de América;Q;Human health and social work activities;False;1;3;0;4;0;0;0;0;4
+2018;9;América;Estados Unidos de América;S;Other service activities;False;1;2;0;3;0;0;0;0;3
+2018;9;América;Estados Unidos de América;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;9;América;Estados Unidos de América;X;Individual;False;0;2;0;2;0;0;0;0;2
+2018;9;América;Estados Unidos de América;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2018;9;Asia;Filipinas;J;Information and communication;False;1;0;0;1;0;0;0;0;1
+2018;9;Asia;India;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;9;Asia;India;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;9;Asia;India;X;Individual;False;1;0;0;1;0;0;0;0;1
+2018;9;Asia;Irán;X;Individual;False;1;0;0;0;1;0;0;0;1
+2018;9;Asia;Japón;J;Information and communication;False;1;0;0;0;1;0;0;0;1
+2018;9;Asia;Japón;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;9;Asia;Pakistán;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;9;Asia;Turquía;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2018;9;Australia y Oceanía;Australia;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;9;Australia y Oceanía;Nueva Zelanda;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;9;Desconocido;Desconocido;O;Public administration and defence, compulsory social security;False;2;0;0;0;2;0;0;0;2
+2018;9;Desconocido;Desconocido;R;Arts entertainment and recreation;False;1;0;0;1;0;0;0;0;1
+2018;9;Desconocido;Desconocido;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2018;9;Europa;Alemania;D;Electricity gas steam and air conditioning supply;False;0;1;0;0;0;0;1;0;1
+2018;9;Europa;Alemania;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;9;Europa;España;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;9;Europa;Irlanda;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;9;Europa;Italia;N;Administrative and support service activities;False;1;0;0;1;0;0;0;0;1
+2018;9;Europa;Italia;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;0;1;0;1
+2018;9;Europa;Italia;S;Other service activities;False;1;0;0;0;0;0;1;0;1
+2018;9;Europa;Malta;R;Arts entertainment and recreation;False;1;0;0;1;0;0;0;0;1
+2018;9;Europa;Reino Unido;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;9;Europa;Reino Unido;H;Transportation and storage;False;1;1;0;2;0;0;0;0;2
+2018;9;Europa;Reino Unido;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;9;Europa;Reino Unido;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;9;Europa;Reino Unido;P;Education;False;0;1;0;1;0;0;0;0;1
+2018;9;International;International;K;Financial and insurance activities;False;3;2;0;5;0;0;0;0;5
+2018;9;International;International;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;9;International;International;X;Individual;False;0;16;0;14;2;0;0;0;16
+2018;9;International;International;Y;Multiple Industries;False;6;12;0;17;1;0;0;0;18
+2018;9;África;Sudáfrica;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;10;América;Canadá;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;10;América;Canadá;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2018;10;América;Canadá;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;10;América;Canadá;X;Individual;False;0;1;0;0;1;0;0;0;1
+2018;10;América;Canadá;Y;Multiple Industries;False;1;0;0;1;0;0;0;0;1
+2018;10;América;Estados Unidos de América;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2018;10;América;Estados Unidos de América;E;Water supply, sewerage waste management, and remediation activities;False;0;2;0;2;0;0;0;0;2
+2018;10;América;Estados Unidos de América;G;Wholesale and retail trade;False;1;0;0;1;0;0;0;0;1
+2018;10;América;Estados Unidos de América;J;Information and communication;False;1;0;0;0;1;0;0;0;1
+2018;10;América;Estados Unidos de América;K;Financial and insurance activities;False;1;0;0;1;0;0;0;0;1
+2018;10;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;10;0;9;1;0;0;0;10
+2018;10;América;Estados Unidos de América;P;Education;False;0;1;0;1;0;0;0;0;1
+2018;10;América;Estados Unidos de América;Q;Human health and social work activities;False;0;9;0;9;0;0;0;0;9
+2018;10;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;10;América;Estados Unidos de América;S;Other service activities;False;0;2;0;2;0;0;0;0;2
+2018;10;América;Estados Unidos de América;U;Activities of extraterritorial organizations and bodies;False;0;1;0;1;0;0;0;0;1
+2018;10;América;Estados Unidos de América;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;10;América;Estados Unidos de América;X;Individual;False;1;2;0;2;0;0;1;0;3
+2018;10;América;Estados Unidos de América;Y;Multiple Industries;False;0;1;0;0;1;0;0;0;1
+2018;10;América;México;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;10;Asia;Arabia Saudita;U;Activities of extraterritorial organizations and bodies;False;0;1;0;0;0;0;1;0;1
+2018;10;Asia;Hong kong;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;10;Asia;India;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;10;Asia;India;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2018;10;Asia;Irán;Y;Multiple Industries;False;0;1;0;0;0;1;0;0;1
+2018;10;Asia;Israel;X;Individual;False;0;2;0;2;0;0;0;0;2
+2018;10;Asia;Japón;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;10;Asia;Japón;X;Individual;False;1;0;0;1;0;0;0;0;1
+2018;10;Asia;Pakistán;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;10;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;0;1;0;1;0;0;0;0;1
+2018;10;Desconocido;Desconocido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;10;Europa;Bélgica;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;10;Europa;Francia;R;Arts entertainment and recreation;False;0;2;0;2;0;0;0;0;2
+2018;10;Europa;Irlanda;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;10;Europa;Italia;H;Transportation and storage;False;0;1;0;0;1;0;0;0;1
+2018;10;Europa;Italia;N;Administrative and support service activities;False;1;0;0;0;0;0;1;0;1
+2018;10;Europa;Italia;P;Education;False;1;0;0;0;0;0;1;0;1
+2018;10;Europa;Italia;Q;Human health and social work activities;False;1;0;0;0;0;0;1;0;1
+2018;10;Europa;Reino Unido;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;10;Europa;Reino Unido;J;Information and communication;False;1;0;0;0;1;0;0;0;1
+2018;10;Europa;Reino Unido;Q;Human health and social work activities;False;1;0;0;1;0;0;0;0;1
+2018;10;Europa;Reino Unido;R;Arts entertainment and recreation;False;0;2;0;2;0;0;0;0;2
+2018;10;Europa;Reino Unido;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;10;Europa;Rusia;K;Financial and insurance activities;False;1;0;0;1;0;0;0;0;1
+2018;10;Europa;Suiza;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;10;Europa;Ucrania;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;10;International;International;D;Electricity gas steam and air conditioning supply;False;1;1;0;0;1;1;0;0;2
+2018;10;International;International;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;10;International;International;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;10;International;International;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;10;International;International;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2018;10;International;International;O;Public administration and defence, compulsory social security;False;3;0;0;0;3;0;0;0;3
+2018;10;International;International;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;10;International;International;X;Individual;False;2;18;0;18;0;2;0;0;20
+2018;10;International;International;Y;Multiple Industries;False;6;7;0;9;3;1;0;0;13
+2018;10;África;Gabón;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2018;10;África;Sudáfrica;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2018;11;América;Brasil;G;Wholesale and retail trade;False;1;0;0;1;0;0;0;0;1
+2018;11;América;Brasil;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;11;América;Canadá;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2018;11;América;Canadá;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;11;América;Canadá;P;Education;False;0;1;0;1;0;0;0;0;1
+2018;11;América;Canadá;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;11;América;Estados Unidos de América;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;11;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2018;11;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;3;0;3;0;0;0;0;3
+2018;11;América;Estados Unidos de América;J;Information and communication;False;0;3;0;3;0;0;0;0;3
+2018;11;América;Estados Unidos de América;K;Financial and insurance activities;False;0;3;0;3;0;0;0;0;3
+2018;11;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;4;0;4;0;0;0;0;4
+2018;11;América;Estados Unidos de América;P;Education;False;0;3;0;3;0;0;0;0;3
+2018;11;América;Estados Unidos de América;Q;Human health and social work activities;False;0;14;0;14;0;0;0;0;14
+2018;11;América;Estados Unidos de América;R;Arts entertainment and recreation;False;1;3;0;4;0;0;0;0;4
+2018;11;América;Estados Unidos de América;S;Other service activities;False;1;0;0;1;0;0;0;0;1
+2018;11;América;Estados Unidos de América;X;Individual;False;2;0;0;2;0;0;0;0;2
+2018;11;América;Estados Unidos de América;Y;Multiple Industries;False;2;1;0;1;2;0;0;0;3
+2018;11;América;México;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;11;Asia;Camboya;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;11;Asia;Irán;J;Information and communication;False;1;0;0;0;0;1;0;0;1
+2018;11;Asia;Irán;X;Individual;False;0;1;0;0;1;0;0;0;1
+2018;11;Asia;Malasia;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;11;Asia;Pakistán;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;11;Asia;Turquía;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2018;11;Asia;Vietnam;J;Information and communication;False;1;0;0;1;0;0;0;0;1
+2018;11;Australia y Oceanía;Australia;C;Manufacturing;False;0;1;0;0;1;0;0;0;1
+2018;11;Australia y Oceanía;Australia;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;11;Desconocido;Desconocido;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;11;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;0;1;0;1;0;0;0;0;1
+2018;11;Europa;Alemania;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;11;Europa;Alemania;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2018;11;Europa;España;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;11;Europa;Francia;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;11;Europa;Francia;R;Arts entertainment and recreation;False;1;0;0;1;0;0;0;0;1
+2018;11;Europa;Irlanda;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2018;11;Europa;Italia;J;Information and communication;False;1;0;0;0;0;0;1;0;1
+2018;11;Europa;Italia;O;Public administration and defence, compulsory social security;False;1;1;0;1;0;0;1;0;2
+2018;11;Europa;Italia;R;Arts entertainment and recreation;False;1;0;0;0;0;0;1;0;1
+2018;11;Europa;Italia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;11;Europa;Italia;Y;Multiple Industries;False;1;0;0;0;0;0;1;0;1
+2018;11;Europa;Países Bajos;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2018;11;Europa;Reino Unido;C;Manufacturing;False;1;0;0;0;1;0;0;0;1
+2018;11;Europa;Reino Unido;G;Wholesale and retail trade;False;2;0;0;2;0;0;0;0;2
+2018;11;Europa;Reino Unido;S;Other service activities;False;1;0;0;1;0;0;0;0;1
+2018;11;Europa;Rusia;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2018;11;Europa;Rusia;K;Financial and insurance activities;False;2;0;0;2;0;0;0;0;2
+2018;11;Europa;Ucrania;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;11;International;International;K;Financial and insurance activities;False;1;1;0;2;0;0;0;0;2
+2018;11;International;International;O;Public administration and defence, compulsory social security;False;1;1;0;1;1;0;0;0;2
+2018;11;International;International;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;11;International;International;X;Individual;False;3;16;0;19;0;0;0;0;19
+2018;11;International;International;Y;Multiple Industries;False;5;18;0;16;6;1;0;0;23
+2018;11;África;Zimbabue;P;Education;False;0;1;0;1;0;0;0;0;1
+2018;12;América;Barbados;L;Real estate activities;False;1;0;0;1;0;0;0;0;1
+2018;12;América;Brasil;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2018;12;América;Brasil;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2018;12;América;Canadá;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;12;América;Estados Unidos de América;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;12;América;Estados Unidos de América;G;Wholesale and retail trade;False;1;4;0;5;0;0;0;0;5
+2018;12;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2018;12;América;Estados Unidos de América;J;Information and communication;False;1;5;0;6;0;0;0;0;6
+2018;12;América;Estados Unidos de América;M;Professional scientific and technical activities;False;1;0;0;1;0;0;0;0;1
+2018;12;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;2;8;0;7;3;0;0;0;10
+2018;12;América;Estados Unidos de América;P;Education;False;0;6;0;6;0;0;0;0;6
+2018;12;América;Estados Unidos de América;Q;Human health and social work activities;False;0;11;0;11;0;0;0;0;11
+2018;12;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;3;0;3;0;0;0;0;3
+2018;12;Asia;China;X;Individual;False;0;1;0;1;0;0;0;0;1
+2018;12;Asia;China;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2018;12;Asia;Corea del Sur;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2018;12;Asia;Filipinas;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2018;12;Australia y Oceanía;Australia;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;12;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;0;1;0;1;0;0;0;0;1
+2018;12;Desconocido;Desconocido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;12;Europa;Alemania;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2018;12;Europa;Francia;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2018;12;Europa;Italia;C;Manufacturing;False;0;1;0;0;1;0;0;0;1
+2018;12;Europa;Italia;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;0;1;0;0;1
+2018;12;Europa;Italia;O;Public administration and defence, compulsory social security;False;0;2;0;0;0;0;2;0;2
+2018;12;Europa;Italia;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2018;12;Europa;Países Bajos;G;Wholesale and retail trade;False;1;0;0;1;0;0;0;0;1
+2018;12;Europa;Reino Unido;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2018;12;Europa;Reino Unido;K;Financial and insurance activities;False;0;1;0;0;1;0;0;0;1
+2018;12;Europa;Reino Unido;S;Other service activities;False;0;1;0;0;1;0;0;0;1
+2018;12;Europa;Reino Unido;X;Individual;False;0;2;0;2;0;0;0;0;2
+2018;12;Europa;República Checa;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2018;12;Europa;Rusia;M;Professional scientific and technical activities;False;1;0;0;0;0;0;1;0;1
+2018;12;Europa;Ucrania;J;Information and communication;False;0;1;0;0;0;1;0;0;1
+2018;12;International;International;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2018;12;International;International;K;Financial and insurance activities;False;2;1;0;3;0;0;0;0;3
+2018;12;International;International;N;Administrative and support service activities;False;1;0;0;0;1;0;0;0;1
+2018;12;International;International;O;Public administration and defence, compulsory social security;False;1;1;0;1;1;0;0;0;2
+2018;12;International;International;P;Education;False;1;0;0;0;1;0;0;0;1
+2018;12;International;International;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2018;12;International;International;X;Individual;False;1;10;0;8;3;0;0;0;11
+2018;12;International;International;Y;Multiple Industries;False;2;13;0;12;3;0;0;0;15
+2019;1;América;Brasil;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;América;Canadá;Z;Unknown;True;0;3;0;0;0;0;3;0;3
+2019;1;América;Chile;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;1;América;Estados Unidos de América;Z;Unknown;False;0;2;0;0;0;0;0;2;2
+2019;1;América;Estados Unidos de América;Z;Unknown;True;1;29;0;2;3;0;25;0;30
+2019;1;Asia;China;Z;Unknown;True;0;2;0;0;0;0;2;0;2
+2019;1;Asia;Corea del Sur;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Asia;Filipinas;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Asia;Hong kong;Z;Unknown;True;1;0;0;1;0;0;0;0;1
+2019;1;Asia;India;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Asia;Japón;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Asia;Malasia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Asia;United Arab Emirates;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;1;Australia y Oceanía;Australia;Z;Unknown;True;1;3;0;0;1;0;3;0;4
+2019;1;Australia y Oceanía;Nueva Zelanda;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Desconocido;Desconocido;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Europa;Alemania;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Europa;Bélgica;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Europa;Finlandia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Europa;Francia;Z;Unknown;True;0;4;0;1;1;0;2;0;4
+2019;1;Europa;Irlanda;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Europa;Italia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Europa;Malta;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;1;Europa;Reino Unido;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;1;Europa;Reino Unido;Z;Unknown;True;0;4;0;0;0;0;4;0;4
+2019;1;Europa;Rusia;Z;Unknown;True;1;2;0;0;0;0;3;0;3
+2019;1;Europa;Ucrania;Z;Unknown;True;1;1;1;0;0;0;1;0;2
+2019;1;International;International;Z;Unknown;False;2;5;0;0;0;0;0;7;7
+2019;1;International;International;Z;Unknown;True;11;38;0;6;1;0;42;0;49
+2019;2;América;Canadá;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;2;América;Colombia;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;2;América;Estados Unidos de América;Z;Unknown;True;2;41;0;8;1;0;34;0;43
+2019;2;Asia;Bangladesh;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;2;Asia;India;Z;Unknown;True;1;2;0;0;0;0;3;0;3
+2019;2;Asia;Pakistán;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;2;Asia;Singapur;Z;Unknown;True;0;1;0;1;0;0;0;0;1
+2019;2;Asia;Vietnam;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;2;Australia y Oceanía;Australia;Z;Unknown;True;0;5;0;0;0;0;5;0;5
+2019;2;Australia y Oceanía;Nueva Zelanda;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;2;Desconocido;Desconocido;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;2;Europa;Italia;Z;Unknown;True;1;5;0;0;0;0;6;0;6
+2019;2;Europa;Malta;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;2;Europa;Noruega;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;2;Europa;Polonia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;2;Europa;Reino Unido;Z;Unknown;True;0;6;0;1;0;0;5;0;6
+2019;2;Europa;Rusia;Z;Unknown;True;2;2;0;0;0;0;4;0;4
+2019;2;International;International;Z;Unknown;False;1;7;0;0;0;0;0;8;8
+2019;2;International;International;Z;Unknown;True;10;45;0;4;1;0;50;0;55
+2019;2;África;Sudáfrica;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;3;América;Brasil;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;3;América;Canadá;Z;Unknown;True;0;3;0;0;0;0;3;0;3
+2019;3;América;Estados Unidos de América;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;3;América;Estados Unidos de América;Z;Unknown;True;2;42;0;1;2;0;41;0;44
+2019;3;Asia;Arabia Saudita;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;3;Asia;China;Z;Unknown;True;0;3;0;0;0;0;3;0;3
+2019;3;Asia;Corea del Sur;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;3;Asia;Filipinas;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;3;Asia;India;Z;Unknown;True;1;2;0;0;0;0;3;0;3
+2019;3;Asia;Israel;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;3;Asia;Israel;Z;Unknown;True;1;2;0;0;0;0;3;0;3
+2019;3;Asia;Japón;Z;Unknown;True;0;2;0;0;0;0;2;0;2
+2019;3;Asia;Pakistán;Z;Unknown;True;0;1;0;0;1;0;0;0;1
+2019;3;Asia;Singapur;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;3;Asia;Taiwán;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;3;Asia;Turquía;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;3;Australia y Oceanía;Nueva Zelanda;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;3;Desconocido;Desconocido;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;3;Europa;Italia;Z;Unknown;True;0;3;0;0;0;0;3;0;3
+2019;3;Europa;Noruega;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;3;Europa;Reino Unido;Z;Unknown;True;0;7;0;0;0;2;5;0;7
+2019;3;Europa;Rumanía;Z;Unknown;True;0;1;0;0;0;1;0;0;1
+2019;3;Europa;Rusia;Z;Unknown;True;0;1;0;0;1;0;0;0;1
+2019;3;Europa;Ucrania;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;3;International;International;Z;Unknown;False;2;15;0;0;0;0;0;17;17
+2019;3;International;International;Z;Unknown;True;10;26;0;4;1;0;31;0;36
+2019;3;África;Egipto;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;3;África;Nigeria;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;América;Brasil;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;América;Canadá;Z;Unknown;True;0;3;0;0;0;0;3;0;3
+2019;4;América;Chile;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;América;Ecuador;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;América;Estados Unidos de América;Z;Unknown;False;1;2;0;0;0;0;0;3;3
+2019;4;América;Estados Unidos de América;Z;Unknown;True;0;51;0;3;1;0;47;0;51
+2019;4;Asia;Bangladesh;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;4;Asia;Filipinas;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;Asia;Hong kong;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;Asia;India;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;Asia;Irán;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;4;Asia;Israel;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;Asia;Japón;Z;Unknown;True;0;3;0;0;0;0;3;0;3
+2019;4;Asia;Singapur;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;Australia y Oceanía;Australia;Z;Unknown;True;0;3;0;0;1;0;2;0;3
+2019;4;Desconocido;Desconocido;Z;Unknown;False;0;2;0;0;0;0;0;2;2
+2019;4;Desconocido;Desconocido;Z;Unknown;True;3;4;0;0;0;0;7;0;7
+2019;4;Europa;Alemania;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;4;Europa;Finlandia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;Europa;Francia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;Europa;Italia;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;4;Europa;Lituania;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;4;Europa;Reino Unido;Z;Unknown;True;0;1;0;1;0;0;0;0;1
+2019;4;Europa;Rusia;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;4;Europa;Rusia;Z;Unknown;True;0;2;0;2;0;0;0;0;2
+2019;4;Europa;Suiza;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;4;Europa;Ucrania;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;4;International;International;Z;Unknown;False;0;11;0;0;0;0;0;11;11
+2019;4;International;International;Z;Unknown;True;8;39;0;2;3;0;42;0;47
+2019;5;América;Chile;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;5;América;Estados Unidos de América;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;5;América;Estados Unidos de América;Z;Unknown;True;5;34;0;1;4;1;33;0;39
+2019;5;América;Islas Vírgenes de los Estados Unidos;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;5;Asia;Corea del Sur;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;5;Asia;Filipinas;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;5;Asia;India;Z;Unknown;False;1;0;0;0;0;0;0;1;1
+2019;5;Asia;India;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;5;Asia;Irán;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;5;Asia;Israel;Z;Unknown;True;2;0;0;0;0;0;2;0;2
+2019;5;Asia;Japón;Z;Unknown;True;0;1;0;1;0;0;0;0;1
+2019;5;Asia;Singapur;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;5;Asia;Taiwán;Z;Unknown;False;1;0;0;0;0;0;0;1;1
+2019;5;Asia;Taiwán;Z;Unknown;True;0;1;0;0;1;0;0;0;1
+2019;5;Australia y Oceanía;Australia;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;5;Desconocido;Desconocido;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;5;Desconocido;Desconocido;Z;Unknown;True;1;3;0;1;0;0;3;0;4
+2019;5;Europa;Alemania;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;5;Europa;Austria;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;5;Europa;Europa;Z;Unknown;True;0;1;0;0;0;1;0;0;1
+2019;5;Europa;Italia;Z;Unknown;True;1;4;0;0;0;0;5;0;5
+2019;5;Europa;Países Bajos;Z;Unknown;True;0;2;0;0;0;0;2;0;2
+2019;5;Europa;Reino Unido;Z;Unknown;True;0;4;0;0;1;0;3;0;4
+2019;5;Europa;Rusia;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;5;Europa;Ucrania;Z;Unknown;True;1;0;0;0;0;1;0;0;1
+2019;5;International;International;Z;Unknown;False;0;9;0;0;0;0;0;9;9
+2019;5;International;International;Z;Unknown;True;12;32;0;4;5;1;34;0;44
+2019;5;África;Sudáfrica;Z;Unknown;False;1;0;0;0;0;0;0;1;1
+2019;6;América;Canadá;Z;Unknown;True;0;4;0;0;0;0;4;0;4
+2019;6;América;Estados Unidos de América;Z;Unknown;False;0;2;0;0;0;0;0;2;2
+2019;6;América;Estados Unidos de América;Z;Unknown;True;2;34;0;1;1;0;34;0;36
+2019;6;Asia;Arabia Saudita;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;6;Asia;Bangladesh;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;6;Asia;China;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;6;Asia;Corea del Sur;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;6;Asia;Corea del Sur;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;6;Asia;Hong kong;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;6;Asia;India;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;6;Asia;Irán;Z;Unknown;True;3;0;0;0;0;0;3;0;3
+2019;6;Asia;Israel;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;6;Asia;Singapur;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;6;Asia;Turquía;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;6;Australia y Oceanía;Australia;Z;Unknown;True;0;4;0;0;0;0;4;0;4
+2019;6;Desconocido;Desconocido;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;6;Europa;Alemania;Z;Unknown;True;0;2;0;1;0;0;1;0;2
+2019;6;Europa;Bélgica;Z;Unknown;True;0;2;0;0;0;0;2;0;2
+2019;6;Europa;Europa;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;6;Europa;Italia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;6;Europa;Reino Unido;Z;Unknown;False;0;2;0;0;0;0;0;2;2
+2019;6;Europa;Reino Unido;Z;Unknown;True;0;3;0;1;0;0;2;0;3
+2019;6;Europa;Rusia;Z;Unknown;True;2;1;0;0;0;0;3;0;3
+2019;6;International;International;Z;Unknown;False;1;12;0;0;0;0;0;13;13
+2019;6;International;International;Z;Unknown;True;11;37;0;3;2;0;43;0;48
+2019;7;América;Bahamas;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;7;América;Brasil;Z;Unknown;True;0;2;0;0;1;0;1;0;2
+2019;7;América;Chile;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;7;América;Estados Unidos de América;Z;Unknown;False;0;3;0;0;0;0;0;3;3
+2019;7;América;Estados Unidos de América;Z;Unknown;True;5;57;0;1;0;1;60;0;62
+2019;7;América;Honduras;Z;Unknown;True;1;0;0;0;0;1;0;0;1
+2019;7;América;Islas Malvinas;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;7;América;Puerto Rico;Z;Unknown;True;0;2;0;0;0;0;2;0;2
+2019;7;Asia;Birmania;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;7;Asia;China;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;7;Asia;Hong kong;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;7;Asia;Japón;Z;Unknown;True;0;2;0;1;0;0;1;0;2
+2019;7;Asia;Palestina;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;7;Asia;Singapur;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;7;Asia;Taiwán;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;7;Asia;Turquía;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;7;Desconocido;Desconocido;Z;Unknown;True;1;2;0;0;1;0;2;0;3
+2019;7;Europa;Alemania;Z;Unknown;True;0;2;0;0;0;0;2;0;2
+2019;7;Europa;Bulgaria;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;7;Europa;Croacia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;7;Europa;Países Bajos;Z;Unknown;True;0;1;0;0;1;0;0;0;1
+2019;7;Europa;Reino Unido;Z;Unknown;True;0;7;0;0;0;0;7;0;7
+2019;7;Europa;Rusia;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;7;Europa;Suiza;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;7;Europa;Ucrania;Z;Unknown;True;1;0;0;0;0;1;0;0;1
+2019;7;International;International;Z;Unknown;False;0;4;0;0;0;0;0;4;4
+2019;7;International;International;Z;Unknown;True;12;44;0;2;5;0;49;0;56
+2019;7;África;Libia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;7;África;Sudáfrica;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;América;Argentina;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;América;Brasil;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;América;Canadá;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;América;Estados Unidos de América;Z;Unknown;False;1;1;0;0;0;0;0;2;2
+2019;8;América;Estados Unidos de América;Z;Unknown;True;4;46;0;6;1;0;43;0;50
+2019;8;América;México;Z;Unknown;True;0;1;0;1;0;0;0;0;1
+2019;8;América;Panamá;Z;Unknown;True;0;1;0;0;1;0;0;0;1
+2019;8;América;Venezuela;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;8;Asia;Birmania;Z;Unknown;True;0;1;0;0;0;1;0;0;1
+2019;8;Asia;China;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;8;Asia;China;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;Asia;Corea del Sur;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;8;Asia;Hong kong;Z;Unknown;True;1;2;0;0;0;2;1;0;3
+2019;8;Asia;India;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;8;Asia;Israel;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;Asia;Malasia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;Australia y Oceanía;Australia;Z;Unknown;True;0;2;0;0;0;0;2;0;2
+2019;8;Australia y Oceanía;Nueva Zelanda;Z;Unknown;True;0;3;0;0;0;0;3;0;3
+2019;8;Desconocido;Desconocido;Z;Unknown;True;1;4;0;0;0;0;5;0;5
+2019;8;Europa;Alemania;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;8;Europa;Alemania;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;Europa;Dinamarca;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;Europa;Europa;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;Europa;Francia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;Europa;Liechtenstein;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;Europa;Reino Unido;Z;Unknown;True;0;2;0;1;0;0;1;0;2
+2019;8;Europa;República Checa;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;Europa;Rusia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;8;International;International;Z;Unknown;False;1;2;0;0;0;0;0;3;3
+2019;8;International;International;Z;Unknown;True;13;56;0;11;4;2;52;0;69
+2019;8;África;Ghana;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;América;Brasil;Z;Unknown;True;1;1;0;0;0;0;2;0;2
+2019;9;América;Canadá;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2019;9;América;Canadá;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2019;9;América;Canadá;Z;Unknown;True;0;6;0;0;0;0;6;0;6
+2019;9;América;Estados Unidos de América;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2019;9;América;Estados Unidos de América;Z;Unknown;True;6;48;0;4;1;0;49;0;54
+2019;9;América;Panamá;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;9;Asia;China;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;Asia;Hong kong;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;Asia;India;Z;Unknown;True;2;0;0;0;0;0;2;0;2
+2019;9;Asia;Irak;Z;Unknown;True;0;2;0;0;0;2;0;0;2
+2019;9;Asia;Japón;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;Asia;Tibet;Z;Unknown;True;1;0;0;0;0;0;1;0;1
+2019;9;Australia y Oceanía;Nueva Zelanda;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;9;Australia y Oceanía;Nueva Zelanda;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;Desconocido;Desconocido;Z;Unknown;True;0;2;0;1;0;0;1;0;2
+2019;9;Europa;Alemania;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;Europa;Dinamarca;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;Europa;Francia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;Europa;Hungría;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;Europa;Irlanda;Z;Unknown;False;1;0;0;0;0;0;0;1;1
+2019;9;Europa;Irlanda;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;Europa;Italia;Z;Unknown;True;0;4;0;0;1;0;3;0;4
+2019;9;Europa;Reino Unido;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;Europa;República Checa;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;9;International;International;Z;Unknown;False;1;3;0;0;0;0;0;4;4
+2019;9;International;International;Z;Unknown;True;5;45;0;4;2;1;43;0;50
+2019;9;África;Sudáfrica;Z;Unknown;True;0;2;0;0;1;0;1;0;2
+2019;10;América;Canadá;Q;Human health and social work activities;False;0;2;0;2;0;0;0;0;2
+2019;10;América;Canadá;Z;Unknown;True;0;2;0;0;0;0;2;0;2
+2019;10;América;Chile;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2019;10;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;2;0;2;0;0;0;0;2
+2019;10;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;2;0;2;0;0;0;0;2
+2019;10;América;Estados Unidos de América;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2019;10;América;Estados Unidos de América;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2019;10;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2019;10;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;2;0;2;0;0;0;0;2
+2019;10;América;Estados Unidos de América;P;Education;False;0;4;0;4;0;0;0;0;4
+2019;10;América;Estados Unidos de América;Q;Human health and social work activities;False;0;5;0;5;0;0;0;0;5
+2019;10;América;Estados Unidos de América;S;Other service activities;False;0;2;0;2;0;0;0;0;2
+2019;10;América;Estados Unidos de América;Y;Multiple Industries;False;1;1;0;1;1;0;0;0;2
+2019;10;América;Estados Unidos de América;Z;Unknown;False;0;2;0;0;0;0;0;2;2
+2019;10;América;Estados Unidos de América;Z;Unknown;True;3;30;0;2;2;0;29;0;33
+2019;10;América;Panamá;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2019;10;Asia;Corea del Sur;X;Individual;False;0;1;0;1;0;0;0;0;1
+2019;10;Asia;Georgia;Y;Multiple Industries;False;0;1;0;0;0;0;1;0;1
+2019;10;Asia;India;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;1;0;0;0;1
+2019;10;Asia;India;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2019;10;Asia;India;Z;Unknown;False;1;0;0;0;0;0;0;1;1
+2019;10;Asia;Japón;Z;Unknown;True;2;0;0;0;0;0;2;0;2
+2019;10;Asia;Malasia;P;Education;False;0;1;0;1;0;0;0;0;1
+2019;10;Asia;Malasia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;10;Asia;Turquía;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2019;10;Australia y Oceanía;Australia;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2019;10;Australia y Oceanía;Australia;Z;Unknown;True;0;2;0;0;0;0;2;0;2
+2019;10;Australia y Oceanía;Nueva Zelanda;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;10;Desconocido;Desconocido;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2019;10;Desconocido;Desconocido;J;Information and communication;False;1;0;0;0;1;0;0;0;1
+2019;10;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;0;1;0;0;1;0;0;0;1
+2019;10;Desconocido;Desconocido;Z;Unknown;False;0;1;0;1;0;0;0;0;1
+2019;10;Desconocido;Desconocido;Z;Unknown;True;2;2;0;0;1;0;3;0;4
+2019;10;Europa;Alemania;Y;Multiple Industries;False;2;0;0;2;0;0;0;0;2
+2019;10;Europa;Alemania;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;10;Europa;España;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;10;Europa;Francia;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2019;10;Europa;Francia;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2019;10;Europa;Francia;Z;Unknown;True;0;2;0;0;0;0;2;0;2
+2019;10;Europa;Italia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2019;10;Europa;Italia;P;Education;False;1;0;0;0;1;0;0;0;1
+2019;10;Europa;Italia;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2019;10;Europa;Italia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2019;10;Europa;Italia;Y;Multiple Industries;False;1;0;0;1;0;0;0;0;1
+2019;10;Europa;Italia;Z;Unknown;True;0;3;0;0;0;0;3;0;3
+2019;10;Europa;Reino Unido;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;10;Europa;Reino Unido;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;10;Europa;República Checa;M;Professional scientific and technical activities;False;0;1;0;0;1;0;0;0;1
+2019;10;Europa;República Checa;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2019;10;Europa;Rusia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2019;10;Europa;Rusia;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;10;International;International;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2019;10;International;International;K;Financial and insurance activities;False;0;3;0;3;0;0;0;0;3
+2019;10;International;International;O;Public administration and defence, compulsory social security;False;2;1;0;0;2;1;0;0;3
+2019;10;International;International;U;Activities of extraterritorial organizations and bodies;False;1;0;0;0;1;0;0;0;1
+2019;10;International;International;X;Individual;False;0;11;0;11;0;0;0;0;11
+2019;10;International;International;Y;Multiple Industries;False;2;10;0;9;3;0;0;0;12
+2019;10;International;International;Z;Unknown;False;0;1;0;0;0;0;0;1;1
+2019;10;International;International;Z;Unknown;True;9;11;0;3;0;0;17;0;20
+2019;10;África;Marruecos;Z;Unknown;True;0;1;0;0;0;0;1;0;1
+2019;10;África;Sudáfrica;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2019;10;África;Sudáfrica;O;Public administration and defence, compulsory social security;False;1;0;0;1;0;0;0;0;1
+2019;11;América;Brasil;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2019;11;América;Canadá;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2019;11;América;Canadá;P;Education;False;0;2;0;2;0;0;0;0;2
+2019;11;América;Estados Unidos de América;C;Manufacturing;False;0;2;0;2;0;0;0;0;2
+2019;11;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;3;0;3;0;0;0;0;3
+2019;11;América;Estados Unidos de América;I;Accommodation and food service activities;False;1;3;0;4;0;0;0;0;4
+2019;11;América;Estados Unidos de América;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2019;11;América;Estados Unidos de América;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2019;11;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;5;0;5;0;0;0;0;5
+2019;11;América;Estados Unidos de América;N;Administrative and support service activities;False;0;1;0;0;1;0;0;0;1
+2019;11;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;1;5;0;6;0;0;0;0;6
+2019;11;América;Estados Unidos de América;P;Education;False;0;6;0;6;0;0;0;0;6
+2019;11;América;Estados Unidos de América;Q;Human health and social work activities;False;0;15;0;15;0;0;0;0;15
+2019;11;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;2;0;2;0;0;0;0;2
+2019;11;América;Estados Unidos de América;X;Individual;False;0;2;0;2;0;0;0;0;2
+2019;11;América;México;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2019;11;Asia;Arabia Saudita;C;Manufacturing;False;1;0;0;1;0;0;0;0;1
+2019;11;Asia;China;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2019;11;Asia;Corea del Sur;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2019;11;Asia;Hong kong;S;Other service activities;False;0;1;0;0;0;1;0;0;1
+2019;11;Asia;India;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2019;11;Asia;India;P;Education;False;0;1;0;1;0;0;0;0;1
+2019;11;Asia;India;X;Individual;False;0;1;0;1;0;0;0;0;1
+2019;11;Asia;Irán;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2019;11;Asia;Israel;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2019;11;Asia;Kazajistán;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2019;11;Asia;Pakistán;X;Individual;False;1;0;0;0;0;1;0;0;1
+2019;11;Australia y Oceanía;Australia;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2019;11;Desconocido;Desconocido;M;Professional scientific and technical activities;False;1;0;0;1;0;0;0;0;1
+2019;11;Desconocido;Desconocido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2019;11;Desconocido;Desconocido;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2019;11;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;1;0;0;0;0;1;0;0;1
+2019;11;Desconocido;Desconocido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2019;11;Europa;Alemania;Y;Multiple Industries;False;0;2;0;2;0;0;0;0;2
+2019;11;Europa;Bélgica;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2019;11;Europa;España;M;Professional scientific and technical activities;False;0;3;0;3;0;0;0;0;3
+2019;11;Europa;Francia;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2019;11;Europa;Francia;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2019;11;Europa;Irlanda;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2019;11;Europa;Isla de Man;K;Financial and insurance activities;False;1;0;0;0;0;0;1;0;1
+2019;11;Europa;Italia;J;Information and communication;False;1;1;0;0;1;0;1;0;2
+2019;11;Europa;Italia;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;0;1;0;1
+2019;11;Europa;Reino Unido;D;Electricity gas steam and air conditioning supply;True;0;1;0;0;0;0;1;0;1
+2019;11;Europa;Reino Unido;M;Professional scientific and technical activities;False;0;2;0;2;0;0;0;0;2
+2019;11;Europa;Reino Unido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2019;11;Europa;Reino Unido;S;Other service activities;False;1;0;0;0;0;0;1;0;1
+2019;11;Europa;Reino Unido;S;Other service activities;True;0;1;0;0;0;0;1;0;1
+2019;11;Europa;Reino Unido;X;Individual;False;0;1;0;1;0;0;0;0;1
+2019;11;Europa;Reino Unido;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2019;11;Europa;Ucrania;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2019;11;International;International;C;Manufacturing;False;1;1;0;1;1;0;0;0;2
+2019;11;International;International;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;1;0;0;0;1
+2019;11;International;International;G;Wholesale and retail trade;False;1;0;0;1;0;0;0;0;1
+2019;11;International;International;I;Accommodation and food service activities;False;1;0;0;0;1;0;0;0;1
+2019;11;International;International;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2019;11;International;International;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2019;11;International;International;X;Individual;False;0;21;0;21;0;0;0;0;21
+2019;11;International;International;Y;Multiple Industries;False;3;13;0;14;2;0;0;0;16
+2019;12;América;Canadá;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2019;12;América;Canadá;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2019;12;América;Estados Unidos de América;C;Manufacturing;False;0;2;0;2;0;0;0;0;2
+2019;12;América;Estados Unidos de América;G;Wholesale and retail trade;False;1;1;0;2;0;0;0;0;2
+2019;12;América;Estados Unidos de América;H;Transportation and storage;False;0;2;0;2;0;0;0;0;2
+2019;12;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;3;0;3;0;0;0;0;3
+2019;12;América;Estados Unidos de América;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2019;12;América;Estados Unidos de América;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2019;12;América;Estados Unidos de América;L;Real estate activities;False;0;1;0;1;0;0;0;0;1
+2019;12;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;9;0;9;0;0;0;0;9
+2019;12;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;16;0;16;0;0;0;0;16
+2019;12;América;Estados Unidos de América;P;Education;False;0;7;0;7;0;0;0;0;7
+2019;12;América;Estados Unidos de América;Q;Human health and social work activities;False;0;11;0;11;0;0;0;0;11
+2019;12;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;2;0;2;0;0;0;0;2
+2019;12;América;Estados Unidos de América;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2019;12;América;Estados Unidos de América;U;Activities of extraterritorial organizations and bodies;False;0;1;0;1;0;0;0;0;1
+2019;12;América;Estados Unidos de América;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2019;12;América;Estados Unidos de América;X;Individual;False;0;2;0;2;0;0;0;0;2
+2019;12;América;Estados Unidos de América;Y;Multiple Industries;False;0;2;0;2;0;0;0;0;2
+2019;12;Asia;Camboya;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2019;12;Asia;China;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2019;12;Asia;Hong kong;P;Education;False;0;1;0;1;0;0;0;0;1
+2019;12;Asia;India;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2019;12;Asia;Irán;K;Financial and insurance activities;False;0;1;0;0;0;1;0;0;1
+2019;12;Asia;Irán;O;Public administration and defence, compulsory social security;False;1;1;0;0;1;1;0;0;2
+2019;12;Asia;Japón;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2019;12;Asia;Japón;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2019;12;Asia;Japón;X;Individual;False;0;1;0;1;0;0;0;0;1
+2019;12;Asia;Singapur;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2019;12;Asia;Singapur;Q;Human health and social work activities;False;0;2;0;2;0;0;0;0;2
+2019;12;Asia;Tailandia;O;Public administration and defence, compulsory social security;False;1;0;0;1;0;0;0;0;1
+2019;12;Asia;Turquía;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2019;12;Asia;United Arab Emirates;X;Individual;False;0;1;0;0;1;0;0;0;1
+2019;12;Australia y Oceanía;Australia;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2019;12;Desconocido;Desconocido;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2019;12;Desconocido;Desconocido;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2019;12;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;1;0;0;0;1;0;0;0;1
+2019;12;Desconocido;Desconocido;Z;Unknown;False;0;1;0;0;1;0;0;0;1
+2019;12;Europa;Alemania;O;Public administration and defence, compulsory social security;False;0;2;0;2;0;0;0;0;2
+2019;12;Europa;Alemania;P;Education;False;0;2;0;2;0;0;0;0;2
+2019;12;Europa;Alemania;X;Individual;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;España;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;España;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;Francia;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;Francia;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2019;12;Europa;Francia;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;Italia;E;Water supply, sewerage waste management, and remediation activities;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;Italia;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;Países Bajos;P;Education;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;Polonia;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;Portugal;X;Individual;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;Reino Unido;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;Reino Unido;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;Reino Unido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;República Checa;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2019;12;Europa;Rusia;X;Individual;False;0;1;0;0;1;0;0;0;1
+2019;12;International;International;C;Manufacturing;False;2;1;0;1;2;0;0;0;3
+2019;12;International;International;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;0;1;0;0;1
+2019;12;International;International;J;Information and communication;False;1;0;0;0;1;0;0;0;1
+2019;12;International;International;K;Financial and insurance activities;False;1;2;0;3;0;0;0;0;3
+2019;12;International;International;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;1;0;0;1
+2019;12;International;International;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2019;12;International;International;R;Arts entertainment and recreation;False;0;2;0;2;0;0;0;0;2
+2019;12;International;International;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2019;12;International;International;X;Individual;False;3;15;0;15;2;1;0;0;18
+2019;12;International;International;Y;Multiple Industries;False;4;12;0;11;5;0;0;0;16
+2019;12;África;Etiopía;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;1;América;Canadá;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2020;1;América;Canadá;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;1;América;Canadá;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2020;1;América;Canadá;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2020;1;América;Estados Unidos de América;C;Manufacturing;False;0;2;0;2;0;0;0;0;2
+2020;1;América;Estados Unidos de América;D;Electricity gas steam and air conditioning supply;False;2;0;0;0;0;2;0;0;2
+2020;1;América;Estados Unidos de América;E;Water supply, sewerage waste management, and remediation activities;False;0;1;0;1;0;0;0;0;1
+2020;1;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;3;0;3;0;0;0;0;3
+2020;1;América;Estados Unidos de América;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2020;1;América;Estados Unidos de América;J;Information and communication;False;0;3;0;3;0;0;0;0;3
+2020;1;América;Estados Unidos de América;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2020;1;América;Estados Unidos de América;M;Professional scientific and technical activities;False;1;1;0;2;0;0;0;0;2
+2020;1;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;4;19;0;18;2;2;1;0;23
+2020;1;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;True;0;1;0;0;0;0;1;0;1
+2020;1;América;Estados Unidos de América;P;Education;False;0;8;0;8;0;0;0;0;8
+2020;1;América;Estados Unidos de América;Q;Human health and social work activities;False;0;10;0;10;0;0;0;0;10
+2020;1;América;Estados Unidos de América;R;Arts entertainment and recreation;False;2;0;0;2;0;0;0;0;2
+2020;1;América;Estados Unidos de América;S;Other service activities;False;0;2;0;2;0;0;0;0;2
+2020;1;América;Estados Unidos de América;U;Activities of extraterritorial organizations and bodies;False;0;1;0;1;0;0;0;0;1
+2020;1;América;Estados Unidos de América;X;Individual;False;1;5;0;5;1;0;0;0;6
+2020;1;América;Estados Unidos de América;Y;Multiple Industries;False;1;0;0;0;0;1;0;0;1
+2020;1;Asia;Bahrein;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;0;1;0;0;1
+2020;1;Asia;Corea del Sur;X;Individual;False;0;1;0;1;0;0;0;0;1
+2020;1;Asia;Hong kong;P;Education;False;0;1;0;0;1;0;0;0;1
+2020;1;Asia;Israel;H;Transportation and storage;False;0;1;1;0;0;0;0;0;1
+2020;1;Asia;Japón;C;Manufacturing;False;2;0;0;0;2;0;0;0;2
+2020;1;Asia;Japón;X;Individual;False;0;1;0;1;0;0;0;0;1
+2020;1;Asia;Kuwait;J;Information and communication;False;0;1;0;0;0;0;1;0;1
+2020;1;Asia;Omán;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;1;Asia;Turquía;J;Information and communication;False;0;1;0;0;0;0;1;0;1
+2020;1;Australia y Oceanía;Australia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;1;Australia y Oceanía;Australia;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2020;1;Australia y Oceanía;Australia;X;Individual;False;0;1;0;0;0;0;1;0;1
+2020;1;Desconocido;Desconocido;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2020;1;Desconocido;Desconocido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2020;1;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;0;2;0;1;1;0;0;0;2
+2020;1;Desconocido;Desconocido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2020;1;Europa;Alemania;C;Manufacturing;False;0;2;0;2;0;0;0;0;2
+2020;1;Europa;Alemania;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2020;1;Europa;Austria;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2020;1;Europa;Europa;D;Electricity gas steam and air conditioning supply;False;0;1;0;0;1;0;0;0;1
+2020;1;Europa;Francia;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;1;Europa;Grecia;O;Public administration and defence, compulsory social security;False;2;0;0;0;0;0;2;0;2
+2020;1;Europa;Italia;G;Wholesale and retail trade;False;1;0;0;1;0;0;0;0;1
+2020;1;Europa;Malta;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2020;1;Europa;Países Bajos;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2020;1;Europa;Reino Unido;P;Education;False;0;1;0;1;0;0;0;0;1
+2020;1;Europa;Reino Unido;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2020;1;Europa;Reino Unido;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2020;1;Europa;Reino Unido;X;Individual;False;0;1;0;1;0;0;0;0;1
+2020;1;Europa;República Checa;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2020;1;Europa;Ucrania;D;Electricity gas steam and air conditioning supply;False;1;0;0;0;1;0;0;0;1
+2020;1;International;International;G;Wholesale and retail trade;False;0;2;0;2;0;0;0;0;2
+2020;1;International;International;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2020;1;International;International;M;Professional scientific and technical activities;False;1;0;0;1;0;0;0;0;1
+2020;1;International;International;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2020;1;International;International;V;Fintech;False;1;0;0;1;0;0;0;0;1
+2020;1;International;International;X;Individual;False;0;16;0;16;0;0;0;0;16
+2020;1;International;International;Y;Multiple Industries;False;3;21;0;22;2;0;0;0;24
+2020;1;International;International;Y;Multiple Industries;True;0;1;0;0;0;0;1;0;1
+2020;1;África;Sierra Leona;K;Financial and insurance activities;False;1;0;0;0;0;1;0;0;1
+2020;2;América;Brasil;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;2;América;Canadá;O;Public administration and defence, compulsory social security;False;0;2;0;2;0;0;0;0;2
+2020;2;América;Canadá;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2020;2;América;Estados Unidos de América;C;Manufacturing;False;1;3;0;4;0;0;0;0;4
+2020;2;América;Estados Unidos de América;D;Electricity gas steam and air conditioning supply;False;0;3;0;3;0;0;0;0;3
+2020;2;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;2;0;2;0;0;0;0;2
+2020;2;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;2;0;2;0;0;0;0;2
+2020;2;América;Estados Unidos de América;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2020;2;América;Estados Unidos de América;K;Financial and insurance activities;False;0;9;0;8;1;0;0;0;9
+2020;2;América;Estados Unidos de América;L;Real estate activities;False;0;1;0;1;0;0;0;0;1
+2020;2;América;Estados Unidos de América;M;Professional scientific and technical activities;False;1;8;0;9;0;0;0;0;9
+2020;2;América;Estados Unidos de América;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2020;2;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;12;0;12;0;0;0;0;12
+2020;2;América;Estados Unidos de América;P;Education;False;0;16;0;16;0;0;0;0;16
+2020;2;América;Estados Unidos de América;Q;Human health and social work activities;False;1;12;0;13;0;0;0;0;13
+2020;2;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;2;0;2;0;0;0;0;2
+2020;2;América;Estados Unidos de América;S;Other service activities;False;0;1;0;0;1;0;0;0;1
+2020;2;América;Estados Unidos de América;X;Individual;False;0;3;0;3;0;0;0;0;3
+2020;2;América;Estados Unidos de América;Y;Multiple Industries;False;2;1;0;2;1;0;0;0;3
+2020;2;América;México;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2020;2;América;Puerto Rico;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2020;2;Asia;Corea del Sur;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2020;2;Asia;India;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;2;Asia;India;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2020;2;Asia;India;P;Education;False;0;1;0;1;0;0;0;0;1
+2020;2;Asia;Irán;J;Information and communication;False;0;1;0;0;0;1;0;0;1
+2020;2;Asia;Israel;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;2;Asia;Israel;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2020;2;Asia;Japón;C;Manufacturing;False;0;2;0;0;2;0;0;0;2
+2020;2;Asia;Malasia;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2020;2;Asia;Pakistán;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2020;2;Asia;Palestina;X;Individual;False;1;0;0;0;1;0;0;0;1
+2020;2;Asia;Singapur;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2020;2;Asia;Turquía;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2020;2;Australia y Oceanía;Australia;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;2;Australia y Oceanía;Nueva Zelanda;P;Education;False;0;1;0;1;0;0;0;0;1
+2020;2;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;1;0;0;1;0;0;0;0;1
+2020;2;Desconocido;Desconocido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2020;2;Desconocido;Desconocido;Z;Unknown;False;0;2;0;0;2;0;0;0;2
+2020;2;Europa;Alemania;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Alemania;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Croacia;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Dinamarca;N;Administrative and support service activities;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;España;R;Arts entertainment and recreation;False;1;0;0;1;0;0;0;0;1
+2020;2;Europa;Francia;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Francia;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Italia;P;Education;False;1;0;0;0;0;0;1;0;1
+2020;2;Europa;Italia;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Italia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Países Bajos;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Portugal;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Reino Unido;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Reino Unido;O;Public administration and defence, compulsory social security;False;0;2;0;2;0;0;0;0;2
+2020;2;Europa;Reino Unido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Rusia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Suiza;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Ucrania;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;2;Europa;Ucrania;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2020;2;Europa;Ucrania;X;Individual;False;0;1;0;1;0;0;0;0;1
+2020;2;International;International;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2020;2;International;International;G;Wholesale and retail trade;False;1;3;0;4;0;0;0;0;4
+2020;2;International;International;K;Financial and insurance activities;False;0;3;0;3;0;0;0;0;3
+2020;2;International;International;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;2;International;International;O;Public administration and defence, compulsory social security;False;1;1;0;0;2;0;0;0;2
+2020;2;International;International;R;Arts entertainment and recreation;False;1;0;0;1;0;0;0;0;1
+2020;2;International;International;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2020;2;International;International;X;Individual;False;1;17;0;17;1;0;0;0;18
+2020;2;International;International;Y;Multiple Industries;False;4;24;0;24;4;0;0;0;28
+2020;2;África;Ruanda;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2020;2;África;Seychelles;V;Fintech;False;1;0;0;1;0;0;0;0;1
+2020;2;África;Sudáfrica;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;3;América;Brasil;C;Manufacturing;False;1;0;0;1;0;0;0;0;1
+2020;3;América;Canadá;J;Information and communication;False;0;1;0;1;0;0;0;0;1
+2020;3;América;Curaçao;R;Arts entertainment and recreation;False;1;0;0;1;0;0;0;0;1
+2020;3;América;Estados Unidos de América;C;Manufacturing;False;2;5;0;7;0;0;0;0;7
+2020;3;América;Estados Unidos de América;G;Wholesale and retail trade;False;0;5;0;5;0;0;0;0;5
+2020;3;América;Estados Unidos de América;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2020;3;América;Estados Unidos de América;J;Information and communication;False;0;4;0;4;0;0;0;0;4
+2020;3;América;Estados Unidos de América;K;Financial and insurance activities;False;1;1;0;2;0;0;0;0;2
+2020;3;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;3;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;6;0;6;0;0;0;0;6
+2020;3;América;Estados Unidos de América;P;Education;False;0;6;0;6;0;0;0;0;6
+2020;3;América;Estados Unidos de América;Q;Human health and social work activities;False;1;12;0;13;0;0;0;0;13
+2020;3;América;Estados Unidos de América;R;Arts entertainment and recreation;False;0;4;0;4;0;0;0;0;4
+2020;3;América;Estados Unidos de América;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2020;3;América;Estados Unidos de América;X;Individual;False;0;10;0;9;0;1;0;0;10
+2020;3;América;Estados Unidos de América;Y;Multiple Industries;False;1;5;0;5;1;0;0;0;6
+2020;3;América;Jamaica;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;3;Asia;Arabia Saudita;X;Individual;False;0;1;0;0;1;0;0;0;1
+2020;3;Asia;Armenia;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2020;3;Asia;China;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2020;3;Asia;China;X;Individual;False;0;1;0;1;0;0;0;0;1
+2020;3;Asia;Corea del Sur;O;Public administration and defence, compulsory social security;False;2;0;0;0;2;0;0;0;2
+2020;3;Asia;Georgia;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2020;3;Asia;Hong kong;X;Individual;False;1;0;0;0;1;0;0;0;1
+2020;3;Asia;India;G;Wholesale and retail trade;False;0;1;0;1;0;0;0;0;1
+2020;3;Asia;India;L;Real estate activities;False;0;1;0;1;0;0;0;0;1
+2020;3;Asia;India;O;Public administration and defence, compulsory social security;False;2;0;0;1;1;0;0;0;2
+2020;3;Asia;Irán;X;Individual;False;1;0;0;1;0;0;0;0;1
+2020;3;Asia;Israel;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2020;3;Asia;Líbano;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2020;3;Asia;Mongolia;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2020;3;Asia;Pakistán;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;3;Asia;Palestina;X;Individual;False;1;0;0;0;1;0;0;0;1
+2020;3;Asia;Vietnam;Y;Multiple Industries;False;1;0;0;0;1;0;0;0;1
+2020;3;Australia y Oceanía;Australia;O;Public administration and defence, compulsory social security;False;0;1;0;0;1;0;0;0;1
+2020;3;Australia y Oceanía;Australia;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2020;3;Australia y Oceanía;Australia;Z;Unknown;False;0;1;0;1;0;0;0;0;1
+2020;3;Desconocido;Desconocido;Z;Unknown;False;0;2;0;2;0;0;0;0;2
+2020;3;Europa;Alemania;I;Accommodation and food service activities;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Alemania;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Alemania;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Alemania;Y;Multiple Industries;False;1;0;0;1;0;0;0;0;1
+2020;3;Europa;España;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Europa;C;Manufacturing;False;1;0;0;1;0;0;0;0;1
+2020;3;Europa;Europa;D;Electricity gas steam and air conditioning supply;True;0;1;0;0;0;0;1;0;1
+2020;3;Europa;Francia;D;Electricity gas steam and air conditioning supply;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Francia;O;Public administration and defence, compulsory social security;False;1;1;0;2;0;0;0;0;2
+2020;3;Europa;Irlanda;P;Education;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Italia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Italia;X;Individual;False;0;2;0;2;0;0;0;0;2
+2020;3;Europa;Países Bajos;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Reino Unido;G;Wholesale and retail trade;False;0;2;0;2;0;0;0;0;2
+2020;3;Europa;Reino Unido;J;Information and communication;False;0;2;0;2;0;0;0;0;2
+2020;3;Europa;Reino Unido;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Reino Unido;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Reino Unido;Q;Human health and social work activities;False;1;0;0;1;0;0;0;0;1
+2020;3;Europa;Reino Unido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Reino Unido;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;República Checa;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Rusia;M;Professional scientific and technical activities;False;1;0;0;1;0;0;0;0;1
+2020;3;Europa;Rusia;X;Individual;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Serbia;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2020;3;Europa;Suiza;K;Financial and insurance activities;False;1;0;0;1;0;0;0;0;1
+2020;3;International;International;K;Financial and insurance activities;False;0;2;0;2;0;0;0;0;2
+2020;3;International;International;O;Public administration and defence, compulsory social security;False;0;1;0;0;0;1;0;0;1
+2020;3;International;International;Q;Human health and social work activities;False;0;1;0;1;0;0;0;0;1
+2020;3;International;International;U;Activities of extraterritorial organizations and bodies;False;0;1;0;0;1;0;0;0;1
+2020;3;International;International;V;Fintech;False;0;2;0;2;0;0;0;0;2
+2020;3;International;International;X;Individual;False;0;27;0;26;1;0;0;0;27
+2020;3;International;International;Y;Multiple Industries;False;6;21;0;22;5;0;0;0;27
+2020;3;África;Libia;X;Individual;False;0;1;0;0;1;0;0;0;1
+2020;3;África;Marruecos;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2020;3;África;Marruecos;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2020;4;América;Brasil;X;Individual;False;0;1;0;1;0;0;0;0;1
+2020;4;América;Canadá;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;4;América;Canadá;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;4;América;Canadá;Q;Human health and social work activities;False;0;2;0;2;0;0;0;0;2
+2020;4;América;Estados Unidos de América;H;Transportation and storage;False;1;0;0;0;1;0;0;0;1
+2020;4;América;Estados Unidos de América;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;4;América;Estados Unidos de América;L;Real estate activities;False;0;1;0;1;0;0;0;0;1
+2020;4;América;Estados Unidos de América;M;Professional scientific and technical activities;False;0;3;0;3;0;0;0;0;3
+2020;4;América;Estados Unidos de América;O;Public administration and defence, compulsory social security;False;0;4;0;2;2;0;0;0;4
+2020;4;América;Estados Unidos de América;Q;Human health and social work activities;False;2;6;0;8;0;0;0;0;8
+2020;4;América;Estados Unidos de América;R;Arts entertainment and recreation;False;1;1;0;2;0;0;0;0;2
+2020;4;América;Estados Unidos de América;S;Other service activities;False;0;1;0;1;0;0;0;0;1
+2020;4;América;Estados Unidos de América;X;Individual;False;0;4;0;4;0;0;0;0;4
+2020;4;América;Estados Unidos de América;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2020;4;Asia;China;O;Public administration and defence, compulsory social security;False;1;0;0;0;1;0;0;0;1
+2020;4;Asia;Irán;X;Individual;False;0;1;0;1;0;0;0;0;1
+2020;4;Asia;Nepal;J;Information and communication;False;1;1;0;2;0;0;0;0;2
+2020;4;Asia;Pakistán;X;Individual;False;0;1;0;1;0;0;0;0;1
+2020;4;Asia;Singapur;Y;Multiple Industries;False;0;1;0;1;0;0;0;0;1
+2020;4;Asia;Siria;X;Individual;False;1;0;0;0;1;0;0;0;1
+2020;4;Asia;Sri lanka;C;Manufacturing;False;1;0;0;1;0;0;0;0;1
+2020;4;Australia y Oceanía;Australia;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;4;Australia y Oceanía;Australia;X;Individual;False;0;2;0;1;1;0;0;0;2
+2020;4;Desconocido;Desconocido;U;Activities of extraterritorial organizations and bodies;False;0;1;0;1;0;0;0;0;1
+2020;4;Desconocido;Desconocido;V;Fintech;False;0;1;0;1;0;0;0;0;1
+2020;4;Desconocido;Desconocido;Z;Unknown;False;0;1;0;1;0;0;0;0;1
+2020;4;Europa;Alemania;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
+2020;4;Europa;Dinamarca;C;Manufacturing;False;0;1;0;1;0;0;0;0;1
+2020;4;Europa;España;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;4;Europa;Italia;J;Information and communication;False;1;0;0;1;0;0;0;0;1
+2020;4;Europa;Italia;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;4;Europa;Portugal;D;Electricity gas steam and air conditioning supply;False;1;0;0;1;0;0;0;0;1
+2020;4;Europa;Portugal;K;Financial and insurance activities;False;0;1;0;1;0;0;0;0;1
+2020;4;Europa;Suiza;H;Transportation and storage;False;0;1;0;1;0;0;0;0;1
+2020;4;International;International;G;Wholesale and retail trade;False;1;0;0;1;0;0;0;0;1
+2020;4;International;International;K;Financial and insurance activities;False;1;0;0;1;0;0;0;0;1
+2020;4;International;International;M;Professional scientific and technical activities;False;0;1;0;1;0;0;0;0;1
+2020;4;International;International;O;Public administration and defence, compulsory social security;False;1;0;0;0;0;0;1;0;1
+2020;4;International;International;Q;Human health and social work activities;False;0;2;0;2;0;0;0;0;2
+2020;4;International;International;R;Arts entertainment and recreation;False;0;1;0;1;0;0;0;0;1
+2020;4;International;International;X;Individual;False;1;17;0;15;0;3;0;0;18
+2020;4;International;International;Y;Multiple Industries;False;2;14;0;14;2;0;0;0;16
+2020;4;África;Algeria;D;Electricity gas steam and air conditioning supply;False;1;0;0;1;0;0;0;0;1
+2020;4;África;Sudáfrica;O;Public administration and defence, compulsory social security;False;0;1;0;1;0;0;0;0;1
