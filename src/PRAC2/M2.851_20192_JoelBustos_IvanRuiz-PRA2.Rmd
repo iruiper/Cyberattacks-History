@@ -3,9 +3,9 @@ title: 'Tipología y Ciclo de Vida de los Datos: PRA2 - Limpieza y validación d
 author: "Autores: Joel Bustos - Iván Ruiz"
 date: "Junio 2020"
 output:
-  pdf_document:
-    toc: yes
   word_document:
+    toc: yes
+  pdf_document:
     toc: yes
   html_document:
     toc: yes
@@ -300,7 +300,7 @@ NumeroAtaques <- attacks_Input$NumeroAtaques
 casosMultiataque <- attacks_Input$Code_attack_class_.1
 casosCyberCrime <- attacks_Input$Code_attack_class_CC
 casosCyberEspionage <- attacks_Input$Code_attack_class_CE
-casosCyberWarfae <- attacks_Input$Code_attack_class_CW
+casosCyberWarfare <- attacks_Input$Code_attack_class_CW
 casosHacktivism <- attacks_Input$Code_attack_class_H
 casosTipoAtaqueDesconocido <- attacks_Input$Code_attack_class_UK
 
@@ -320,7 +320,7 @@ plot(NumeroAtaques)
 plot(casosMultiataque)
 plot(casosCyberCrime)
 plot(casosCyberEspionage)
-plot(casosCyberWarfae)
+plot(casosCyberWarfare)
 plot(casosHacktivism)
 plot(casosTipoAtaqueDesconocido)
 
@@ -331,17 +331,15 @@ plot(casosTipoAtaqueDesconocido)
 
 # Representación de los boxplot para las variables numéricas
 
-par(mfrow=c(3,3)) 
-
-boxplot(casosConAutor)
-boxplot(casosAnonimos)
-boxplot(NumeroAtaques)
-boxplot(casosMultiataque)
-boxplot(casosCyberCrime)
-boxplot(casosCyberEspionage)
-boxplot(casosCyberWarfae)
-boxplot(casosHacktivism)
-boxplot(casosTipoAtaqueDesconocido)
+boxplot(casosConAutor, main="Casos con Autor")
+boxplot(casosAnonimos, main="Casos Anónimos")
+boxplot(NumeroAtaques, main="Número total de ataques")
+boxplot(casosMultiataque, main="Casos con varias tipologías de ataque")
+boxplot(casosCyberCrime, main="Casos CyberCrime")
+boxplot(casosCyberEspionage, main="Casos CyberEspionage")
+boxplot(casosCyberWarfare, main="Casos CyberWarfare")
+boxplot(casosHacktivism, main="Casos Hacktivism")
+boxplot(casosTipoAtaqueDesconocido, main="Casos con ataque desconocido")
 
 
 ```
@@ -359,7 +357,7 @@ hist(NumeroAtaques)
 hist(casosMultiataque)
 hist(casosCyberCrime)
 hist(casosCyberEspionage)
-hist(casosCyberWarfae)
+hist(casosCyberWarfare)
 hist(casosHacktivism)
 hist(casosTipoAtaqueDesconocido)
 
@@ -390,17 +388,17 @@ plot(attacks_agg1$NumeroAtaques, col=attacks_agg1$Code_target_class)
 
 par(mfrow=c(1,3)) 
 
-boxplot(attacks_agg1$casosConAutor, col=attacks_agg1$Code_target_class)
-boxplot(attacks_agg1$casosAnonimos, col=attacks_agg1$Code_target_class)
-boxplot(attacks_agg1$NumeroAtaques, col=attacks_agg1$Code_target_class)
+boxplot(attacks_agg1$casosConAutor, col=attacks_agg1$Code_target_class, main="Casos con Autor")
+boxplot(attacks_agg1$casosAnonimos, col=attacks_agg1$Code_target_class, main="Casos Anónimos")
+boxplot(attacks_agg1$NumeroAtaques, col=attacks_agg1$Code_target_class, main="Número de ataques")
 
 # Representación de los histogramas para las variables numéricas
 
 par(mfrow=c(1,3)) 
 
-hist(attacks_agg1$casosConAutor, col=attacks_agg1$Code_target_class, breaks = 50)
-hist(attacks_agg1$casosAnonimos, col=attacks_agg1$Code_target_class, breaks = 50)
-hist(attacks_agg1$NumeroAtaques, col=attacks_agg1$Code_target_class, breaks = 50)
+hist(attacks_agg1$casosConAutor, col=attacks_agg1$Code_target_class, breaks = 50,main="Casos con Autor", xlab="incidentes")
+hist(attacks_agg1$casosAnonimos, col=attacks_agg1$Code_target_class, breaks = 50, main="Casos Anónimos", xlab="incidentes")
+hist(attacks_agg1$NumeroAtaques, col=attacks_agg1$Code_target_class, breaks = 50, main="Número de ataques", xlab="incidentes")
 
 ```
 
@@ -427,17 +425,17 @@ Por el momento, como último análisis visual, vamos a presentar los gráficos p
 
 # Representación de los gráficos de dispersión de valores
 
-par(mfrow=c(3,3)) 
+par(mfrow=c(1,3)) 
 
-plot(casosConAutor, col=attacks_Input$Code_target_class)
-plot(casosAnonimos, col=attacks_Input$Code_target_class)
-plot(NumeroAtaques, col=attacks_Input$Code_target_class)
-plot(casosMultiataque, col=attacks_Input$Code_target_class)
-plot(casosCyberCrime, col=attacks_Input$Code_target_class)
-plot(casosCyberEspionage, col=attacks_Input$Code_target_class)
-plot(casosCyberWarfae, col=attacks_Input$Code_target_class)
-plot(casosHacktivism, col=attacks_Input$Code_target_class)
-plot(casosTipoAtaqueDesconocido, col=attacks_Input$Code_target_class)
+plot(casosConAutor, col=attacks_Input$Code_target_class, main = "Con Autor")
+plot(casosAnonimos, col=attacks_Input$Code_target_class, main = "Anónimos")
+plot(NumeroAtaques, col=attacks_Input$Code_target_class, main = "Total Ataques")
+plot(casosMultiataque, col=attacks_Input$Code_target_class, main="Varios Tipos")
+plot(casosCyberCrime, col=attacks_Input$Code_target_class, main="CyberCrime")
+plot(casosCyberEspionage, col=attacks_Input$Code_target_class, main="CyberEspionage")
+plot(casosCyberWarfare, col=attacks_Input$Code_target_class, main="CyberWarfare")
+plot(casosHacktivism, col=attacks_Input$Code_target_class, main="Hacktivism")
+plot(casosTipoAtaqueDesconocido, col=attacks_Input$Code_target_class, main="Desconocido")
 
 
 ```
@@ -447,19 +445,19 @@ plot(casosTipoAtaqueDesconocido, col=attacks_Input$Code_target_class)
 
 # Representación de los gráficos de dispersión de valores, excluyendo las entidades que generan valores extremos
 
-par(mfrow=c(3,3)) 
+par(mfrow=c(1,3)) 
 
 exclEnt <- attacks_Input$Code_target_class!="X" & attacks_Input$Code_target_class!="Y" & attacks_Input$Code_target_class!="Z"
 
-plot(casosConAutor[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
-plot(casosAnonimos[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
-plot(NumeroAtaques[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
-plot(casosMultiataque[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
-plot(casosCyberCrime[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
-plot(casosCyberEspionage[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
-plot(casosCyberWarfae[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
-plot(casosHacktivism[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
-plot(casosTipoAtaqueDesconocido[exclEnt], col=attacks_Input$Code_target_class[exclEnt])
+plot(casosConAutor[exclEnt], col=attacks_Input$Code_target_class[exclEnt], main = "Con Autor")
+plot(casosAnonimos[exclEnt], col=attacks_Input$Code_target_class[exclEnt], main = "Anónimos")
+plot(NumeroAtaques[exclEnt], col=attacks_Input$Code_target_class[exclEnt], main = "Total Ataques")
+plot(casosMultiataque[exclEnt], col=attacks_Input$Code_target_class[exclEnt], main="Varios Tipos")
+plot(casosCyberCrime[exclEnt], col=attacks_Input$Code_target_class[exclEnt], main="CyberCrime")
+plot(casosCyberEspionage[exclEnt], col=attacks_Input$Code_target_class[exclEnt], main="CyberEspionage")
+plot(casosCyberWarfare[exclEnt], col=attacks_Input$Code_target_class[exclEnt], main="CyberWarfare")
+plot(casosHacktivism[exclEnt], col=attacks_Input$Code_target_class[exclEnt], main="Hacktivism")
+plot(casosTipoAtaqueDesconocido[exclEnt], col=attacks_Input$Code_target_class[exclEnt], main="Desconocido")
 
 
 ```
@@ -475,18 +473,174 @@ De todo lo anterior, podemos extraer varias conclusiones muy interesantes sobre 
 ******
 # 4. Análisis de los datos
 ******
-* 4.1 Selección de los grupos de datos que se quieren analizar/compararar (planificación de los análisis a aplicar)
+* 4.1 Selección de los grupos de datos que se quieren analizar/compararar (planificación de los análisis a aplicar) [Pendiente. Word de Joel]
 =========================
 
 
 
-* 4.2 Comprobación de la normalidad y homogeneidad de la varianza
+* 4.2 Análisis particulares, y comprobaciones de normalidad y distribución de la varianza en las variables bajo estudio
 =========================
 
 
+A continuación vamos a presentar el trabajo de estudio que requiere responder a alguna de las cuestiones que motivan el proyecto. Por ello, estructuramos la presentación del trabajo más bien de acuerdo a la siguiente estructura:
 
-* 4.3 Aplicación de pruebas estadísticas para comparar los grupos de datos
-=========================
+a) Pregunta que queremos responder.
+b) Selección de los datos concretos para resolver la cuestión.
+c) Comprobación de normalidad y homogeneidad de la varianza.
+d) Aplicación de pruebas estadísticas.
+
+Comencemos con las siguientes cuestiones.
+
+a) *¿Existe algún periodo del año en que debería ampliar el presupuesto y los medios necesarios, al estar más expuesto a recibir ciberataques?*
+b) Para responder a esta pregunta, podrían plantearse muy distintas técnicas estadísticas. De hecho, en el momento en que entra en juego la dimensión temporal, podría plantearse un análisis más bien en el terreno del análisis de series temporales. Para este análisis avanzado, hemos encontrado una referencia de Box [5] que podría ser de mucha utilidad, pero que por su complejidad trataremos de simplificar en análisis más sencillos.
+
+En concreto, en lugar de analizar estacionalidad en la serie, lo que vamos a considerar es que la variable "Mes" constituye una variable categórica, que podría segmentar el set de datos en observaciones para cada uno de los meses. Como estamos interesados en lo que ocurre en nuestro sector (recordemos que el caso que analizamos nos pone en el papel de una empresa de sector público, que según hemos visto tiene el identificador "O"), únicamente filtraríamos las observaciones de ataques en nuestro sector, y para no hacer más complejo el análisis, nos interesará el número total de incidentes de seguridad reportados (campo "TotalAtaques").
+
+A partir de estos datos seleccionados, es decir, las observaciones individuales para Sector Público "O", y el número total de ataques, posterioremente fragmentaremos el set de datos en 12 subsets, y querremos ver si existen diferencias estadísticamente significativas entre la media del número de ataques según el mes seleccionado. Para ello, cogeremos como mes de referencia para la comparación aquel en el que la media de ataques sea más alta, y haciendo el contraste de hipótesis sobre la media sobre el resto de grupos, podremos concluir para cuáles de ellos la diferencia entre las medias es estadísticamente igual, o diferencia.
+
+Veamos a continuación cómo seleccionar el subset apropiado para este análisis.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Set de datos necesario para el análisis de impacto temporal
+
+attacks_temp <- attacks_Input[attacks_Input$Code_target_class=="O",c('Year','Mes','NumeroAtaques')]
+
+monthlyAttacks <- attacks_temp$NumeroAtaques
+
+# Graficamos para la variable seleccionada un diagrama de boxplot, y la distribución de frecuencias de los distintos valores.
+
+boxplot(monthlyAttacks,
+        main="Ataques Mensuales para Sector Público",
+        ylab="Número de Casos",
+        col="orange",
+        border="brown",
+        horizontal=TRUE)
+
+hist(monthlyAttacks, freq=FALSE, breaks=50, main="Ataques Mensuales para Sector Público", xlab="Número de Casos", ylab="Densidad")
+abline(v=mean(monthlyAttacks), col="blue", lwd=3)
+abline(v=median(monthlyAttacks), col="red")
+abline(v=mean(monthlyAttacks)-2*sd(monthlyAttacks), col="cyan")
+abline(v=mean(monthlyAttacks)+2*sd(monthlyAttacks), col="cyan")
+curve(dnorm(x, mean=mean(monthlyAttacks), sd=sd(monthlyAttacks)), add=TRUE, col="green", lwd=2)
+
+
+```
+
+A partir de los gráficos anterior, sin necesidad de ningún test de normalidad, vemos que la observación tiene una cola pesada a derecha. Vamos a intentar tipificar [6] la variable.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Tipificación de la variable Número de Ataques
+
+monthlyAttacks_N <- scale(monthlyAttacks, center = T, scale = T)
+
+hist(monthlyAttacks_N, freq=FALSE, main="Ataques Mensuales para Sector Público", xlab="Número de Casos", ylab="Densidad")
+abline(v=mean(monthlyAttacks_N), col="blue", lwd=3)
+abline(v=median(monthlyAttacks_N), col="red")
+abline(v=mean(monthlyAttacks_N)-2*sd(monthlyAttacks_N), col="cyan")
+abline(v=mean(monthlyAttacks_N)+2*sd(monthlyAttacks_N), col="cyan")
+curve(dnorm(x, mean=mean(monthlyAttacks_N), sd=sd(monthlyAttacks_N)), add=TRUE, col="green", lwd=2)
+```
+
+Según apreciamos, seguimos teniendo la dificultad de que el ajuste a la curva normal sea demasiado bueno, puede que por el pequeño tamaño de la muestra sobre la que tenemos que trabajar. Sin embargo, sí que observamos un ajuste más razonable a lo que cabría esperar de una curva normal. Vamos a analizar qué nos dice un test de normalidad sobre dicha variable.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Test de normalidad para la variable tipificada que hemos creado, para el análisis del número de casos mensuales.
+
+# Carga de librerías para tests de normalidad
+library(normtest)
+library(nortest)
+library(moments)
+
+# Varios tests de normalidad, todos ellos rechazando la hipótesis nula de normalidad
+
+sf.test(monthlyAttacks_N) # Shapiro-Francia
+jb.norm.test(monthlyAttacks_N) # Jarque-Bera
+agostino.test(monthlyAttacks_N) # Agostino
+
+```
+
+Observamos que la variable que tratamos de analizar no cumple la hipótesis de normalidad bajo ninguno de los tests realizados. Sin embargo, siguiendo a Rovira [7], podremos llevar a cabo nuestro análisis si el contraste que vamos a realizar es sobre la media, en virtud de lo siguiente: *"si una muestra es lo bastante grande (n>30), sea cual sea la distribución de la variable de interés, la distribución de la media muestral será aproximadamente una normal. Además la media será la misma que la de la variable de interés, y la desviación típica de la media muestral será aproximadamenet el error estándar."* 
+
+Es decir, no hemos podido asegurar la normalidad en la variable, pero avanzaremos igualmente con el contraste de hipótesis sobre la media, dado que tenemos un tamaño de muestra considerado grande (superior a 30).
+
+En relación a la homocedasticidad, según se indica en [1], podemos aplicar el test de Fligner-Killeen cuando los datos no cumplen la condición de normalidad.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# test de homocedasticidad para muestras que no cumplen la condición de normalidad: Fligner-Killeen
+
+fligner.test(NumeroAtaques ~ Mes, data = attacks_temp)
+```
+
+En este caso, al menos, sí que hemos podido confirmar que no existe una diferencia significativa de la varianza en el número total de ataques a lo largo de los distintos grupos de meses. En consecuencia, parece razonable admitir que podamos llevar a cabo contrastes de hipótesis sobre la media y aceptar sus conclusiones, a partir del Teorema Central del Límite.
+
+
+c1) En este caso, seguimos el desarrollo práctico de Amat [8], donde también se afirma que aunque no hayamos encontrado normalidad en la población, el test sobre la media en muestras de más de 30 observaciones  *"el t-test sigue siendo suficientemente robusto, aunque un test no paramétrico basado en la mediana (Mann-Withney-Wilcoxon) o un test de bootstraping podrían ser más adecuados*. Como primera aproximación, veremos los resultados a que llegamos con el t-test. Como decíamos al principio, primeramente tomaremos como base de los tests, aquel mes con mayor media de ataques.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Mes con máximo valor medio de ataques
+
+attacks_meanByMonth <- attacks_temp %>% group_by(Mes) %>% summarize(mean(NumeroAtaques))
+
+attacks_meanByMonth[order(-attacks_meanByMonth$`mean(NumeroAtaques)`),]
+
+```
+
+De la tabla anterior, observamos que el mes con mayor número medio de ataques sería enero, por lo que vamos a contrastar si la media del número de ataques del resto de meses es estadísticamente igual o diferente (necesariamente menor).
+
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Contraste de hipótesis sobre igualdad en la media del número de ataques entre enero y el resto de meses, de manera iterativa.
+
+for(i in seq(2,12)){
+  a <- t.test(attacks_temp[attacks_temp$Mes==1,3], attacks_temp[attacks_temp$Mes==i,3])
+  cat("p-valor para el contraste entre el mes 1 y el mes",i,":", a$p.value,"\n")
+  
+}
+
+
+```
+
+Como se puede apreciar, esto nos indica que no se puede rechazar la hipótesis nula de igualdad en la media en la comparación entre cada par de meses, por lo que de alguna manera lo que concluimos es que el número de ataques se mantiene relativamente estable a lo largo del año. En la sección de conclusiones, desarrollaremos en qué se traduce este hecho para la pregunta que nos planteábamos.
+
+c2) Otro asunto relacionado con la variable temporal que puede resultar interesante analizar, es hasta qué punto la tendencia se mantiene relativamente constante, o si se prevé que el número de ataques aumente o disminuye. De nuevo, puede que la aproximación más ortodoxa pasara por análisis de series temporales, pero vamos a hacer una aproximación lineal que nos permita reflexionar sobre hasta qué punto cabe esperar crecimiento, decrecimiento o mantenimiento. Para ello, vamos a "ordenar" de alguna manera el número de ataques, creando una variable que recoja la secuencialidad de las observaciones a partir de los meses, agregando casos por mes y año, y asignando a esta variable *"t"* un valor secuencial.
+
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# Agregación por Mes y Año, y creación de una variable temporal secuencial "t"
+
+attacks_sumByMonth <- attacks_temp %>% group_by(Year, Mes) %>% summarize(sumAtaques = sum(NumeroAtaques))
+attacks_sumByMonth <- as.data.frame(attacks_sumByMonth)
+attacks_sumByMonth$t <- seq(1,dim(attacks_sumByMonth)[1])
+
+# Regresión del número de ataques sobre el paso del tiempo (variable secuencial "t")
+
+reg_attacks_temp <- lm(sumAtaques ~ t, data = attacks_sumByMonth)
+
+
+# Mostramos el resumen de la regresión, y la representación gráfica de la recta de regresión sobre el disgrama de dispersión de ambas variables
+
+summary(reg_attacks_temp)
+
+plot(x=attacks_sumByMonth$t, y=attacks_sumByMonth$sumAtaques, main="Regresion lineal NumeroAtaques ~ t. Sector Público", xlab='tiempo', ylab='Número de ataques')
+abline(reg_attacks_temp, col=2)
+
+
+```
+
+Del análisis anterior, cabe extraer algunas conclusiones interesantes: 
+
+* Por un lado, parece que la tendencia en el número de ataques que esperamos recibir, será creciente. De hecho, si consideramos que el factor tiempo tiene una granularidad mensual, el parámetro de 0.23 de la pendiente viene a indicar que en cada mes cabe esperar un crecimiento en el número medio de casos superior al 20%. Es cierto que el número medio de incidentes mensual aún es muy bajo, por lo que el crecimiento en valor absoluto no es muy alto. Sin embargo, esto debe darnos una idea sobre la previsión de inversión futura, y que será necesario cada vez una mayor dedicación y esfuerzo para atajar estos problemas.
+* Observamos además que dicha pendiente es estadísticamente significativa, dentro de la regresión que hemos realizado.
+* No obstante, el valor del valor del coeficiente de autodeterminación $R^2$ es bastante bajo para lo que se suele exigir en este tipo de análisis, y sin embargo el valor de significatividad global del modelo a través del estadístico F no rechaza la hipótesis nula de buen ajuste global del modelo. Estos datos aparentemente contradictorios pueden venir a expresar que el modelo que hemos utilizado, en el que únicamente consideramos el tiempo, es excesivamente simple, y que gran parte de la varianza en la variable analizada seguramente encuentre justificación en otras variables que no se están incluyendo en el modelo. 
+* Teniendo en cuenta que lo que queríamos era una primera aproximación a si cabe esperar que el número de ataques en nuestro sector (Sector Público "O") crecerá, parece razonable afirmarlo. Además, parte del buen ajuste del modelo podría venir explicado también por el hecho de que a través de la prueba anterior, hemos descartado diferencias estadísticamente significativas entre los datos de número de ataques mes a mes.
+
 
 
 
@@ -526,3 +680,9 @@ De todo lo anterior, podemos extraer varias conclusiones muy interesantes sobre 
 [3] Osborne, Jason W. (2013). "Best practices in data cleaning: A complete guide to everything you need to do before and after collecting your data." Thousand Oaks, CA. Sage Publications.
 
 [4] Datacarpentry (2018). "Aggregating and analyzing data with dplyr" [en línea] [Última consulta: 20/May/2020] <https://datacarpentry.org/R-genomics/04-dplyr.html>
+
+[5] Peña, D. (2010), "Análisis de Series Temporales", Alianza Editorial.
+
+[6] Parada, Luis F. (2019). "Tipificación de variables". RPubs. [en línea] [Última consulta: 24/May/2020] <https://www.rpubs.com/F3rnando/521190>
+
+[7] Rovira, Carles (2009), "Teorema del límite central", Universidad Oberta de Catalunya.
