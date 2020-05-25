@@ -686,3 +686,6 @@ Del análisis anterior, cabe extraer algunas conclusiones interesantes:
 [6] Parada, Luis F. (2019). "Tipificación de variables". RPubs. [en línea] [Última consulta: 24/May/2020] <https://www.rpubs.com/F3rnando/521190>
 
 [7] Rovira, Carles (2009), "Teorema del límite central", Universidad Oberta de Catalunya.
+
+[8] Amat, Joaquín (2016), "T-test: Comparación de medias poblacionales independientes", Rpubs. [en línea] [Última consulta: 25/May/2020] <https://rpubs.com/Joaquin_AR/218467>
+  
