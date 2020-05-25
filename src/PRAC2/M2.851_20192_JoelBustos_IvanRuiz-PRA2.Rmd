@@ -598,7 +598,7 @@ De la tabla anterior, observamos que el mes con mayor número medio de ataques s
 # Contraste de hipótesis sobre igualdad en la media del número de ataques entre enero y el resto de meses, de manera iterativa.
 
 for(i in seq(2,12)){
-  a <- t.test(attacks_temp[attacks_temp$Mes==1,3], attacks_temp[attacks_temp$Mes==i,3])
+  a <- t.test(attacks_temp[attacks_temp$Mes==1,3], attacks_temp[attacks_temp$Mes==i,3], alternative = "less")
   cat("p-valor para el contraste entre el mes 1 y el mes",i,":", a$p.value,"\n")
   
 }
