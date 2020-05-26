@@ -76,7 +76,7 @@ La carpeta data se divide en:
 - **01_clean:** Carpeta destinada a almacenar los datos procesados y limpios procedentes de _00_raw_. Durante la realización de esta practica, no se ha empleado esta carpeta.
 
 ### PDF
-Carpeta que contiene el documento de la práctica.
+La carpeta "PRA1" contiene el documento explicativo de la práctica.
 
  ## Referencias
  [1] https://www.hackmageddon.com/category/security/cyber-attacks-timeline/
