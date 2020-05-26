@@ -476,6 +476,7 @@ De todo lo anterior, podemos extraer varias conclusiones muy interesantes sobre 
 * 4.1 Selección de los grupos de datos que se quieren analizar/compararar (planificación de los análisis a aplicar) [Pendiente. Word de Joel]
 =========================
 
+Se redacta directamente sobre el informe.
 
 
 * 4.2 Análisis particulares, y comprobaciones de normalidad y distribución de la varianza en las variables bajo estudio
@@ -619,6 +620,7 @@ attacks_sumByMonth <- attacks_temp %>% group_by(Year, Mes) %>% summarize(sumAtaq
 attacks_sumByMonth <- as.data.frame(attacks_sumByMonth)
 attacks_sumByMonth$t <- seq(1,dim(attacks_sumByMonth)[1])
 
+
 # Regresión del número de ataques sobre el paso del tiempo (variable secuencial "t")
 
 reg_attacks_temp <- lm(sumAtaques ~ t, data = attacks_sumByMonth)
@@ -648,7 +650,7 @@ Del análisis anterior, cabe extraer algunas conclusiones interesantes:
 # 5. Representación de los resultados a partir de tablas y gráficas
 ******
 
-
+Hemos utilizado herramientas adicionales a R para la creación de gráficos, y se incorporan directamente al informe.
 
 
 
@@ -656,8 +658,7 @@ Del análisis anterior, cabe extraer algunas conclusiones interesantes:
 # 6. Resolución del problema. A partir de los resultados obtenidos, ¿cuáles son las conclusiones? ¿Los resultados permiten responder al problema?
 ******
 
-
-
+Se redactan directamente sobre el informe.
 
 
 
