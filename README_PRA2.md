@@ -34,12 +34,12 @@ La carpeta data se divide en:
         
 - **01_clean:** Carpeta destinada a almacenar los datos procesados y limpios procedentes de _00_raw_. En concreto, a través de los distintos procesos de acondicionamiento y limpieza de datos, hemos creado los siguientes ficheros:
 
-     - **_XXX_**:
-     - **_XXX_**:
+     - **_EstadisticasAtaques2017_2020_Input.csv_**: Archivo con la información de ataques en el periodo 2017-2020, con las tareas de acondicionamiento que nos han permitido crear variables cuantitativas y diversas tareas de limpieza de datos, que describimos en el informe.
+     - **_EstadisticasAtaques2017_2020_Input_Visualization.csv_**: Archivo utilizado para generar visualizaciones.
 
-- **99_XXX:** Carpeta con información complementaria que hemos necesitado utilizar en nuestro análisis. En concreto, contiene el siguiente fichero:
+- **99_aditional:** Carpeta con información complementaria que hemos necesitado utilizar en nuestro análisis. En concreto, contiene el siguiente fichero:
 
-     - **_XXX_**:
+     - **_continent_country.xlsx_**: Relación de "Código de país"-"Continente" utilizado para el mapping de la información geográfica contenida en el dataset.
 
 
 ### PDF
