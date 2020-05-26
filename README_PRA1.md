@@ -1,4 +1,4 @@
-# Cyberattacks-History
+# Cyberattacks-History. PRA1
 Este proyecto, pretende recopilar datos históricos de ciberataques, con el objetivo de crear una base de datos estructurada. De esta forma, esta base de datos, servirá para poder aplicar modelos predictivos que ayuden a los equipos de seguridad de una empresa.  
 
 Para la obtención de los datos, se ha desarrollado un rasgado web de la página https://www.hackmageddon.com/. A continuación, se detallan los autores del proyecto y su contenido.
