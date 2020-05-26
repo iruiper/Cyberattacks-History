@@ -1,4 +1,4 @@
-from scrapper import BeautyScraper
+from extract.scrapper import BeautyScraper
 
 if __name__ == '__main__':
     # Se inicializa un objeto de la clase BeautyScraper para realizar el rasgado web
@@ -7,7 +7,7 @@ if __name__ == '__main__':
     # Con el método start_scrapping, se realiza el rasgado de toda la pagina web: Timeline y master table 2017, 2018.
     # Al no indicar una fecha de inicio ni de fin se realiza, por defecto, el rasgado desde 01/01/2017 - hoy.
     # Para realizar el scrapping se utiliza el driver de google Chrome (puede cambiarse a Firefox).
-    sc.start_scrapping(driver_name='chrome')
+    #sc.start_scrapping(driver_name='chrome')
 
     # A continuación, se muestran distintos métodos disponibles, para realizar el rasgado de la página web
     # https://www.hackmageddon.com.

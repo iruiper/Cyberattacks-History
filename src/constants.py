@@ -17,8 +17,10 @@ URL_SITE_MASTER_TABLE_2018 = "https://www.hackmageddon.com/2018-master-table/"
 DRIVERS_PATH = path.join(getcwd(), '..', 'drivers')
 RAW_DATA_PATH = path.join(getcwd(), '..', 'data', '00_raw')
 CLEAN_DATA_PATH = path.join(getcwd(), '..', 'data', '01_clean')
+ADDITIONAL_DATA_PATH = path.join(getcwd(), '..', 'data', '99_aditional')
 LOGGING_DATA_PATH = path.join(getcwd(), '..', 'logging')
 DESKTOP_PATH = path.join("C:", environ['HOMEPATH'], "Desktop")
+
 
 """
     ARCHIVOS
