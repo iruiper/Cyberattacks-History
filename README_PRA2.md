@@ -23,11 +23,11 @@ Contiene el código en Python adicional al desarrollado en la PRA1. Este, se enc
 
 ### Visual
 Contiene el código de las representaciónes gráficas que hemos llevado a cabo en las etapas de interpretación y obtención de conclusiones para nuestro trabajo. La carpeta contiene los siguientes jupyters notebooks.
-- **attack_viz.ipynb**: visualizaciones de las distribuciones de ataques.
+- **_attack_viz.ipynb_**: visualizaciones de las distribuciones de ataques.
 
-- **region_viz.ipynb**: visualizaciones de las distribuciones de ataque a lo largo de los distintos continentes.
+- **_region_viz.ipynb_**: visualizaciones de las distribuciones de ataque a lo largo de los distintos continentes.
 
-- **sankey_viz.ipynb**: visualizaciones de los parallel sets que relacionan el tipo de autor causante del ataque cibernetico, con el tipo de ataque realizado y el sector afectado.
+- **_sankey_viz.ipynb_**: visualizaciones de los parallel sets que relacionan el tipo de autor causante del ataque cibernetico, con el tipo de ataque realizado y el sector afectado.
 
 ### Data
 Carpeta con los distintos ficheros fuente y tratados que hemos utilizado a lo largo de la práctica. 
