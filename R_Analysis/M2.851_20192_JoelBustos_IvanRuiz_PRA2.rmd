@@ -700,7 +700,7 @@ df_test_final$CodigoAtaque <- relevel(df_test_final$CodigoAtaque, ref='Code_atta
 
 # Creación del gráfico ROC
 predictions_test <- prediction(predict(log_model, df_test_final), df_test_final$Attacked)
-test <- performance(predictions, 'tpr', 'fpr')
+test <- performance(predictions_test, 'tpr', 'fpr')
 plot(test, colorize=T, lwd=3)
 abline(a=0, b=1)
 
