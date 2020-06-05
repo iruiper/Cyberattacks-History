@@ -670,6 +670,45 @@ abline(a=0, b=1)
 ```{r}
 paste('AUROC de:', performance(predictions, measure="auc")@y.values[1])
 ```
+
+
+```{r}
+path_test <- 'https://raw.githubusercontent.com/iruiper/Cyberattacks-History/master/data/01_clean/datos_test.csv'
+
+# Obtención del dataset
+df_test <- read.csv(file=path_test, encoding='latin-1')
+
+# Procesado de datos. Se descartan las tipologías de empresa X, Y, Z y nos quedamos con la información de europa.
+# Adicionalmente, seleccionamos los datos de las distintas tipologías de ataque juntamente con el tipo de empresa.
+# Por último, a través de melt concatenamos los valores de las tipologías de ataque en una única columna.
+df_test_model <- df_test[!(df_test$Code_target_class %in% c('Z','Y','X')) & (df_test$Continent == 'Europa'),] %>%
+  select(Code_target_class, Code_attack_class_CW, Code_attack_class_CE, Code_attack_class_CC, Code_attack_class_H)  %>%
+  melt(value.name = 'NumeroAtaques', variable.name = 'CodigoAtaque')
+
+# Eliminamos aquellos registros con 0 números de ataque, ya que simbolizará que no se ha producido dicha categoria de ataque
+df_test_model_filtered <- df_test_model[df_test_model$NumeroAtaques != 0,]
+
+# En función del número de ataques, repetiremos los registros n veces.
+df_test_final <- as.data.frame(lapply(df_test_model_filtered, rep, df_test_model_filtered$NumeroAtaques))
+
+# Codificación de la variable Attacked.
+df_test_final$Attacked <- ifelse(df_test_final$Code_target_class == 'O', 1, 0)
+
+# Asignamos CC como nivel de referencia
+df_test_final$CodigoAtaque <- relevel(df_test_final$CodigoAtaque, ref='Code_attack_class_CC')
+
+
+# Creación del gráfico ROC
+predictions_test <- prediction(predict(log_model, df_test_final), df_test_final$Attacked)
+test <- performance(predictions, 'tpr', 'fpr')
+plot(test, colorize=T, lwd=3)
+abline(a=0, b=1)
+
+```
+
+```{r}
+paste('AUROC de:', performance(predictions_test, measure="auc")@y.values[1])
+```
 ******
 # 5. Representación de los resultados a partir de tablas y gráficas
 ******
