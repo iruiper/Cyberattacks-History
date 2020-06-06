@@ -208,7 +208,21 @@ attacks_Input$Mes <- as.factor(attacks_Input$Mes)
 attacks_Input$NumeroAtaques <- attacks_Input$Code_attack_class_.1+attacks_Input$Code_attack_class_CC+attacks_Input$Code_attack_class_CE+attacks_Input$Code_attack_class_CW+attacks_Input$Code_attack_class_H+attacks_Input$Code_attack_class_UK
 # Mostramos la estructura del archivo recién cargado
 str(attacks_Input)
+
+# Mostramos un resumen de los datos por cada campo
+summary(attacks_Input)
+
 ```
+
+Con una función exploratoria tan sencilla como "summary", somos capaces de empezar a entender e interpretar buena parte de los datos del dataset, con algunos aspectos especialmente interesantes como los siguientes:
+
+* Se aprecia un número de casos relativamente estable de casos en cada año (hay que tener en cuenta que para 2020 sólo tenemos datos de los primeros meses).
+* Parece que el número de casos por mes también se mantiene relativamente estable, aunque los primeros 3 meses tienen un número de casos ligeramente superior.
+* El país con mayor impacto de ataques es Estados Unidos, y por continentes los principales objetivos de ataques son Estados Unidos y Europa.
+* Hay un gran número de casos con objetivo sectorial desconocido, y el siguiente más relevante es sector público, el cual corresponde además al caso de la entidad que estamos representando para nuestro ejercicio.
+* En cada una de las observaciones, dado el nivel de granularidad escogido (Año/Mes/País/Entidad), el número absoluto de ataques de cada tipo (campos "Code_attack_class_XX") es relativamente bajo, y con medidas de tendencia central, media y mediana, en torno al valor 1. Esto sugiere y recomienda, que para responder a las distintas cuestiones que hemos planteado en la sección inicial, se utilicen distintos niveles de agregación que permitan obtener datos globales con mayor significatividad.
+
+Todo lo anterior resulta de gran utilidad para tener una mejor composición de lugar, y apunta de manera temprana algunas cautelas que deberemos tener en consideración a lo largo del ejercicio.
 
 Podemos hacer una comprobación sobra una de las variables más relevantes para nuestros análisis numéricos: el número de ataques totales que estamos analizando, y segmentados en las distintas categorías de ataques que nos indica el atributo original "Attack.Class".
 
