@@ -41,6 +41,7 @@ La carpeta data se divide en:
 
      - **_EstadisticasAtaques2017_2020_Input.csv_**: Archivo con la información de ataques en el periodo 2017-2020, con las tareas de acondicionamiento que nos han permitido crear variables cuantitativas y diversas tareas de limpieza de datos, que describimos en el informe.
      - **_EstadisticasAtaques2017_2020_Input_Visualization.csv_**: Archivo utilizado para generar visualizaciones.
+     - **_datos_test.csv_**: Nuevo archivo, con los datos más actualizados posibles (abril 2020), para uso como set de test para análisis de algunas de las medidas de precisión de los modelos implementados y descritos en la memoria.
 
 - **99_aditional:** Carpeta con información complementaria que hemos necesitado utilizar en nuestro análisis. En concreto, contiene el siguiente fichero:
 
