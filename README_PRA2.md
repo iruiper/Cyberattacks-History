@@ -35,13 +35,15 @@ Carpeta con los distintos ficheros fuente y tratados que hemos utilizado a lo la
 La carpeta data se divide en:
 - **00_raw_:** Carpeta con archivos en bruto, descritos en README_PRA1.md. Adicionalmente, para la segunda parte del análisis hemos añadido el siguiente fichero:
      
-     - **_DatosAtaques_2017_2020_RAW_**: Información en bruto, agregada a partir de las extracciones individuales de la PRA1, con el único objetivo de poder llevar a cabo un análisis preliminar de algunas variables.
+     - **_DatosAtaques_2017_2020_RAW.csv_**: Información en bruto, agregada a partir de las extracciones individuales de la PRA1, con el único objetivo de poder llevar a cabo un análisis preliminar de algunas variables.
+     - **_Error-files.csv_**: Información en bruto con aquellos reportes que han dado problemas durante la fase de scrapping.
+     - **_scrapping 2020-06-05 17.25.57.csv_**: Información en bruto que contiene los datos rasgados a partir del reporte: https://www.hackmageddon.com/2020/05/26/16-30-april-2020-cyber-attacks-timeline/
         
 - **01_clean:** Carpeta destinada a almacenar los datos procesados y limpios procedentes de _00_raw_. En concreto, a través de los distintos procesos de acondicionamiento y limpieza de datos, hemos creado los siguientes ficheros:
 
      - **_EstadisticasAtaques2017_2020_Input.csv_**: Archivo con la información de ataques en el periodo 2017-2020, con las tareas de acondicionamiento que nos han permitido crear variables cuantitativas y diversas tareas de limpieza de datos, que describimos en el informe.
      - **_EstadisticasAtaques2017_2020_Input_Visualization.csv_**: Archivo utilizado para generar visualizaciones.
-     - **_datos_test.csv_**: Nuevo archivo, con los datos más actualizados posibles (abril 2020), para uso como set de test para análisis de algunas de las medidas de precisión de los modelos implementados y descritos en la memoria.
+     - **_datos_test.csv_**: Archivo con la información procesada a partir del archivo _scrapping 2020-06-05 17.25.57.csv_. Este ficherose utilizará como set de test para el análisis medir la precisión de los modelos implementados y descritos en la memoria.
 
 - **99_aditional:** Carpeta con información complementaria que hemos necesitado utilizar en nuestro análisis. En concreto, contiene el siguiente fichero:
 
